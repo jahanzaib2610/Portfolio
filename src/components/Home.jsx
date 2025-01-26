@@ -40,7 +40,7 @@ const Home = () => {
         <h2 className="home-title">
           Hi, I'm <span>Jahan Zaib</span>
         </h2>
-        <h3 style={{ marginLeft: "15%" }}>
+        <h3>
           and I'm a <span className="home-subtitle"></span>
         </h3>
         <br />

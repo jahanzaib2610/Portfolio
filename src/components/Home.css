@@ -26,6 +26,7 @@
 }
 .home-content h3 {
   animation: slideBottom 1s ease forwards;
+  margin-left: 15%;  
 }
 .home-button {
   animation: slideTop 1s ease forwards;
@@ -97,7 +98,20 @@
   }
 
   .home-subtitle {
-    font-size: 1.25rem;
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 378px) {
+  .home-title {
+    font-size: 1.8rem;
+  }
+
+  .home-subtitle {
+    font-size: 1.1rem;
+  }
+  .home-content h3 {
+    
+    margin-left: 2%;  
   }
 }
 
