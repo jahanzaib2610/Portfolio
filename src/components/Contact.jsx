@@ -3,7 +3,8 @@ import { Mail, Phone, MapPin, Github, Linkedin, Instagram } from "lucide-react";
 import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
 import "./Contact.css";
-import { OrbitProgress, ThreeDot } from "react-loading-indicators";
+import { ThreeDot } from "react-loading-indicators";
+import { motion } from "framer-motion";
 
 const Contact = () => {
   const [alertVisile, setAlertVisible] = useState(false);
@@ -134,12 +135,33 @@ const Contact = () => {
     <section id="contact" className="section contact">
       <div className="container">
         <div className="section-title">
-          <h2>Get in Touch</h2>
-          <div className="divider"></div>
-          <p>
-            Have a project in mind? Let's work together to create something
-            amazing
-          </p>
+          <motion.div
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: -50 }}
+            viewport={{ once: true }} // Once visible, it will trigger animation only once
+            transition={{ duration: 1.5, delay: 0.4 }}
+          >
+            <h2>Get in Touch</h2>
+          </motion.div>
+          <motion.div
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: 50 }}
+            viewport={{ once: true }} // Once visible, it will trigger animation only once
+            transition={{ duration: 1.5, delay: 0.4 }}
+          >
+            <div className="divider"></div>
+          </motion.div>
+          <motion.div
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 50 }}
+            viewport={{ once: true }} // Once visible, it will trigger animation only once
+            transition={{ duration: 1.5, delay: 0.4 }}
+          >
+            <p>
+              Have a project in mind? Let's work together to create something
+              amazing
+            </p>
+          </motion.div>
         </div>
 
         <div className="contact-grid">

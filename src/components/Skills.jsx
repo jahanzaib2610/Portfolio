@@ -10,6 +10,7 @@ import MongoIcon from "../assets/mongo-db.png";
 import ReduxIcon from "../assets/redux.png";
 import NextjsIcon from "../assets/nextjs.png";
 import ExpressIcon from "../assets/express.png";
+import { motion } from "framer-motion";
 import "./Skills.css"; // Your CSS file for styling
 
 const Skills = () => {
@@ -17,8 +18,10 @@ const Skills = () => {
     {
       icon: <img src={ReactIcon} style={{ width: "60%" }} alt="React" />,
       name: "React",
-      level: 90,
+      level: 85,
       expertise:'Advanced',
+      whileInView:{ opacity: 1, x: 0 },
+      initial:{ opacity: 0, x: -50 },
       description: "To build dynamic and interactive web user interfaces.",
     },
     {
@@ -32,6 +35,8 @@ const Skills = () => {
       name: "React Native",
       expertise:'Advanced',
       level: 80,
+      whileInView:{ opacity: 1, x: 0 },
+      initial:{ opacity: 0, x: 50 },
       description: "To develop cross-platform mobile applications.",
     },
     {
@@ -39,6 +44,8 @@ const Skills = () => {
       name: "Node.js",
       expertise:'Intermediate',
       level: 60,
+      whileInView:{ opacity: 1, x: 0 },
+      initial:{ opacity: 0, x: -50 },
       description:
         "To build scalable backend APIs and server-side applications.",
     },
@@ -47,6 +54,8 @@ const Skills = () => {
       name: "MongoDB",
       expertise:'Intermediate',
       level: 50,
+      whileInView:{ opacity: 1, x: 0 },
+      initial:{ opacity: 0, x: 50 },
       description:
         "To store and manage data in a NoSQL database for flexible schema needs.",
     },
@@ -55,6 +64,8 @@ const Skills = () => {
       name: "ExpressJS",
       expertise:'Intermediate',
       level: 60,
+      whileInView:{ opacity: 1, x: 0 },
+      initial:{ opacity: 0, x: -50 },
       description:
         "For building fast, scalable web applications and APIs in Node.js.",
     },
@@ -63,6 +74,8 @@ const Skills = () => {
       name: "NextJS",
       expertise:'Beginner',
       level: 40,
+      whileInView:{ opacity: 1, x: 0 },
+      initial:{ opacity: 0, x: 50 },
       description:
         "To build React applications with server-side rendering and static site generation.",
     },
@@ -71,6 +84,8 @@ const Skills = () => {
       name: "Redux/Redux Toolkit",
       expertise:'Intermediate',
       level: 60,
+      whileInView:{ opacity: 1, x: 0 },
+      initial:{ opacity: 0, x: -50 },
       description:
         "For simplifying state management in React applications with Redux.",
     },
@@ -81,6 +96,8 @@ const Skills = () => {
       name: "JavaScript",
       expertise:'Advanced',
       level: 90,
+      whileInView:{ opacity: 1, x: 0 },
+      initial:{ opacity: 0, x: 50 },
       description:
         "To handle client-side functionality and interactive web features.",
     },
@@ -89,6 +106,8 @@ const Skills = () => {
       name: "HTML5",
       expertise:'Advanced',
       level: 90,
+      whileInView:{ opacity: 1, x: 0 },
+      initial:{ opacity: 0, x: -50 },
       description: "To structure the content of web pages.",
     },
     {
@@ -96,13 +115,17 @@ const Skills = () => {
       name: "CSS3",
       expertise:'Advanced',
       level: 80,
+      whileInView:{ opacity: 1, x: 0 },
+      initial:{ opacity: 0, x: 50 },
       description: "To style and layout web pages for an appealing design.",
     },
     {
       icon: <img src={GitIcon} style={{ width: "60%" }} alt="Git" />,
-      name: "Git",
+      name: "GitHub",
       level: 60,
       expertise:'Intermediate',
+      whileInView:{ opacity: 1, x: 0 },
+      initial:{ opacity: 0, x: -50 },
       description:
         "To manage version control and collaborate on code efficiently.",
     },
@@ -116,11 +139,31 @@ const Skills = () => {
       style={{paddingBottom:'3%', paddingTop:'2%', background: "#f9fafb" }}
     >
       <div className="section-title">
+      <motion.div
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: -50 }}
+            viewport={{ once: true }} // Once visible, it will trigger animation only once
+            transition={{ duration: 1.5, delay: 0.4 }}
+          >
         <h2>My Skills</h2>
+        </motion.div>
+        <motion.div
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: 50 }}
+            viewport={{ once: true }} // Once visible, it will trigger animation only once
+            transition={{ duration: 1.5, delay: 0.4 }}
+          >
         <div className="divider"></div>
+        </motion.div>
       </div>
       <div className="cards-container">
         {skills.map((skill, index) => (
+          <motion.div
+          whileInView={skill.whileInView}
+          initial={skill.initial}
+          viewport={{ once: true }} // Once visible, it will trigger animation only once
+          transition={{ duration: 1.5, delay: 0.4 }}
+        >
           <div className="card" key={index}>
             <div
               style={{
@@ -150,6 +193,7 @@ const Skills = () => {
               </p>
             </div>
           </div>
+          </motion.div>
         ))}
       </div>
     </div>

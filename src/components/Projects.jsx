@@ -1,10 +1,10 @@
-
 import React, { useState } from "react";
 import { ExternalLink, Github } from "lucide-react";
 import "./Projects.css";
 import MindSetImg from "../assets/Mindset.png";
 import PortfolioImg from "../assets/portfolio.png";
 import GuidePlusImg from "../assets/GuidePlus.jpg";
+import { motion } from "framer-motion";
 
 const projects = [
   {
@@ -18,6 +18,8 @@ const projects = [
       "Coordinated with the front-end team to integrate user-facing elements with server-side logic, resulting in a cohesive and well-functioning application.",
       "Performed thorough testing to enhance app reliability and optimize performance, ensuring a high-quality final product.",
     ],
+    whileInView: { opacity: 1, x: 0 },
+    initial: { opacity: 0, x: -50 },
     image: GuidePlusImg,
     tags: ["React", "React Native", "Express", "Node.js", "MongoDB"],
     liveLink: "#",
@@ -35,6 +37,8 @@ const projects = [
       "API Integration: Integrated APIs to fetch survey questionnaires and securely send user responses to the backend for processing and data storage.",
       "Platform-Specific Issue Resolution: Resolved platform-specific issues on iOS and Android, enhancing the app's stability and performance.",
     ],
+    whileInView: { opacity: 1, y: 0 },
+    initial: { opacity: 0, y: 50 },
     image: MindSetImg,
     tags: ["React", "React Native", "Stripe", "JavaScript"],
     liveLink: "#",
@@ -42,7 +46,8 @@ const projects = [
   },
   {
     title: "Personal Portfolio",
-    description: "Designed and developed personal full-stack portfolio website and deployed it on Vercel.com.",
+    description:
+      "Designed and developed personal full-stack portfolio website and deployed it on Vercel.com.",
     detailedDescription: [
       "Responsive Design: Developed a mobile-first responsive layout that adapts seamlessly across all screen sizes, ensuring an optimal viewing experience on both desktop and mobile devices.",
       "Interactive UI: Designed and implemented an engaging user interface using React and Material-UI, with a focus on usability and aesthetics.",
@@ -52,7 +57,16 @@ const projects = [
       "Backend Integration: Implemented a backend to receive messages from users who contact me through the portfolio, ensuring secure and reliable communication.",
     ],
     image: PortfolioImg,
-    tags: ["React", "React-Bootstrap", "Material-UI", "NodeJS", "ExpressJS", "MongoDB"],
+    whileInView: { opacity: 1, x: 0 },
+    initial: { opacity: 0, x: 50 },
+    tags: [
+      "React",
+      "React-Bootstrap",
+      "Material-UI",
+      "NodeJS",
+      "ExpressJS",
+      "MongoDB",
+    ],
     liveLink: "#",
     githubLink: "https://github.com/jahanzaib2610",
   },
@@ -73,53 +87,69 @@ const Projects = () => {
     <section id="projects" className="section projects">
       <div className="container">
         <div className="section-title">
-          <h2>My Projects</h2>
-          <div className="divider"></div>
-          <p>
-            Here are some of my recent projects that showcase my skills and
-            expertise
-          </p>
+          <motion.div
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: -50 }}
+            viewport={{ once: true }} // Once visible, it will trigger animation only once
+            transition={{ duration: 1.5, delay: 0.4 }}
+            
+          >
+            <h2>My Projects</h2>
+            <div className="divider"></div>
+            <p>
+              Here are some of my recent projects that showcase my skills and
+              expertise
+            </p>
+          </motion.div>
         </div>
 
         <div className="projects-grid">
           {projects.map((project) => (
-            <div key={project.title} className="project-card">
-              <div className="project-image">
-                <img
-                  style={{ objectFit: "contain" }}
-                  src={project.image}
-                  alt={project.title}
-                />
-                <div className="project-overlay">
-                  <div
-                  style={{cursor: "pointer"}}
-                    className="project-link"
-                    onClick={() => openModal(project)}
-                  >
-                    <ExternalLink size={20} />
+            <motion.div
+              whileInView={project.whileInView}
+              initial={project.initial}
+              viewport={{ once: true }} // Once visible, it will trigger animation only once
+              transition={{ duration: 1.5, delay: 0.4 }}
+              key={project.title}
+            >
+              <div className="project-card">
+                <div className="project-image">
+                  <img
+                    style={{ objectFit: "contain" }}
+                    src={project.image}
+                    alt={project.title}
+                  />
+                  <div className="project-overlay">
+                    <div
+                      style={{ cursor: "pointer" }}
+                      className="project-link"
+                      onClick={() => openModal(project)}
+                    >
+                      <ExternalLink size={20} />
+                    </div>
+                    <a
+                      href={project.githubLink}
+                      className="project-link"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      <Github size={20} />
+                    </a>
                   </div>
-                  <a
-                    href={project.githubLink}
-                    className="project-link"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                  >
-                    <Github size={20} />
-                  </a>
+                </div>
+                <div className="project-content">
+                  <h3 className="project-title">{project.title}</h3>
+                  <p className="project-description">{project.description}</p>
+                  <div className="project-tags">
+                    {project.tags.map((tag) => (
+                      <span key={tag} className="project-tag">
+                        {tag}
+                      </span>
+                    ))}
+                  </div>
                 </div>
               </div>
-              <div className="project-content">
-                <h3 className="project-title">{project.title}</h3>
-                <p className="project-description">{project.description}</p>
-                <div className="project-tags">
-                  {project.tags.map((tag) => (
-                    <span key={tag} className="project-tag">
-                      {tag}
-                    </span>
-                  ))}
-                </div>
-              </div>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
@@ -131,7 +161,9 @@ const Projects = () => {
               &times;
             </button>
             <h3>{selectedProject.title}</h3>
-            <p style={{textAlign:'left', }}>Detailed Description of Project:</p>
+            <p style={{ textAlign: "left" }}>
+              Detailed Description of Project:
+            </p>
             <ul>
               {selectedProject.detailedDescription.map((description) => {
                 return <li key={description}>{description}</li>;

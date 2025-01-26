@@ -56,9 +56,9 @@ const Navbar = () => {
           margin: "0 auto",
         }}
       >
-        <a href="/" className="navbar-logo">
+        <Link to="home" className="navbar-logo">
           Jahan Zaib Inc.
-        </a>
+        </Link>
 
         <ul className="navbar-menu">
           {navItems.map((item) => (
@@ -67,7 +67,7 @@ const Navbar = () => {
                 to={item.to}
                 spy={true}
                 smooth={true}
-                offset={-40}
+                offset={-64}
                 duration={500}
                 className="nav-link"
               >
