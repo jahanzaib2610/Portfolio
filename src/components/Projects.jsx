@@ -1,89 +1,9 @@
-// import React from 'react';
-// import { ExternalLink, Github } from 'lucide-react';
-// import './Projects.css';
-// import MindSetImg from '../assets/Mindset.png'
-// import PortfolioImg from '../assets/Portfolio.png'
-// import GuidePlusImg from '../assets/GuidePlus.jpg'
-
-// const projects = [
-//   {
-//     title: 'Guide Plus | Mobile App',
-//     description: 'Developed a full stack mobile application designed to assists user with multiple features.',
-//     image: GuidePlusImg,
-//     tags: ['React','React Native','Express', 'Node.js', 'MongoDB'],
-//     liveLink: '#',
-//     githubLink: '#',
-//   },
-//   {
-//     title: 'Mindset Medi | Mobile App',
-//     description: 'Contributed as a front-end developer, designed and deployed mobile app for both iOS and android.',
-//     image: MindSetImg,
-//     tags: ['React', 'React Native', 'Stripe','JavaScript'],
-//     liveLink: '#',
-//     githubLink: '#',
-//   },
-//   {
-//     title: 'Personal Portfolio',
-//     description: 'A responsive dashboard for social media analytics',
-//     image: PortfolioImg,
-//     tags: ['React', 'React-Bootstrap', 'Material-UI'],
-//     liveLink: '#',
-//     githubLink: '#',
-//   },
-// ];
-
-// const Projects = () => {
-//   return (
-//     <section id="projects" className="section projects">
-//       <div className="container">
-//         <div className="section-title">
-//           <h2>My Projects</h2>
-//           <div className="divider"></div>
-//           <p>
-//             Here are some of my recent projects that showcase my skills and expertise
-//           </p>
-//         </div>
-
-//         <div className="projects-grid">
-//           {projects.map((project) => (
-//             <div key={project.title} className="project-card">
-//               <div className="project-image">
-//                 <img style={{objectFit:'contain'}} src={project.image} alt={project.title} />
-//                 <div className="project-overlay">
-//                   <a href={project.liveLink} className="project-link" target="_blank" rel="noopener noreferrer">
-//                     <ExternalLink size={20} />
-//                   </a>
-//                   <a href={project.githubLink} className="project-link" target="_blank" rel="noopener noreferrer">
-//                     <Github size={20} />
-//                   </a>
-//                 </div>
-//               </div>
-//               <div className="project-content">
-//                 <h3 className="project-title">{project.title}</h3>
-//                 <p className="project-description">{project.description}</p>
-//                 <div className="project-tags">
-//                   {project.tags.map((tag) => (
-//                     <span key={tag} className="project-tag">
-//                       {tag}
-//                     </span>
-//                   ))}
-//                 </div>
-//               </div>
-//             </div>
-//           ))}
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default Projects;
 
 import React, { useState } from "react";
 import { ExternalLink, Github } from "lucide-react";
 import "./Projects.css";
 import MindSetImg from "../assets/Mindset.png";
-import PortfolioImg from "../assets/Portfolio.png";
+import PortfolioImg from "../assets/portfolio.png";
 import GuidePlusImg from "../assets/GuidePlus.jpg";
 
 const projects = [
