@@ -24,10 +24,10 @@
   color: #333;
   animation: slideBottom 1s ease forwards;
 }
-.home-content h3{
+.home-content h3 {
   animation: slideBottom 1s ease forwards;
 }
-.home-button{
+.home-button {
   animation: slideTop 1s ease forwards;
 }
 
@@ -49,9 +49,17 @@
 }
 
 .home-cta {
-  display: inline-flex;
+  display: flex;
+  justify-content: center;
+  width: 180px;
   align-items: center;
   gap: 8px;
+
+}
+.home-cta:hover {
+  -webkit-box-shadow: 0px 0px 45px 0px rgba(107, 70, 193, 0.75);
+  -moz-box-shadow: 0px 0px 45px 0px rgba(107, 70, 193, 0.75);
+  box-shadow: 0px 0px 45px 0px rgba(107, 70, 193, 0.75);
 }
 
 .home-cta svg {
@@ -93,24 +101,24 @@
   }
 }
 
-@keyframes slideBottom{
-  0%{
-      transform: translateY(-100px);
-      opacity: 0;
+@keyframes slideBottom {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
   }
-  100%{
-      transform: translateY(0px);
-      opacity: 1;
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
   }
 }
 
-@keyframes slideTop{
-  0%{
-      transform: translateY(100px);
-      opacity: 0;
+@keyframes slideTop {
+  0% {
+    transform: translateY(100px);
+    opacity: 0;
   }
-  100%{
-      transform: translateY(0px);
-      opacity: 1;
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
   }
 }

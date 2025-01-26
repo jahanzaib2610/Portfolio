@@ -144,8 +144,8 @@ const Contact = () => {
             <h2>Get in Touch</h2>
           </motion.div>
           <motion.div
-            whileInView={{ opacity: 1, x: 0 }}
-            initial={{ opacity: 0, x: 50 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: 50 }}
             viewport={{ once: true }} // Once visible, it will trigger animation only once
             transition={{ duration: 1.5, delay: 0.4 }}
           >

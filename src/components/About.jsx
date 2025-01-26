@@ -154,6 +154,7 @@ const About = () => {
             display: "flex",
             justifyContent: "center",
             gap: "5px",
+            flexWrap:'wrap'
           }}
         >
           <motion.div

@@ -53,6 +53,7 @@ const Home = () => {
             smooth={true}
             offset={0}
             duration={500}
+            style={{width: '240px'}}
             className="btn btn-primary home-cta"
           >
             More About Me...

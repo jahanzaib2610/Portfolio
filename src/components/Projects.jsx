@@ -57,8 +57,8 @@ const projects = [
       "Backend Integration: Implemented a backend to receive messages from users who contact me through the portfolio, ensuring secure and reliable communication.",
     ],
     image: PortfolioImg,
-    whileInView: { opacity: 1, x: 0 },
-    initial: { opacity: 0, x: 50 },
+    whileInView: { opacity: 1, y: 0 },
+    initial: { opacity: 0, y: -50 },
     tags: [
       "React",
       "React-Bootstrap",

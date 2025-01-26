@@ -81,8 +81,9 @@ const Services = () => {
             initial={{ opacity: 0, y: -50 }}
             viewport={{ once: true }} // Once visible, it will trigger animation only once
             transition={service.transition}
+            key={service.title}
           >
-              <div key={service.title} className="service-card">
+              <div  className="service-card">
                 <div className="service-icon">
                   <Icon />
                 </div>
