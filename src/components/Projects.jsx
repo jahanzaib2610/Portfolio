@@ -57,8 +57,8 @@ const projects = [
       "Backend Integration: Implemented a backend to receive messages from users who contact me through the portfolio, ensuring secure and reliable communication.",
     ],
     image: PortfolioImg,
-    whileInView: { opacity: 1, y: 0 },
-    initial: { opacity: 0, y: -50 },
+    whileInView: { opacity: 1, x: 0 },
+    initial: { opacity: 0, x: 50 },
     tags: [
       "React",
       "React-Bootstrap",
@@ -84,18 +84,35 @@ const Projects = () => {
   };
 
   return (
-    <section id="projects" className="section projects">
+    <section
+      id="projects"
+      className="section projects"
+      style={{ overflow: "hidden" }}
+    >
       <div className="container">
         <div className="section-title">
           <motion.div
-            whileInView={{ opacity: 1, y: 0 }}
-            initial={{ opacity: 0, y: -50 }}
-            viewport={{ once: true }} // Once visible, it will trigger animation only once
-            transition={{ duration: 1.5, delay: 0.4 }}
-            
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: -100 }}
+            viewport={{ amount: 0.5 }} // Once visible, it will trigger animation only once
+            transition={{ duration: 0.8, delay: 0.4 }}
           >
             <h2>My Projects</h2>
+          </motion.div>
+          <motion.div
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: 100 }}
+            viewport={{ amount: 0.5 }} // Once visible, it will trigger animation only once
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
             <div className="divider"></div>
+          </motion.div>
+          <motion.div
+            whileInView={{ opacity: 1, y: 0 }}
+            initial={{ opacity: 0, y: -50 }}
+            viewport={{ amount: 0.5 }} // Once visible, it will trigger animation only once
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
             <p>
               Here are some of my recent projects that showcase my skills and
               expertise
@@ -108,8 +125,8 @@ const Projects = () => {
             <motion.div
               whileInView={project.whileInView}
               initial={project.initial}
-              viewport={{ once: true }} // Once visible, it will trigger animation only once
-              transition={{ duration: 1.5, delay: 0.4 }}
+              viewport={{ amount: 0.5 }} // Once visible, it will trigger animation only once
+              transition={{ duration: 0.8, delay: 0.4 }}
               key={project.title}
             >
               <div className="project-card">

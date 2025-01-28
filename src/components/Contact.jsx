@@ -132,30 +132,34 @@ const Contact = () => {
   };
 
   return (
-    <section id="contact" className="section contact">
+    <section
+      id="contact"
+      className="section contact"
+      style={{ overflow: "hidden" }}
+    >
       <div className="container">
         <div className="section-title">
           <motion.div
             whileInView={{ opacity: 1, x: 0 }}
             initial={{ opacity: 0, x: -50 }}
-            viewport={{ once: true }} // Once visible, it will trigger animation only once
-            transition={{ duration: 1.5, delay: 0.4 }}
+            viewport={{ amount: 0.5 }} // Once visible, it will trigger animation only once
+            transition={{ duration: 0.8, delay: 0.4 }}
           >
             <h2>Get in Touch</h2>
           </motion.div>
           <motion.div
-            whileInView={{ opacity: 1, y: 0 }}
-            initial={{ opacity: 0, y: 50 }}
-            viewport={{ once: true }} // Once visible, it will trigger animation only once
-            transition={{ duration: 1.5, delay: 0.4 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: 50 }}
+            viewport={{ amount: 0.5 }} // Once visible, it will trigger animation only once
+            transition={{ duration: 0.8, delay: 0.4 }}
           >
             <div className="divider"></div>
           </motion.div>
           <motion.div
             whileInView={{ opacity: 1, y: 0 }}
             initial={{ opacity: 0, y: 50 }}
-            viewport={{ once: true }} // Once visible, it will trigger animation only once
-            transition={{ duration: 1.5, delay: 0.4 }}
+            viewport={{ amount: 0.5 }} // Once visible, it will trigger animation only once
+            transition={{ duration: 0.8, delay: 0.4 }}
           >
             <p>
               Have a project in mind? Let's work together to create something
@@ -165,102 +169,115 @@ const Contact = () => {
         </div>
 
         <div className="contact-grid">
-          <div className="contact-info">
-            <h3>Contact Information</h3>
-            <div className="contact-details">
-              <div className="contact-item">
-                <Mail />
-                <span>jahanzaib2610@gmail.com</span>
+          <motion.div
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: -100 }}
+            viewport={{ amount: 0.5 }} // Once visible, it will trigger animation only once
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            <div className="contact-info">
+              <h3>Contact Information</h3>
+              <div className="contact-details">
+                <div className="contact-item">
+                  <Mail />
+                  <span>jahanzaib2610@gmail.com</span>
+                </div>
+                <div className="contact-item">
+                  <Phone />
+                  <span>+92 318 2425007</span>
+                </div>
+                <div className="contact-item">
+                  <MapPin />
+                  <span>Lahore, Pakistan</span>
+                </div>
               </div>
-              <div className="contact-item">
-                <Phone />
-                <span>+92 318 2425007</span>
-              </div>
-              <div className="contact-item">
-                <MapPin />
-                <span>Lahore, Pakistan</span>
-              </div>
-            </div>
 
-            <div className="social-links">
-              <h4>Follow Me</h4>
-              <div className="social-icons">
-                <a
-                  href="https://github.com/jahanzaib2610"
-                  className="social-icon"
-                >
-                  <Github size={24} />
-                </a>
-                <a
-                  href="https://www.linkedin.com/in/jahanzaib2610/"
-                  className="social-icon"
-                >
-                  <Linkedin size={24} />
-                </a>
-                <a href="/" className="social-icon">
-                  <Instagram size={24} />
-                </a>
+              <div className="social-links">
+                <h4>Follow Me</h4>
+                <div className="social-icons">
+                  <a
+                    href="https://github.com/jahanzaib2610"
+                    className="social-icon"
+                  >
+                    <Github size={24} />
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/jahanzaib2610/"
+                    className="social-icon"
+                  >
+                    <Linkedin size={24} />
+                  </a>
+                  <a href="/" className="social-icon">
+                    <Instagram size={24} />
+                  </a>
+                </div>
               </div>
             </div>
-          </div>
-
-          <form onSubmit={handleSubmit} className="contact-form">
-            <div className="form-group">
-              <label htmlFor="name">Name</label>
-              <input
-                type="text"
-                id="name"
-                name="senderName"
-                value={formData.senderName}
-                onChange={handleChange}
-                placeholder="Your Name"
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="email">Email</label>
-              <input
-                type="text"
-                id="email"
-                name="senderEmail"
-                value={formData.senderEmail}
-                onChange={handleChange}
-                placeholder="johndoe@example.com"
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="subject">Subject</label>
-              <input
-                type="text"
-                id="subject"
-                name="subject"
-                value={formData.subject}
-                onChange={handleChange}
-                placeholder="Subject of Email"
-              />
-            </div>
-            <div className="form-group">
-              <label htmlFor="message">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                value={formData.message}
-                onChange={handleChange}
-                placeholder="Your Message"
-                rows={4}
-              ></textarea>
-            </div>
-            <button
-              disabled={isDisabled}
-              type="submit"
-              className="submit-button"
-            >
-              {isDisabled ? (
-                <ThreeDot variant="bounce" color="#32cd32" size="small" />
-              ) : (
-                "Send Message"
-              )}
-            </button>
-          </form>
+          </motion.div>
+          <motion.div
+            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, x: 100 }}
+            viewport={{ amount: 0.5 }} // Once visible, it will trigger animation only once
+            transition={{ duration: 0.8, delay: 0.4 }}
+          >
+            <form onSubmit={handleSubmit} className="contact-form">
+              <div className="form-group">
+                <label htmlFor="name">Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="senderName"
+                  value={formData.senderName}
+                  onChange={handleChange}
+                  placeholder="Your Name"
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="email">Email</label>
+                <input
+                  type="text"
+                  id="email"
+                  name="senderEmail"
+                  value={formData.senderEmail}
+                  onChange={handleChange}
+                  placeholder="johndoe@example.com"
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="subject">Subject</label>
+                <input
+                  type="text"
+                  id="subject"
+                  name="subject"
+                  value={formData.subject}
+                  onChange={handleChange}
+                  placeholder="Subject of Email"
+                />
+              </div>
+              <div className="form-group">
+                <label htmlFor="message">Message</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  value={formData.message}
+                  onChange={handleChange}
+                  placeholder="Your Message"
+                  rows={4}
+                ></textarea>
+              </div>
+              <button
+                disabled={isDisabled}
+                type="submit"
+                className="submit-button"
+              >
+                {isDisabled ? (
+                  <ThreeDot variant="bounce" color="#32cd32" size="small" />
+                ) : (
+                  "Send Message"
+                )}
+              </button>
+            </form>
+          </motion.div>
         </div>
       </div>
       <Snackbar

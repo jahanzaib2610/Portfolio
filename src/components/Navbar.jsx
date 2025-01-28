@@ -42,7 +42,7 @@ const Navbar = () => {
   return (
     <nav
       className="navbar"
-      style={{ transform: hidden ? "translateY(-100%)" : "translateY(0)" }}
+      style={{ transform: hidden ? "translateY(-100%)" : "translateY(0)", overflow: "hidden" }}
     >
       <div
         className="navbar-container"

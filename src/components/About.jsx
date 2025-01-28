@@ -118,18 +118,40 @@ const skills = [
 
 const About = () => {
   return (
-    <section id="about" className="section about">
+    <section
+      id="about"
+      className="section about"
+      style={{ overflow: "hidden" }}
+    >
       <div className="container">
         {/* Section Title with Framer Motion Animation triggered when in view */}
+        <div className="section-title">
+        <motion.div
+        style={{display:'absolute'}}
+          whileInView={{ opacity: 1, x:0 }}
+          initial={{ opacity: 0, x:50 }}
+          viewport={{ amount: 0.5 }} // Once visible, it will trigger animation only once
+          transition={{ duration: 1 }}
+          
+        >
+          <h2>About Me</h2>
+        </motion.div>
+        <motion.div
+          whileInView={{ opacity: 1, x:0 }}
+          initial={{ opacity: 0, x:-50 }}
+          viewport={{ amount: 0.5 }}// Once visible, it will trigger animation only once
+          transition={{ duration: 1 }}
+          
+        >
+          <div className="divider"></div>
+        </motion.div>
         <motion.div
           whileInView={{ opacity: 1 }}
           initial={{ opacity: 0 }}
-          viewport={{ once: true }} // Once visible, it will trigger animation only once
+          viewport={{ amount: 0.5 }} // Once visible, it will trigger animation only once
           transition={{ duration: 1 }}
-          className="section-title"
+          
         >
-          <h2>About Me</h2>
-          <div className="divider"></div>
           <p style={{ textAlign: "justify" }}>
             Passionate full-stack developer with a love for building dynamic,
             responsive, and user-centric web and mobile applications. With
@@ -144,6 +166,7 @@ const About = () => {
             applications for web and mobile platforms.
           </p>
         </motion.div>
+        </div>
 
         {/* Buttons with animations triggered when in view */}
 
@@ -154,14 +177,14 @@ const About = () => {
             display: "flex",
             justifyContent: "center",
             gap: "5px",
-            flexWrap:'wrap'
+            flexWrap: "wrap",
           }}
         >
           <motion.div
             whileInView={{ opacity: 1, y: 0 }}
             initial={{ opacity: 0, y: 50 }}
-            viewport={{ once: true }} // Once visible, it will trigger animation only once
-            transition={{ duration: 1.5, delay: 0.2 }}
+            viewport={{ amount: 0.5 }} // Once visible, it will trigger animation only once
+            transition={{ duration: 0.8, delay: 0.2 }}
             className="buttonSection"
           >
             <Link
@@ -178,9 +201,9 @@ const About = () => {
           </motion.div>
           <motion.div
             whileInView={{ opacity: 1, y: 0 }}
-            initial={{ opacity: 0, y: 50 }}
-            viewport={{ once: true }} // Once visible, it will trigger animation only once
-            transition={{ duration: 1.5, delay: 0.4 }}
+            initial={{ opacity: 0, y: -50 }}
+            viewport={{ amount: 0.5 }} // Once visible, it will trigger animation only once
+            transition={{ duration: 0.8, delay: 0.4 }}
             className="buttonSection"
           >
             <Link
@@ -198,8 +221,8 @@ const About = () => {
           <motion.div
             whileInView={{ opacity: 1, y: 0 }}
             initial={{ opacity: 0, y: 50 }}
-            viewport={{ once: true }} // Once visible, it will trigger animation only once
-            transition={{ duration: 1.5, delay: 0.6 }}
+            viewport={{ amount: 0.5 }} // Once visible, it will trigger animation only once
+            transition={{ duration: 0.8, delay: 0.2 }}
             className="buttonSection"
           >
             <Link

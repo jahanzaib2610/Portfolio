@@ -134,22 +134,22 @@ const Skills = () => {
   return (
     <div
       id="skills"
-      style={{ paddingBottom: "3%", paddingTop: "2%", background: "#f9fafb" }}
+      style={{ paddingBottom: "3%", paddingTop: "2%", background: "#f9fafb", overflow: "hidden", }}
     >
       <div className="section-title">
         <motion.div
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: -50 }}
-          viewport={{ once: true }} // Once visible, it will trigger animation only once
-          transition={{ duration: 1.5, delay: 0.4 }}
+          viewport={{ amount:0.5 }} // Once visible, it will trigger animation only once
+          transition={{ duration: 0.8, delay: 0.4 }}
         >
           <h2>My Skills</h2>
         </motion.div>
         <motion.div
-          whileInView={{ opacity: 1, y: 0 }}
-          initial={{ opacity: 0, y: 50 }}
-          viewport={{ once: true }} // Once visible, it will trigger animation only once
-          transition={{ duration: 1.5, delay: 0.4 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          initial={{ opacity: 0, x: 50 }}
+          viewport={{ amount:0.5 }} // Once visible, it will trigger animation only once
+          transition={{ duration: 0.8, delay: 0.4 }}
         >
           <div className="divider"></div>
         </motion.div>
@@ -160,8 +160,8 @@ const Skills = () => {
           <motion.div
             whileInView={skill.whileInView}
             initial={skill.initial}
-            viewport={{ once: true }} // Once visible, it will trigger animation only once
-            transition={{ duration: 1.5, delay: 0.4 }}
+            viewport={{ amount:0.5 }} // Once visible, it will trigger animation only once
+            transition={{ duration: 0.8, delay: 0.4 }}
             key={index}
           >
             <div className="card" >

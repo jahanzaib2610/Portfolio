@@ -25,7 +25,7 @@ const Home = () => {
     };
   }, []);
   return (
-    <section id="home" className="home">
+    <section id="home" className="home" style={{overflow: "hidden"}}>
       <div className="background-circle circle-1"></div>
       <div className="background-circle circle-2"></div>
 
