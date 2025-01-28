@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
-import { Menu, X } from "lucide-react";
+import { Menu, Moon, Sun, X } from "lucide-react";
 import "./Navbar.css";
 
 const Navbar = () => {
@@ -42,7 +42,10 @@ const Navbar = () => {
   return (
     <nav
       className="navbar"
-      style={{ transform: hidden ? "translateY(-100%)" : "translateY(0)", overflow: "hidden" }}
+      style={{
+        transform: hidden ? "translateY(-100%)" : "translateY(0)",
+        
+      }}
     >
       <div
         className="navbar-container"
@@ -77,7 +80,11 @@ const Navbar = () => {
           ))}
         </ul>
 
-        <button className="navbar-toggle" onClick={() => setIsOpen(!isOpen)}>
+        <button
+          className="navbar-toggle"
+          // style={{ cursor: "pointer !important", zIndex: 999999 }}
+          onClick={() => setIsOpen(!isOpen)}
+        >
           {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
