@@ -24,8 +24,9 @@ const Home = () => {
       typed.destroy();
     };
   }, []);
+
   return (
-    <section id="home" className="home" style={{overflow: "hidden"}}>
+    <section id="home" className="home" style={{ overflow: "hidden" }}>
       <div className="background-circle circle-1"></div>
       <div className="background-circle circle-2"></div>
 
@@ -46,14 +47,17 @@ const Home = () => {
         <br />
         {/* <br /> */}
 
-        <div className="home-button" style={{ textAlign: "center", width: "100%" }}>
+        <div
+          className="home-button"
+          style={{ textAlign: "center", width: "100%" }}
+        >
           <Link
             to="about"
             spy={true}
             smooth={true}
             offset={0}
             duration={500}
-            style={{width: '240px'}}
+            style={{ width: "240px" }}
             className="btn btn-primary home-cta"
           >
             More About Me...

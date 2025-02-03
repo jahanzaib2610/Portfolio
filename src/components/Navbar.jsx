@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-scroll";
 import { Menu, Moon, Sun, X } from "lucide-react";
 import "./Navbar.css";
+import tune from "../assets/notify.mp3";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -38,13 +39,14 @@ const Navbar = () => {
     { name: "Projects", to: "projects" },
     { name: "Contact", to: "contact" },
   ];
+  const audio = new Audio(tune);
+  audio.loop = true;
 
   return (
     <nav
       className="navbar"
       style={{
         transform: hidden ? "translateY(-100%)" : "translateY(0)",
-        
       }}
     >
       <div
@@ -67,6 +69,10 @@ const Navbar = () => {
           {navItems.map((item) => (
             <li key={item.name}>
               <Link
+                onClick={() => {
+                  audio.loop = false;
+                  audio.play();
+                }}
                 to={item.to}
                 spy={true}
                 smooth={true}
@@ -100,7 +106,11 @@ const Navbar = () => {
                   smooth={true}
                   offset={-64}
                   duration={500}
-                  onClick={() => setIsOpen(false)}
+                  onClick={() => {
+                    setIsOpen(false);
+                    audio.loop = false;
+                    audio.play();
+                  }}
                 >
                   {item.name}
                 </Link>

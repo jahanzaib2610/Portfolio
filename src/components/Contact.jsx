@@ -5,6 +5,7 @@ import Alert from "@mui/material/Alert";
 import "./Contact.css";
 import { ThreeDot } from "react-loading-indicators";
 import { motion } from "framer-motion";
+import tune from "../assets/notify.mp3";
 
 const Contact = () => {
   const [alertVisile, setAlertVisible] = useState(false);
@@ -103,6 +104,8 @@ const Contact = () => {
         subject: "",
         message: "",
       });
+      audio.loop = false;
+      audio.play();
       setAlertSeverity("success");
       setAlertMessage("Message sent successfully!");
       setAlertVisible(true);
@@ -130,7 +133,8 @@ const Contact = () => {
       [e.target.name]: e.target.value,
     });
   };
-
+  const audio = new Audio(tune);
+  audio.loop = true;
   return (
     <section
       id="contact"
@@ -172,7 +176,7 @@ const Contact = () => {
           <motion.div
             whileInView={{ opacity: 1, x: 0 }}
             initial={{ opacity: 0, x: -100 }}
-            viewport={{ amount: 0.5 }} // Once visible, it will trigger animation only once
+            viewport={{ amount: 0.3 }} // Once visible, it will trigger animation only once
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <div className="contact-info">
@@ -217,7 +221,7 @@ const Contact = () => {
           <motion.div
             whileInView={{ opacity: 1, x: 0 }}
             initial={{ opacity: 0, x: 100 }}
-            viewport={{ amount: 0.5 }} // Once visible, it will trigger animation only once
+            viewport={{ amount: 0.2 }} // Once visible, it will trigger animation only once
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <form onSubmit={handleSubmit} className="contact-form">
