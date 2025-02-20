@@ -105,7 +105,7 @@ const projects = [
     whileInView: { opacity: 1, x: 0 },
     initial: { opacity: 0, x: 50 },
     image: placeHolderImg,
-    tags: ["ReactJS", "Redux Toolkit", "Rest APIs", "OpenAI APIs"],
+    tags: ["React JS", "Redux Toolkit", "Material UI", "React Query"],
     liveLink: "#",
     githubLink: "#",
   },
