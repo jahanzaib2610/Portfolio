@@ -4,11 +4,10 @@ import "./Projects.css";
 import MindSetImg from "../assets/Mindset.png";
 import PortfolioImg from "../assets/portfolio.png";
 import GuidePlusImg from "../assets/GuidePlus.jpg";
-import placeHolderImg from '../assets/placeholder.jpg';
+import placeHolderImg from "../assets/placeholder.jpg";
 import { motion } from "framer-motion";
 
 const projects = [
-  
   {
     title: "Guide Plus | Mobile App",
     description:
@@ -75,14 +74,14 @@ const projects = [
   {
     title: "Geo Travels",
     description:
-      "Developed a full stack mobile application designed to assist users with multiple features.",
+      "Developed a tourism management platform with multi-enterprise support, enabling campaign creation and premium content management.",
     detailedDescription: [
       "Developed user and admin dashboards with ReactJS, ensuring seamless and efficient UI/UX experiences.",
       "Implemented Redux Toolkit for state management, improving application performance and maintainability.",
       "Integrated REST APIs effectively to ensure smooth data flow between frontend and backend services.",
       "Implemented OpenAI APIs to provide personalized tour suggestions, enhancing user engagement and experience.",
       "Collaborated with backend developers to optimize API consumption and improve data handling efficiency.",
-      "Worked as a front-end developer, focusing on creating scalable and high-performance web applications."
+      "Worked as a front-end developer, focusing on creating scalable and high-performance web applications.",
     ],
     whileInView: { opacity: 1, x: 0 },
     initial: { opacity: 0, x: -50 },
@@ -94,14 +93,14 @@ const projects = [
   {
     title: "Slim Club",
     description:
-      "Developed a full stack mobile application designed to assist users with multiple features.",
+      "Developed a fitness club management platform with user registration, payments, and booking features.",
     detailedDescription: [
       "Developed user and admin dashboards with ReactJS, ensuring seamless and efficient UI/UX experiences.",
       "Implemented Redux Toolkit for state management, improving application performance and maintainability.",
       "Integrated REST APIs effectively to ensure smooth data flow between frontend and backend services.",
       "Implemented OpenAI APIs to provide personalized tour suggestions, enhancing user engagement and experience.",
       "Collaborated with backend developers to optimize API consumption and improve data handling efficiency.",
-      "Worked as a front-end developer, focusing on creating scalable and high-performance web applications."
+      "Worked as a front-end developer, focusing on creating scalable and high-performance web applications.",
     ],
     whileInView: { opacity: 1, x: 0 },
     initial: { opacity: 0, x: 50 },
