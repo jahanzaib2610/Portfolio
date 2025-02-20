@@ -116,7 +116,7 @@ const Skills = () => {
       expertise: "Advanced",
       level: 80,
       whileInView: { opacity: 1, y: 0 },
-      initial: { opacity: 0, y: 50 },
+      initial: { opacity: 0, y: 20 },
       description: "To style and layout web pages for an appealing design.",
     },
     {

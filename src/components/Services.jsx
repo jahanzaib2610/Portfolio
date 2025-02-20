@@ -95,9 +95,15 @@ const Services = () => {
             const Icon = service.icon;
             return (
               <motion.div
-                whileInView={{ opacity: 1, y: 0 }}
-                initial={{ opacity: 0, y: -100 }}
-                viewport={{ amount: 0.5 }} // Once visible, it will trigger animation only once
+                variants={{
+                  hidden: { opacity: 0, y: 50 }, // Initial hidden state
+                  visible: { opacity: 1, y: 0 }, // Shown state when in view
+                  exit: { opacity: 0, y: -20 }, // Disappear when out of view
+                }}
+                initial="hidden"
+                whileInView="visible"
+                exit="exit"
+                viewport={{ amount: 0.3, once: false }} // Ensure it triggers again when leaving
                 transition={service.transition}
                 key={service.title}
               >

@@ -162,12 +162,18 @@ const Projects = () => {
         <div className="projects-grid">
           {projects.map((project) => (
             <motion.div
-              whileInView={project.whileInView}
-              initial={project.initial}
-              viewport={{ amount: 0.5 }} // Once visible, it will trigger animation only once
-              transition={{ duration: 0.8, delay: 0.4 }}
-              key={project.title}
-            >
+            variants={{
+              hidden: { opacity: 0, y: 50 }, // Initial hidden state
+              visible: { opacity: 1, y: 0 }, // Shown state when in view
+              exit: { opacity: 0, y: -20 } // Disappear when out of view
+            }}
+            initial="hidden"
+            whileInView="visible"
+            exit="exit"
+            viewport={{ amount: 0.3, once: false }} // Ensure it triggers again when leaving
+            transition={{ duration: 0.8, delay: 0.4 }}
+            key={project.title}
+          >
               <div className="project-card">
                 <div className="project-image">
                   <img
