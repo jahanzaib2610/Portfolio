@@ -3,7 +3,7 @@ import { Link } from "react-scroll";
 import { ArrowRight } from "lucide-react";
 import "./Home.css";
 import Typed from "typed.js";
-
+import tune2 from "../assets/notify2.mp3";
 const Home = () => {
   useEffect(() => {
     const options = {
@@ -24,7 +24,8 @@ const Home = () => {
       typed.destroy();
     };
   }, []);
-
+  const audio = new Audio(tune2);
+  audio.loop = true;
   return (
     <section id="home" className="home" style={{ overflow: "hidden" }}>
       <div className="background-circle circle-1"></div>
@@ -59,6 +60,10 @@ const Home = () => {
             duration={500}
             style={{ width: "240px" }}
             className="btn btn-primary home-cta"
+            onClick={() => {
+              audio.loop = false;
+              audio.play();
+            }}
           >
             More About Me...
             <ArrowRight size={20} />
