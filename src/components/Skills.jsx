@@ -21,7 +21,7 @@ const Skills = () => {
       level: 85,
       expertise: "Advanced",
       whileInView: { opacity: 1, y: 0 },
-      initial: { opacity: 0, y: -50 },
+      initial: { opacity: 0, y: -30 },
       description: "To build dynamic and interactive web user interfaces.",
     },
     {
@@ -36,7 +36,7 @@ const Skills = () => {
       expertise: "Advanced",
       level: 80,
       whileInView: { opacity: 1, y: 0 },
-      initial: { opacity: 0, y: 50 },
+      initial: { opacity: 0, y: 30 },
       description: "To develop cross-platform mobile applications.",
     },
     {
@@ -45,7 +45,7 @@ const Skills = () => {
       expertise: "Intermediate",
       level: 60,
       whileInView: { opacity: 1, y: 0 },
-      initial: { opacity: 0, y: -50 },
+      initial: { opacity: 0, y: -30 },
       description:
         "To build scalable backend APIs and server-side applications.",
     },
@@ -55,7 +55,7 @@ const Skills = () => {
       expertise: "Intermediate",
       level: 50,
       whileInView: { opacity: 1, y: 0 },
-      initial: { opacity: 0, y: 50 },
+      initial: { opacity: 0, y: 30 },
       description:
         "To store and manage data in a NoSQL database for flexible schema needs.",
     },
@@ -65,7 +65,7 @@ const Skills = () => {
       expertise: "Intermediate",
       level: 60,
       whileInView: { opacity: 1, y: 0 },
-      initial: { opacity: 0, y: -50 },
+      initial: { opacity: 0, y: -30 },
       description:
         "For building fast, scalable web applications and APIs in Node.js.",
     },
@@ -75,7 +75,7 @@ const Skills = () => {
       expertise: "Beginner",
       level: 40,
       whileInView: { opacity: 1, y: 0 },
-      initial: { opacity: 0, y: 50 },
+      initial: { opacity: 0, y: 30 },
       description:
         "To build React applications with server-side rendering and static site generation.",
     },
@@ -85,7 +85,7 @@ const Skills = () => {
       expertise: "Intermediate",
       level: 60,
       whileInView: { opacity: 1, y: 0 },
-      initial: { opacity: 0, y: -50 },
+      initial: { opacity: 0, y: -30 },
       description:
         "For simplifying state management in React applications with Redux.",
     },
@@ -97,7 +97,7 @@ const Skills = () => {
       expertise: "Advanced",
       level: 90,
       whileInView: { opacity: 1, y: 0 },
-      initial: { opacity: 0, y: 50 },
+      initial: { opacity: 0, y: 30 },
       description:
         "To handle client-side functionality and interactive web features.",
     },
@@ -107,7 +107,7 @@ const Skills = () => {
       expertise: "Advanced",
       level: 90,
       whileInView: { opacity: 1, y: 0 },
-      initial: { opacity: 0, y: -50 },
+      initial: { opacity: 0, y: -30 },
       description: "To structure the content of web pages.",
     },
     {
@@ -125,7 +125,7 @@ const Skills = () => {
       level: 60,
       expertise: "Intermediate",
       whileInView: { opacity: 1, y: 0 },
-      initial: { opacity: 0, y: -50 },
+      initial: { opacity: 0, y: -30 },
       description:
         "To manage version control and collaborate on code efficiently.",
     },
@@ -139,17 +139,17 @@ const Skills = () => {
       <div className="section-title">
         <motion.div
           whileInView={{ opacity: 1, x: 0 }}
-          initial={{ opacity: 0, x: -50 }}
-          viewport={{ amount:0.5 }} // Once visible, it will trigger animation only once
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial={{ opacity: 0, x: -30 }}
+          viewport={{ amount:0.2, once: true }} // Once visible, it will trigger animation only once
+          transition={{ duration: 0.5, delay: 0.4 }}
         >
           <h2>My Skills</h2>
         </motion.div>
         <motion.div
           whileInView={{ opacity: 1, x: 0 }}
-          initial={{ opacity: 0, x: 50 }}
-          viewport={{ amount:0.5 }} // Once visible, it will trigger animation only once
-          transition={{ duration: 0.8, delay: 0.4 }}
+          initial={{ opacity: 0, x: 30 }}
+          viewport={{ amount:0.2, once: true }} // Once visible, it will trigger animation only once
+          transition={{ duration: 0.5, delay: 0.4 }}
         >
           <div className="divider"></div>
         </motion.div>
@@ -160,8 +160,8 @@ const Skills = () => {
           <motion.div
             whileInView={skill.whileInView}
             initial={skill.initial}
-            viewport={{ amount:0.5 }} // Once visible, it will trigger animation only once
-            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ amount:0.2, once: true }} // Once visible, it will trigger animation only once
+            transition={{ duration: 0.5, delay: 0.4 }}
             key={index}
           >
             <div className="card" >

@@ -85,7 +85,7 @@ const Contact = () => {
         }
       );
 
-      // Handle non-2xx responses (like 400, 500, etc.)
+      // Handle non-2xx responses (like 400, 300, etc.)
       if (!response.ok) {
         const result = await response.json();
         setAlertSeverity("error");
@@ -145,24 +145,24 @@ const Contact = () => {
         <div className="section-title">
           <motion.div
             whileInView={{ opacity: 1, x: 0 }}
-            initial={{ opacity: 0, x: -50 }}
-            viewport={{ amount: 0.5 }} // Once visible, it will trigger animation only once
+            initial={{ opacity: 0, x: -30 }}
+            viewport={{ amount: 0.2, once: true }} // Once visible, it will trigger animation only once
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <h2>Get in Touch</h2>
           </motion.div>
           <motion.div
             whileInView={{ opacity: 1, x: 0 }}
-            initial={{ opacity: 0, x: 50 }}
-            viewport={{ amount: 0.5 }} // Once visible, it will trigger animation only once
+            initial={{ opacity: 0, x: 30 }}
+            viewport={{ amount: 0.2, once: true }} // Once visible, it will trigger animation only once
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <div className="divider"></div>
           </motion.div>
           <motion.div
             whileInView={{ opacity: 1, y: 0 }}
-            initial={{ opacity: 0, y: 50 }}
-            viewport={{ amount: 0.5 }} // Once visible, it will trigger animation only once
+            initial={{ opacity: 0, y: 30 }}
+            viewport={{ amount: 0.2, once: true }} // Once visible, it will trigger animation only once
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <p>
@@ -175,8 +175,8 @@ const Contact = () => {
         <div className="contact-grid">
           <motion.div
             whileInView={{ opacity: 1, x: 0 }}
-            initial={{ opacity: 0, x: -100 }}
-            viewport={{ amount: 0.3 }} // Once visible, it will trigger animation only once
+            initial={{ opacity: 0, x: -50 }}
+            viewport={{ amount: 0.2, once: true }} // Once visible, it will trigger animation only once
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <div className="contact-info">
@@ -220,8 +220,8 @@ const Contact = () => {
           </motion.div>
           <motion.div
             whileInView={{ opacity: 1, x: 0 }}
-            initial={{ opacity: 0, x: 100 }}
-            viewport={{ amount: 0.2 }} // Once visible, it will trigger animation only once
+            initial={{ opacity: 0, x: 50 }}
+            viewport={{ amount: 0.2, once: true }} // Once visible, it will trigger animation only once
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             <form onSubmit={handleSubmit} className="contact-form">

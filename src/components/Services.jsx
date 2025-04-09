@@ -14,41 +14,41 @@ const services = [
     description:
       "Creating responsive and visually appealing websites tailored to your needs.",
     icon: CodeIcon, // Replace with the appropriate icon if needed
-    transition: { duration: 0.8, delay: 0.4 },
+    transition: { duration: 0.5, delay: 0.4 },
   },
   {
     title: "Mobile App Development",
     description:
       "Building high-quality cross-platform mobile applications using modern frameworks.",
     icon: PhoneIphoneIcon,
-    transition: { duration: 0.8, delay: 0.6 },
+    transition: { duration: 0.5, delay: 0.6 },
   },
   {
     title: "iOS App Development",
     description:
       "Designing and developing smooth and efficient iOS applications.",
     icon: AppleIcon, // Replace with the appropriate icon for iOS
-    transition: { duration: 0.8, delay: 0.8 },
+    transition: { duration: 0.5, delay: 0.5 },
   },
   {
     title: "Android App Development",
     description: "Creating scalable and feature-rich Android applications.",
     icon: AndroidIcon, // Replace with the appropriate icon for Android if needed
-    transition: { duration: 0.8, delay: 1 },
+    transition: { duration: 0.5, delay: 1 },
   },
   {
     title: "Front-end Development",
     description:
       "Building interactive and dynamic user interfaces with modern front-end frameworks.",
     icon: ViewQuiltIcon,
-    transition: { duration: 0.8, delay: 1.2 },
+    transition: { duration: 0.5, delay: 1.2 },
   },
   {
     title: "Back-end Development",
     description:
       "Developing secure and scalable backend solutions to power your applications.",
     icon: StorageIcon,
-    transition: { duration: 0.8, delay: 1.4 },
+    transition: { duration: 0.5, delay: 1.4 },
   },
 ];
 
@@ -64,24 +64,24 @@ const Services = () => {
           <motion.div
             whileInView={{ opacity: 1, x: 0 }}
             initial={{ opacity: 0, x: -100 }}
-            viewport={{ amount: 0.5 }} // Once visible, it will trigger animation only once
-            transition={{ duration: 0.8, delay: 0.4 }}
+            viewport={{ amount: 0.2, once: true }} // Once visible, it will trigger animation only once
+            transition={{ duration: 0.5, delay: 0.4 }}
           >
             <h2>My Services</h2>
           </motion.div>
           <motion.div
             whileInView={{ opacity: 1, x: 0 }}
-            initial={{ opacity: 0, x: 100 }}
-            viewport={{ amount: 0.5 }} // Once visible, it will trigger animation only once
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial={{ opacity: 0, x: 50 }}
+            viewport={{ amount: 0.2, once: true }} // Once visible, it will trigger animation only once
+            transition={{ duration: 0.5, delay: 0.4 }}
           >
             <div className="divider"></div>
           </motion.div>
           <motion.div
             whileInView={{ opacity: 1, y: 0 }}
-            initial={{ opacity: 0, y: 50 }}
-            viewport={{ amount: 0.5 }} // Once visible, it will trigger animation only once
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial={{ opacity: 0, y: 30 }}
+            viewport={{ amount: 0.2, once: true }} // Once visible, it will trigger animation only once
+            transition={{ duration: 0.5, delay: 0.4 }}
           >
             <p>
               I offer a wide range of services to help bring your digital ideas
@@ -95,15 +95,9 @@ const Services = () => {
             const Icon = service.icon;
             return (
               <motion.div
-                variants={{
-                  hidden: { opacity: 0, y: 50 }, // Initial hidden state
-                  visible: { opacity: 1, y: 0 }, // Shown state when in view
-                  exit: { opacity: 0, y: -20 }, // Disappear when out of view
-                }}
-                initial="hidden"
-                whileInView="visible"
-                exit="exit"
-                viewport={{ amount: 0.3, once: false }} // Ensure it triggers again when leaving
+              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: -30 }}
+                viewport={{ amount: 0.3, once: true }} // Ensure it triggers again when leaving
                 transition={service.transition}
                 key={service.title}
               >

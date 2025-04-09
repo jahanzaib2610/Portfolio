@@ -20,18 +20,18 @@ const About = () => {
         <motion.div
         style={{display:'absolute'}}
           whileInView={{ opacity: 1, x:0 }}
-          initial={{ opacity: 0, x:50 }}
-          viewport={{ amount: 0.5 }} // Once visible, it will trigger animation only once
-          transition={{ duration: 1 }}
+          initial={{ opacity: 0, x:30 }}
+          viewport={{ amount: 0.2, once: true }} // Once visible, it will trigger animation only once
+          transition={{ duration: 0.5 }}
           
         >
           <h2>About Me</h2>
         </motion.div>
         <motion.div
           whileInView={{ opacity: 1, x:0 }}
-          initial={{ opacity: 0, x:-50 }}
-          viewport={{ amount: 0.5 }}// Once visible, it will trigger animation only once
-          transition={{ duration: 1 }}
+          initial={{ opacity: 0, x:-30 }}
+          viewport={{ amount: 0.2, once: true }}// Once visible, it will trigger animation only once
+          transition={{ duration: 0.5 }}
           
         >
           <div className="divider"></div>
@@ -39,8 +39,8 @@ const About = () => {
         <motion.div
           whileInView={{ opacity: 1 }}
           initial={{ opacity: 0 }}
-          viewport={{ amount: 0.5 }} // Once visible, it will trigger animation only once
-          transition={{ duration: 1 }}
+          viewport={{ amount: 0.2, once: true }} // Once visible, it will trigger animation only once
+          transition={{ duration: 0.5 }}
           
         >
           <p style={{ textAlign: "justify" }}>
@@ -73,16 +73,16 @@ const About = () => {
         >
           <motion.div
             whileInView={{ opacity: 1, y: 0 }}
-            initial={{ opacity: 0, y: 50 }}
-            viewport={{ amount: 0.5 }} // Once visible, it will trigger animation only once
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0, y: 30 }}
+            viewport={{ amount: 0.2, once: true }} // Once visible, it will trigger animation only once
+            transition={{ duration: 0.5, delay: 0.2 }}
             className="buttonSection"
           >
             <Link
               to="skills"
               spy={true}
               smooth={true}
-              offset={-50}
+              offset={-30}
               duration={300}
               className="btn btn-primary home-cta"
               onClick={() => {
@@ -96,16 +96,16 @@ const About = () => {
           </motion.div>
           <motion.div
             whileInView={{ opacity: 1, y: 0 }}
-            initial={{ opacity: 0, y: -50 }}
-            viewport={{ amount: 0.5 }} // Once visible, it will trigger animation only once
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial={{ opacity: 0, y: -30 }}
+            viewport={{ amount: 0.2, once: true }} // Once visible, it will trigger animation only once
+            transition={{ duration: 0.5, delay: 0.4 }}
             className="buttonSection"
           >
             <Link
               to="projects"
               spy={true}
               smooth={true}
-              offset={-50}
+              offset={-30}
               duration={300}
               className="btn btn-primary home-cta"
               onClick={() => {
@@ -119,9 +119,9 @@ const About = () => {
           </motion.div>
           <motion.div
             whileInView={{ opacity: 1, y: 0 }}
-            initial={{ opacity: 0, y: 50 }}
-            viewport={{ amount: 0.5 }} // Once visible, it will trigger animation only once
-            transition={{ duration: 0.8, delay: 0.2 }}
+            initial={{ opacity: 0, y: 30 }}
+            viewport={{ amount: 0.2, once: true }} // Once visible, it will trigger animation only once
+            transition={{ duration: 0.5, delay: 0.2 }}
             className="buttonSection"
           >
             <Link

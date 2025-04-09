@@ -6,6 +6,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   gap: 48px;
+  padding: 0% 5%;
 }
 
 .contact-info h3 {
@@ -73,12 +74,12 @@
 }
 
 .form-group {
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
 .form-group label {
   display: block;
-  margin-bottom: 8px;
+  margin-bottom: 2px;
   font-weight: 500;
   color: #333;
 }
@@ -86,7 +87,7 @@
 .form-group input,
 .form-group textarea {
   width: 100%;
-  padding: 12px;
+  padding: 10px;
   border: 1px solid #ddd;
   border-radius: 8px;
   font-size: 1rem;
