@@ -4,10 +4,10 @@ import { motion } from "framer-motion";
 
 const experiences = [
   {
-    jobTitle: "Frontend Developer",
-    years: "Feb 2024 - Feb 2025",
-    company: "Idea Section, Lahore",
-    description: "Worked as a frontend developer in a startup company.",
+    jobTitle: "Junior MERN Stack Developer",
+    years: "Apr 2025 - Present",
+    company: "Axis Cyber Technologies, Lahore",
+    description: "Working as a Junior MERN Stack developer.",
   },
   {
     jobTitle: "ReactJS/ NextJS Developer",
@@ -16,11 +16,12 @@ const experiences = [
     description: "Worked as a ReactJS/ NextJS developer.",
   },
   {
-    jobTitle: "Junior MERN Stack Developer",
-    years: "Apr 2025 - Present",
-    company: "Axis Cyber Technologies, Lahore",
-    description: "Working as a Junior MERN Stack developer.",
+    jobTitle: "Frontend Developer",
+    years: "Feb 2024 - Feb 2025",
+    company: "Idea Section, Lahore",
+    description: "Worked as a frontend developer in a startup company.",
   },
+  
 ];
 
 const Experience = () => {

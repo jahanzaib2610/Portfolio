@@ -5,9 +5,50 @@ import MindSetImg from "../assets/Mindset.png";
 import PortfolioImg from "../assets/portfolio.png";
 import GuidePlusImg from "../assets/GuidePlus.jpg";
 import placeHolderImg from "../assets/placeholder.jpg";
+import meredith from "../assets/meredith.png";
+import rnr from "../assets/rnr.jpg";
 import { motion } from "framer-motion";
 
 const projects = [
+  {
+    title: "TMZ Meredith | Web App",
+    description:
+      "Worked as a Frontend Developer on the Meredith project, delivering a modern and scalable web application.",
+    detailedDescription: [
+      "Created multiple reusable and modular React components to ensure scalability, maintainability, and consistency across the application.",
+      "Led a complete UI overhaul, translating Figma designs into a pixel-perfect, responsive interface, significantly improving user engagement.",
+      "Implemented robust cart handling with dynamic updates, seamless state management, and real-time price calculations.",
+      "Utilized Material UI (MUI) to design elegant and accessible UI components, adhering to modern design standards.",
+      "Optimized the front-end application for production and successfully deployed the project with a focus on performance and user experience.",
+      "Collaborated closely with designers and backend developers to ensure smooth integration and timely delivery of features.",
+      "Actively participated in sprint planning, code reviews, and team discussions to continuously improve development workflows and code quality.",
+    ],
+    whileInView: { opacity: 1, x: 0 },
+    initial: { opacity: 0, x: -30 },
+    image: meredith,
+    tags: ["React", "Material UI", "Context API", "JavaScript", "Typescript"],
+    liveLink: "https://meredith-prod-web.azurewebsites.net/",
+    githubLink: "https://github.com/jahanzaib2610",
+  },
+  {
+    title: "RNR Bookings | Mobile App",
+    description:
+      "Serving as a Frontend Developer on the RNR Mobile App, building a robust, scalable, and user-friendly mobile application using React Native and Expo.",
+    detailedDescription: [
+      "Implemented a clean, modern UI by translating Figma designs into pixel-perfect, responsive mobile screens, significantly enhancing user experience and engagement.",
+      "Integrated RESTful APIs for authentication, booking management, implementing robust error handling, and seamless data synchronization throughout the app.",
+      "Added support for both dark and light modes, providing users with a visually appealing and accessible interface that adapts to their preferences.",
+      "Utilized React Context API and AsyncStorage to manage global state and persist user preferences, authentication tokens, and app settings securely across sessions.",
+      "Integrated Google Maps API to provide location auto-suggestions, and utilized the Distance Matrix API to calculate accurate travel distances and durations.",
+      "Actively participated in sprint planning, code reviews, and team discussions to continuously improve development workflows and code quality.",
+    ],
+    whileInView: { opacity: 1, x: 0 },
+    initial: { opacity: 0, x: -30 },
+    image: rnr,
+    tags: ["React Native", "Expo", "Context API", "React Native Paper", "Google Maps API"],
+    liveLink: "https://meredith-prod-web.azurewebsites.net/",
+    githubLink: "https://github.com/jahanzaib2610",
+  },
   {
     title: "Guide Plus | Mobile App",
     description:
@@ -72,21 +113,20 @@ const projects = [
     githubLink: "https://github.com/jahanzaib2610",
   },
   {
-    title: "Geo Travels",
+    title: "Judgement Labs",
     description:
-      "Developed a tourism management platform with multi-enterprise support, enabling campaign creation and premium content management.",
-    detailedDescription: [
-      "Developed user and admin dashboards with ReactJS, ensuring seamless and efficient UI/UX experiences.",
-      "Implemented Redux Toolkit for state management, improving application performance and maintainability.",
-      "Integrated REST APIs effectively to ensure smooth data flow between frontend and backend services.",
-      "Implemented OpenAI APIs to provide personalized tour suggestions, enhancing user engagement and experience.",
-      "Collaborated with backend developers to optimize API consumption and improve data handling efficiency.",
-      "Worked as a front-end developer, focusing on creating scalable and high-performance web applications.",
-    ],
+      "Worked as a Frontend Developer on the Judgement Labs, delivering a high-quality, responsive web application with secure payment integration.",
+      detailedDescription: [
+        "Worked as a Frontend Developer, contributing to the development of user-centric web applications with a focus on performance and scalability.",
+        "Integrated Stripe payment gateway to enable secure, seamless, and efficient online transactions, enhancing the overall checkout experience.",
+        "Collaborated closely with UI/UX designers to accurately translate Figma wireframes into responsive, pixel-perfect user interfaces.",
+        "Resolved complex UI/UX issues to maintain visual and functional consistency across a wide range of devices and screen sizes.",
+        "Ensured high code quality through regular testing, debugging, and cross-browser compatibility checks to deliver a smooth user experience."
+      ],
     whileInView: { opacity: 1, x: 0 },
     initial: { opacity: 0, x: -30 },
     image: placeHolderImg,
-    tags: ["ReactJS", "Redux Toolkit", "Rest APIs", "OpenAI APIs"],
+    tags: ["ReactJS","NextJS", "Material UI", "Stripe", "Typescript"],
     liveLink: "#",
     githubLink: "#",
   },
@@ -162,12 +202,12 @@ const Projects = () => {
         <div className="projects-grid">
           {projects.map((project) => (
             <motion.div
-            whileInView={{ opacity: 1, y: 0 }}
-            initial={{ opacity: 0, y: -30 }}
-            viewport={{ amount: 0.3, once: true }} // Ensure it triggers again when leaving
-            transition={{ duration: 0.8, delay: 0.4 }}
-            key={project.title}
-          >
+              whileInView={{ opacity: 1, y: 0 }}
+              initial={{ opacity: 0, y: -30 }}
+              viewport={{ amount: 0.3, once: true }} // Ensure it triggers again when leaving
+              transition={{ duration: 0.8, delay: 0.4 }}
+              key={project.title}
+            >
               <div className="project-card">
                 <div className="project-image">
                   <img
