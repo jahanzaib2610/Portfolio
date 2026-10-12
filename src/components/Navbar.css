@@ -1,56 +1,86 @@
-.navbar {
-  position: sticky;
-  top: 0;
+/* Fixed wrapper creating top margin and centering the floating pill */
+.navbar-wrapper {
+  position: fixed;
+  top: 18px;
   left: 0;
   right: 0;
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(10px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   z-index: 9999;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 0 16px;
+  pointer-events: none; /* Allows user to interact with page content on the sides */
 }
 
-.navbar-container {
-  display: flex !important;
-  justify-content: space-between !important;
+/* Glassy floating pill navbar */
+.navbar-pill {
+  pointer-events: auto; /* Restores clicks on the navbar pill */
+  display: flex;
   align-items: center;
-  height: 64px;
-  padding: 0 20px;
-  max-width: 1200px;
-  margin: 0 auto;
+  justify-content: space-between;
+  width: min(92%, 1160px);
+  padding: 8px 18px 8px 28px;
+  border-radius: 9999px;
+  background: var(--nav-pill-bg);
+  backdrop-filter: blur(24px) saturate(1.8);
+  -webkit-backdrop-filter: blur(24px) saturate(1.8);
+  border: 1px solid var(--nav-pill-border);
+  box-shadow: var(--nav-pill-shadow);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .navbar-logo {
-  font-size: 1.5rem;
-  font-weight: bold;
-  background: linear-gradient(to right, #6b46c1, #3b82f6);
+  font-size: 1.35rem;
+  font-weight: 800;
+  background: var(--accent-gradient);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
   text-decoration: none;
-  animation: slideRight 1s ease forwards;
-}
-
-.navbar-menu {
-  display: flex;
-  gap: 32px;
-  list-style: none;
-  animation: slideLeft 1s ease forwards;
-}
-
-.navbar-menu li a {
-  color: #333;
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s ease;
-  transition: border-bottom 0.1s ease;
   cursor: pointer;
-  padding-bottom: 2px;
+  white-space: nowrap;
+  letter-spacing: -0.02em;
+  padding: 4px 6px;
+  flex-shrink: 0;
 }
 
-.navbar-menu li a:hover,
-.navbar-menu li a.active {
-  color: #6b46c1;
-  border-bottom: 2px solid #3b82f6;
+.navbar-gooey-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  margin: 0 32px;
+}
+
+/* Right side icons (Theme toggle + mobile burger) */
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  padding-right: 4px;
+}
+
+/* Theme Toggle Button inside the pill */
+.theme-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border: 1px solid var(--border-color);
+  cursor: pointer;
+  background: var(--card-bg-alt);
+  color: var(--text-primary);
+  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease, border-color 0.3s ease;
+  overflow: hidden;
+}
+
+.theme-toggle:hover {
+  background: var(--accent-purple);
+  color: white;
+  transform: scale(1.08);
 }
 
 .navbar-toggle {
@@ -58,75 +88,82 @@
   background: none;
   border: none;
   cursor: pointer;
-  padding: 8px;
+  padding: 6px;
+  color: var(--text-primary);
+  border-radius: 50%;
+  transition: background 0.2s ease;
 }
 
-.mobile-menu {
-  display: none;
+.navbar-toggle:hover {
+  background: var(--card-bg-alt);
 }
 
-@media (max-width: 768px) {
-  .navbar-menu {
+/* Floating Glass Mobile Dropdown */
+.mobile-menu-pill {
+  pointer-events: auto;
+  margin-top: 10px;
+  width: min(92%, 360px);
+  border-radius: 22px;
+  background: var(--nav-pill-bg);
+  backdrop-filter: blur(24px) saturate(1.8);
+  -webkit-backdrop-filter: blur(24px) saturate(1.8);
+  border: 1px solid var(--nav-pill-border);
+  box-shadow: var(--nav-pill-shadow);
+  padding: 12px 14px;
+  animation: slideDownFade 0.25s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.mobile-menu-pill ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.mobile-menu-pill li a {
+  color: var(--text-primary);
+  text-decoration: none;
+  font-weight: 500;
+  display: block;
+  padding: 9px 14px;
+  border-radius: 14px;
+  font-size: 0.95rem;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.mobile-menu-pill li a:hover,
+.mobile-menu-pill li a.active {
+  background: var(--card-bg-alt);
+  color: var(--accent-purple);
+  font-weight: 600;
+}
+
+@keyframes slideDownFade {
+  from {
+    opacity: 0;
+    transform: translateY(-8px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@media (max-width: 980px) {
+  .navbar-gooey-wrapper {
     display: none;
   }
 
+  .navbar-pill {
+    width: min(94%, 500px);
+    justify-content: space-between;
+  }
+
   .navbar-toggle {
-    display: block;
-  }
-
-  .mobile-menu {
-    display: block;
-    position: absolute;
-    top: 64px;
-    left: 0;
-    right: 0;
-    background: white;
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  }
-
-  .mobile-menu ul {
-    list-style: none;
-  }
-
-  .mobile-menu li {
-    margin-bottom: 16px;
-  }
-
-  .mobile-menu li a {
-    color: #333;
-    text-decoration: none;
-    font-weight: 500;
-    display: block;
-    padding: 8px 16px;
-    transition: color 0.3s ease;
-  }
-
-  .mobile-menu li a:hover,
-  .mobile-menu li a.active {
-    color: #6b46c1;
-    text-decoration: underline;
-  }
-}
-
-@keyframes slideRight{
-  0%{
-      transform: translateX(-100px);
-      opacity: 0;
-  }
-  100%{
-      transform: translateX(0px);
-      opacity: 1;
-  }
-}
-
-@keyframes slideLeft{
-  0%{
-      transform: translateX(100px);
-      opacity: 0;
-  }
-  100%{
-      transform: translateX(0px);
-      opacity: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 }

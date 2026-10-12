@@ -1,5 +1,6 @@
 .contact {
-  background: #f9fafb;
+  background: var(--bg-secondary);
+  transition: background 0.3s ease;
 }
 
 .contact-grid {
@@ -12,8 +13,9 @@
 .contact-info h3 {
   font-size: 1.5rem;
   font-weight: 600;
-  color: #333;
+  color: var(--text-primary);
   margin-bottom: 24px;
+  transition: color 0.3s ease;
 }
 
 .contact-details {
@@ -36,7 +38,8 @@
 }
 
 .contact-item span {
-  color: #666;
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
 }
 
 .social-links {
@@ -46,8 +49,9 @@
 .social-links h4 {
   font-size: 1.25rem;
   font-weight: 600;
-  color: #333;
+  color: var(--text-primary);
   margin-bottom: 16px;
+  transition: color 0.3s ease;
 }
 
 .social-icons {
@@ -56,21 +60,21 @@
 }
 
 .social-icon {
-  color: #666;
+  color: var(--text-secondary);
   transition: transform 0.3s ease, color 0.3s ease;
 }
 
 .social-icon:hover {
   color: #6b46c1;
   transform: scale(1.2);
-
 }
 
 .contact-form {
-  background: white;
+  background: var(--card-bg);
   padding: 32px;
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background 0.3s ease;
 }
 
 .form-group {
@@ -81,17 +85,25 @@
   display: block;
   margin-bottom: 2px;
   font-weight: 500;
-  color: #333;
+  color: var(--text-primary);
+  transition: color 0.3s ease;
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
   padding: 10px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   font-size: 1rem;
+  background-color: var(--input-bg);
+  color: var(--input-text);
   transition: all 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--text-secondary);
 }
 
 .form-group input:focus,

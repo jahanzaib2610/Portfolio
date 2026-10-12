@@ -1,4 +1,8 @@
 import React from "react";
+import { motion } from "framer-motion";
+import "./Skills.css";
+
+// Skill Assets
 import ReactIcon from "../assets/react.png";
 import ReactNativeIcon from "../assets/react-native.png";
 import NodeIcon from "../assets/nodejs.png";
@@ -10,195 +14,172 @@ import MongoIcon from "../assets/mongo-db.png";
 import ReduxIcon from "../assets/redux.png";
 import NextjsIcon from "../assets/nextjs.png";
 import ExpressIcon from "../assets/express.png";
-import { motion } from "framer-motion";
-import "./Skills.css"; // Your CSS file for styling
+
+// Additional Skill Assets
+import FirebaseIcon from "../assets/Firebase.png";
+import DockerIcon from "../assets/Docker.png";
+import ExpoIcon from "../assets/Expo.png";
+import GitlabIcon from "../assets/Gitlab.png";
+import BitBucketIcon from "../assets/BitBucket.png";
+import JiraIcon from "../assets/Jira.png";
+import PostgresIcon from "../assets/Postgres.png";
+import MySQLIcon from "../assets/MySQL.png";
+
+const SkillCard = ({ name, icon, category }) => (
+  <div className="skill-card-item">
+    <div className="skill-icon-thumb">
+      <img src={icon} alt={name} className="skill-icon-img" />
+    </div>
+    <div className="skill-meta">
+      <span className="skill-title">{name}</span>
+      <span className="skill-badge">{category}</span>
+    </div>
+  </div>
+);
 
 const Skills = () => {
-  const skills = [
-    {
-      icon: <img src={ReactIcon} style={{ width: "60%" }} alt="React" />,
-      name: "React",
-      level: 85,
-      expertise: "Advanced",
-      whileInView: { opacity: 1, y: 0 },
-      initial: { opacity: 0, y: -30 },
-      description: "To build dynamic and interactive web user interfaces.",
-    },
-    {
-      icon: (
-        <img
-          src={ReactNativeIcon}
-          style={{ width: "60%" }}
-          alt="React Native"
-        />
-      ),
-      name: "React Native",
-      expertise: "Advanced",
-      level: 80,
-      whileInView: { opacity: 1, y: 0 },
-      initial: { opacity: 0, y: 30 },
-      description: "To develop cross-platform mobile applications.",
-    },
-    {
-      icon: <img src={NodeIcon} style={{ width: "60%" }} alt="Node.js" />,
-      name: "Node.js",
-      expertise: "Intermediate",
-      level: 60,
-      whileInView: { opacity: 1, y: 0 },
-      initial: { opacity: 0, y: -30 },
-      description:
-        "To build scalable backend APIs and server-side applications.",
-    },
-    {
-      icon: <img src={MongoIcon} style={{ width: "60%" }} alt="MongoDB" />,
-      name: "MongoDB",
-      expertise: "Intermediate",
-      level: 50,
-      whileInView: { opacity: 1, y: 0 },
-      initial: { opacity: 0, y: 30 },
-      description:
-        "To store and manage data in a NoSQL database for flexible schema needs.",
-    },
-    {
-      icon: <img src={ExpressIcon} style={{ width: "60%" }} alt="MongoDB" />,
-      name: "ExpressJS",
-      expertise: "Intermediate",
-      level: 60,
-      whileInView: { opacity: 1, y: 0 },
-      initial: { opacity: 0, y: -30 },
-      description:
-        "For building fast, scalable web applications and APIs in Node.js.",
-    },
-    {
-      icon: <img src={NextjsIcon} style={{ width: "60%" }} alt="MongoDB" />,
-      name: "NextJS",
-      expertise: "Beginner",
-      level: 40,
-      whileInView: { opacity: 1, y: 0 },
-      initial: { opacity: 0, y: 30 },
-      description:
-        "To build React applications with server-side rendering and static site generation.",
-    },
-    {
-      icon: <img src={ReduxIcon} style={{ width: "60%" }} alt="MongoDB" />,
-      name: "Redux/Redux Toolkit",
-      expertise: "Intermediate",
-      level: 60,
-      whileInView: { opacity: 1, y: 0 },
-      initial: { opacity: 0, y: -30 },
-      description:
-        "For simplifying state management in React applications with Redux.",
-    },
-    {
-      icon: (
-        <img src={JavaScriptIcon} style={{ width: "60%" }} alt="JavaScript" />
-      ),
-      name: "JavaScript",
-      expertise: "Advanced",
-      level: 90,
-      whileInView: { opacity: 1, y: 0 },
-      initial: { opacity: 0, y: 30 },
-      description:
-        "To handle client-side functionality and interactive web features.",
-    },
-    {
-      icon: <img src={HtmlIcon} style={{ width: "60%" }} alt="HTML5" />,
-      name: "HTML5",
-      expertise: "Advanced",
-      level: 90,
-      whileInView: { opacity: 1, y: 0 },
-      initial: { opacity: 0, y: -30 },
-      description: "To structure the content of web pages.",
-    },
-    {
-      icon: <img src={CssIcon} style={{ width: "60%" }} alt="CSS3" />,
-      name: "CSS3",
-      expertise: "Advanced",
-      level: 80,
-      whileInView: { opacity: 1, y: 0 },
-      initial: { opacity: 0, y: 20 },
-      description: "To style and layout web pages for an appealing design.",
-    },
-    {
-      icon: <img src={GitIcon} style={{ width: "60%" }} alt="Git" />,
-      name: "GitHub",
-      level: 60,
-      expertise: "Intermediate",
-      whileInView: { opacity: 1, y: 0 },
-      initial: { opacity: 0, y: -30 },
-      description:
-        "To manage version control and collaborate on code efficiently.",
-    },
+  // Line 1 (Moving Left): Varied mix of Frontend, Cloud & Backend
+  const line1 = [
+    { name: "React", icon: ReactIcon, category: "Frontend" },
+    { name: "Docker", icon: DockerIcon, category: "DevOps" },
+    { name: "Node.js", icon: NodeIcon, category: "Backend" },
+    { name: "Firebase", icon: FirebaseIcon, category: "Cloud" },
+    { name: "Next.js", icon: NextjsIcon, category: "Fullstack" },
+    { name: "PostgreSQL", icon: PostgresIcon, category: "Database" },
+    { name: "JavaScript", icon: JavaScriptIcon, category: "Language" },
+    { name: "GitLab", icon: GitlabIcon, category: "CI/CD" },
+    { name: "React Native", icon: ReactNativeIcon, category: "Mobile" },
+    { name: "MySQL", icon: MySQLIcon, category: "Database" },
+    { name: "Expo", icon: ExpoIcon, category: "Mobile" },
+    { name: "Redux", icon: ReduxIcon, category: "State Mgmt" },
+  ];
+
+  // Line 2 (Moving Right): Varied mix of DBs, Tools & Frameworks
+  const line2 = [
+    { name: "MongoDB", icon: MongoIcon, category: "NoSQL DB" },
+    { name: "React", icon: ReactIcon, category: "Frontend" },
+    { name: "Express.js", icon: ExpressIcon, category: "Backend" },
+    { name: "Jira", icon: JiraIcon, category: "Agile Mgmt" },
+    { name: "Bitbucket", icon: BitBucketIcon, category: "Git Hosting" },
+    { name: "Firebase", icon: FirebaseIcon, category: "BaaS" },
+    { name: "CSS3", icon: CssIcon, category: "Styling" },
+    { name: "Docker", icon: DockerIcon, category: "Container" },
+    { name: "HTML5", icon: HtmlIcon, category: "Markup" },
+    { name: "Next.js", icon: NextjsIcon, category: "Framework" },
+    { name: "GitHub", icon: GitIcon, category: "Version Control" },
+    { name: "PostgreSQL", icon: PostgresIcon, category: "SQL DB" },
+  ];
+
+  // Line 3 (Moving Left): Varied mix of Mobile, Core Tech & Collaboration
+  const line3 = [
+    { name: "Expo", icon: ExpoIcon, category: "Mobile App" },
+    { name: "JavaScript", icon: JavaScriptIcon, category: "Core JS" },
+    { name: "MySQL", icon: MySQLIcon, category: "Relational DB" },
+    { name: "React Native", icon: ReactNativeIcon, category: "Cross-Platform" },
+    { name: "GitLab", icon: GitlabIcon, category: "DevOps" },
+    { name: "Node.js", icon: NodeIcon, category: "Runtime" },
+    { name: "Redux", icon: ReduxIcon, category: "Store" },
+    { name: "Docker", icon: DockerIcon, category: "Deployment" },
+    { name: "Bitbucket", icon: BitBucketIcon, category: "VCS" },
+    { name: "Firebase", icon: FirebaseIcon, category: "Auth & DB" },
+    { name: "Express.js", icon: ExpressIcon, category: "REST API" },
+    { name: "Jira", icon: JiraIcon, category: "Scrum" },
   ];
 
   return (
-    <div
-      id="skills"
-      style={{ paddingBottom: "3%", paddingTop: "2%", background: "#f9fafb", overflow: "hidden", }}
-    >
+    <section id="skills" className="skills-section">
       <div className="section-title">
         <motion.div
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: -30 }}
-          viewport={{ amount:0.2, once: true }} // Once visible, it will trigger animation only once
-          transition={{ duration: 0.5, delay: 0.4 }}
+          viewport={{ amount: 0.2, once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
         >
           <h2>My Skills</h2>
         </motion.div>
         <motion.div
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: 30 }}
-          viewport={{ amount:0.2, once: true }} // Once visible, it will trigger animation only once
-          transition={{ duration: 0.5, delay: 0.4 }}
+          viewport={{ amount: 0.2, once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
         >
           <div className="divider"></div>
         </motion.div>
+        <motion.p
+          whileInView={{ opacity: 1, y: 0 }}
+          initial={{ opacity: 0, y: 20 }}
+          viewport={{ amount: 0.2, once: true }}
+          transition={{ duration: 0.5, delay: 0.3 }}
+        >
+          Technologies, frameworks, databases, and DevOps tools I leverage to build scalable, high-performance software.
+        </motion.p>
       </div>
 
-      <div className="cards-container">
-        {skills.map((skill, index) => (
-          <motion.div
-            whileInView={skill.whileInView}
-            initial={skill.initial}
-            viewport={{ amount:0.2, once: true }} // Once visible, it will trigger animation only once
-            transition={{ duration: 0.5, delay: 0.4 }}
-            key={index}
+      <div className="skills-marquee-container">
+        {/* Line 1: Moving Left */}
+        <div className="skills-marquee-row">
+          <div
+            className="skills-marquee-track skills-marquee-track--left"
+            style={{ "--duration": "38s" }}
           >
-            <div className="card" >
-              <div
-                style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
-                  flexDirection: "column",
-                }}
-              >
-                <div className="card__icon" style={{ textAlign: "center" }}>
-                  {skill.icon}
-                </div>
-                <h5>{skill.name}</h5>
-              </div>
-              <div className="card__content">
-                <p className="card__title">{skill.name}</p>
-                <p className="card__description">
-                  <span>{skill.description}</span>
-                  <p>
-                    Skill Level(%) : <b>{skill.expertise}</b>
-                  </p>
-                  0{" "}
-                  <progress
-                    value={skill.level}
-                    max={100}
-                    style={{ width: "80%" }}
-                  />{" "}
-                  100
-                </p>
-              </div>
-            </div>
-          </motion.div>
-        ))}
+            {line1.map((skill, idx) => (
+              <SkillCard key={`l1-a-${idx}-${skill.name}`} {...skill} />
+            ))}
+          </div>
+          <div
+            className="skills-marquee-track skills-marquee-track--left"
+            style={{ "--duration": "38s" }}
+            aria-hidden="true"
+          >
+            {line1.map((skill, idx) => (
+              <SkillCard key={`l1-b-${idx}-${skill.name}`} {...skill} />
+            ))}
+          </div>
+        </div>
+
+        {/* Line 2: Moving Right */}
+        <div className="skills-marquee-row">
+          <div
+            className="skills-marquee-track skills-marquee-track--right"
+            style={{ "--duration": "44s" }}
+          >
+            {line2.map((skill, idx) => (
+              <SkillCard key={`l2-a-${idx}-${skill.name}`} {...skill} />
+            ))}
+          </div>
+          <div
+            className="skills-marquee-track skills-marquee-track--right"
+            style={{ "--duration": "44s" }}
+            aria-hidden="true"
+          >
+            {line2.map((skill, idx) => (
+              <SkillCard key={`l2-b-${idx}-${skill.name}`} {...skill} />
+            ))}
+          </div>
+        </div>
+
+        {/* Line 3: Moving Left */}
+        <div className="skills-marquee-row">
+          <div
+            className="skills-marquee-track skills-marquee-track--left"
+            style={{ "--duration": "40s" }}
+          >
+            {line3.map((skill, idx) => (
+              <SkillCard key={`l3-a-${idx}-${skill.name}`} {...skill} />
+            ))}
+          </div>
+          <div
+            className="skills-marquee-track skills-marquee-track--left"
+            style={{ "--duration": "40s" }}
+            aria-hidden="true"
+          >
+            {line3.map((skill, idx) => (
+              <SkillCard key={`l3-b-${idx}-${skill.name}`} {...skill} />
+            ))}
+          </div>
+        </div>
       </div>
-    </div>
+    </section>
   );
 };
 

@@ -1,126 +1,185 @@
-import React, { useState, useEffect } from "react";
-import { Link } from "react-scroll";
+import React, { useState, useEffect, useRef } from "react";
+import { Link, scroller } from "react-scroll";
 import { Menu, Moon, Sun, X } from "lucide-react";
+import { motion, AnimatePresence } from "framer-motion";
+import { useTheme } from "../context/ThemeContext";
+import GooeyNav from "./GooeyNav";
 import "./Navbar.css";
 import tune from "../assets/notify.mp3";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [hidden, setHidden] = useState(false);
-  const [lastScrollY, setLastScrollY] = useState(0);
-
-  useEffect(() => {
-    // For hiding Navbar on scroll down
-    // const handleScroll = () => {
-    //   const currentScrollY = window.scrollY;
-    //   if (currentScrollY > lastScrollY && currentScrollY > 150) {
-    //     setHidden(true);
-    //   } else {
-    //     setHidden(false);
-    //   }
-    //   setLastScrollY(currentScrollY);
-    // };
-
-    // For consistently displaying Navbar
-    const handleScroll = () => {
-      // Only update lastScrollY without hiding the navbar
-      setLastScrollY(window.scrollY);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, [lastScrollY]);
+  const [activeIndex, setActiveIndex] = useState(0);
+  const { isDark, toggleTheme } = useTheme();
+  const isClickScrolling = useRef(false);
 
   const navItems = [
-    { name: "Home", to: "home" },
-    { name: "About", to: "about" },
-    { name: "Experience", to: "experience" },
-    { name: "My Skills", to: "skills" },
-    { name: "Services", to: "services" },
-    { name: "Projects", to: "projects" },
-    { name: "Contact", to: "contact" },
+    { label: "Home", target: "home" },
+    { label: "About", target: "about" },
+    { label: "Experience", target: "experience" },
+    { label: "Skills", target: "skills" },
+    { label: "Services", target: "services" },
+    { label: "Projects", target: "projects" },
+    { label: "Contact", target: "contact" },
   ];
-  const audio = new Audio(tune);
-  audio.loop = true;
+
+  const audio = useRef(new Audio(tune)).current;
+
+  const handleSelect = (index, item) => {
+    setActiveIndex(index);
+    isClickScrolling.current = true;
+    try {
+      audio.loop = false;
+      audio.currentTime = 0;
+      audio.play().catch(() => {});
+    } catch (e) {}
+
+    scroller.scrollTo(item.target, {
+      smooth: true,
+      offset: -85,
+      duration: 500,
+    });
+
+    setTimeout(() => {
+      isClickScrolling.current = false;
+    }, 600);
+  };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (isClickScrolling.current) return;
+
+      // When near the very bottom of the page, activate the last section (Contact)
+      if (
+        window.innerHeight + Math.round(window.scrollY) >=
+        document.documentElement.scrollHeight - 60
+      ) {
+        setActiveIndex((prev) => (prev !== navItems.length - 1 ? navItems.length - 1 : prev));
+        return;
+      }
+
+      const scrollPosition = window.scrollY + 200;
+      for (let i = navItems.length - 1; i >= 0; i--) {
+        const section = document.getElementById(navItems[i].target);
+        if (section && section.offsetTop <= scrollPosition) {
+          setActiveIndex((prev) => (prev !== i ? i : prev));
+          break;
+        }
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
-    <nav
-      className="navbar"
-      style={{
-        transform: hidden ? "translateY(-100%)" : "translateY(0)",
-      }}
-    >
-      <div
-        className="navbar-container"
-        style={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          height: "64px",
-          padding: "0 20px",
-          maxWidth: "1200px",
-          margin: "0 auto",
-        }}
-      >
-        <Link to="home" className="navbar-logo">
+    <header className="navbar-wrapper">
+      <nav className="navbar-pill">
+        <Link
+          to="home"
+          spy={true}
+          smooth={true}
+          offset={-85}
+          duration={500}
+          className="navbar-logo"
+          onClick={() => setActiveIndex(0)}
+        >
           Jahan Zaib Inc.
         </Link>
 
-        <ul className="navbar-menu">
-          {navItems.map((item) => (
-            <li key={item.name}>
-              <Link
-                onClick={() => {
-                  audio.loop = false;
-                  audio.play();
-                }}
-                to={item.to}
-                spy={true}
-                smooth={true}
-                offset={-64}
-                duration={500}
-                className="nav-link"
-              >
-                {item.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
+        <div className="navbar-gooey-wrapper">
+          <GooeyNav
+            items={navItems}
+            activeIndex={activeIndex}
+            onChange={handleSelect}
+            theme={isDark ? "dark" : "light"}
+            size="md"
+            frame={false}
+            color={isDark ? "#8a5cff" : "#6b46c1"}
+            activeTextColor="#ffffff"
+            colors={
+              isDark
+                ? ["#22e6ff", "#8a5cff", "#ff3d9a"]
+                : ["#0284c7", "#7c3aed", "#ec4899"]
+            }
+            particleCount={14}
+            spread={48}
+            animationTime={550}
+            timeVariance={250}
+            gooeyness={0.5}
+            wobble={0.45}
+            hoverEffect={true}
+          />
+        </div>
 
-        <button
-          className="navbar-toggle"
-          // style={{ cursor: "pointer !important", zIndex: 999999 }}
-          onClick={() => setIsOpen(!isOpen)}
-        >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
-        </button>
-      </div>
+        <div className="navbar-right">
+          {/* Animated Dark/Light Toggle Button */}
+          <button
+            className="theme-toggle"
+            onClick={toggleTheme}
+            aria-label="Toggle dark/light mode"
+            title={isDark ? "Switch to light mode" : "Switch to dark mode"}
+          >
+            <AnimatePresence mode="wait" initial={false}>
+              {isDark ? (
+                <motion.span
+                  key="sun"
+                  initial={{ rotate: -90, opacity: 0, scale: 0.5 }}
+                  animate={{ rotate: 0, opacity: 1, scale: 1 }}
+                  exit={{ rotate: 90, opacity: 0, scale: 0.5 }}
+                  transition={{ duration: 0.35, ease: "easeInOut" }}
+                  style={{ display: "flex" }}
+                >
+                  <Sun size={19} />
+                </motion.span>
+              ) : (
+                <motion.span
+                  key="moon"
+                  initial={{ rotate: 90, opacity: 0, scale: 0.5 }}
+                  animate={{ rotate: 0, opacity: 1, scale: 1 }}
+                  exit={{ rotate: -90, opacity: 0, scale: 0.5 }}
+                  transition={{ duration: 0.35, ease: "easeInOut" }}
+                  style={{ display: "flex" }}
+                >
+                  <Moon size={19} />
+                </motion.span>
+              )}
+            </AnimatePresence>
+          </button>
 
+          <button
+            className="navbar-toggle"
+            onClick={() => setIsOpen(!isOpen)}
+            aria-label="Toggle navigation menu"
+          >
+            {isOpen ? <X size={22} /> : <Menu size={22} />}
+          </button>
+        </div>
+      </nav>
+
+      {/* Floating Glass Mobile Dropdown Card */}
       {isOpen && (
-        <div className="mobile-menu">
+        <div className="mobile-menu-pill">
           <ul>
-            {navItems.map((item) => (
-              <li key={item.name}>
-                <Link
-                  to={item.to}
-                  spy={true}
-                  smooth={true}
-                  offset={-64}
-                  duration={500}
-                  onClick={() => {
+            {navItems.map((item, index) => (
+              <li key={item.target}>
+                <a
+                  href={`#${item.target}`}
+                  className={index === activeIndex ? "active" : ""}
+                  onClick={(e) => {
+                    e.preventDefault();
                     setIsOpen(false);
-                    audio.loop = false;
-                    audio.play();
+                    handleSelect(index, item);
                   }}
                 >
-                  {item.name}
-                </Link>
+                  {item.label}
+                </a>
               </li>
             ))}
           </ul>
         </div>
       )}
-    </nav>
+    </header>
   );
 };
 

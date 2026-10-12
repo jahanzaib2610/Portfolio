@@ -1,0 +1,546 @@
+- generic [ref=f6e3]:
+  - banner:
+    - navigation [ref=f6e4]:
+      - generic [ref=f6e5] [cursor=pointer]: Jahan Zaib Inc.
+      - navigation [ref=f6e7]:
+        - generic [ref=f6e8]:
+          - list [ref=f6e9]:
+            - listitem [ref=f6e10]:
+              - button "Home" [ref=f6e11] [cursor=pointer]
+            - listitem [ref=f6e13]:
+              - button "About" [ref=f6e14] [cursor=pointer]
+            - listitem [ref=f6e16]:
+              - button "Experience" [ref=f6e17] [cursor=pointer]
+            - listitem [ref=f6e19]:
+              - button "Skills" [ref=f6e20] [cursor=pointer]
+            - listitem [ref=f6e22]:
+              - button "Services" [ref=f6e23] [cursor=pointer]
+            - listitem [ref=f6e25]:
+              - button "Projects" [ref=f6e26] [cursor=pointer]
+            - listitem [ref=f6e28]:
+              - button "Contact" [ref=f6e29] [cursor=pointer]
+          - list [aria-hidden]:
+            - listitem:
+              - generic: Home
+            - listitem:
+              - generic: About
+            - listitem:
+              - generic: Experience
+            - listitem:
+              - generic: Skills
+            - listitem:
+              - generic: Services
+            - listitem:
+              - generic: Projects
+            - listitem:
+              - generic: Contact
+      - button "Toggle dark/light mode" [ref=f6e32] [cursor=pointer]
+  - generic [ref=f6e39]:
+    - heading "Hi, I'm Jahan Zaib" [level=2] [ref=f6e40]
+    - heading "and I'm a Front" [level=3] [ref=f6e41]: and I'm a Front|
+    - generic [ref=f6e42]: More About Me...
+  - generic [ref=f6e47]:
+    - generic [ref=f6e48]:
+      - heading "About Me" [level=2] [ref=f6e50]
+      - paragraph [ref=f6e54]: Passionate full-stack developer with a love for building dynamic, responsive, and user-centric web and mobile applications. With experience in React, React Native, MongoDB, Express.js, and Node.js, I specialize in creating seamless user experiences and efficient back-end solutions. I am skilled in developing robust cross-platform mobile apps for both Android and iOS, leveraging React Native to ensure high performance and native-like functionality. My expertise also includes designing intuitive user interfaces and delivering scalable solutions that meet modern development standards. Dedicated to turning innovative ideas into functional and visually appealing applications for web and mobile platforms.
+    - generic [ref=f6e55]:
+      - generic [ref=f6e56]: My Skills
+      - generic [ref=f6e60]: My Projects
+      - generic [ref=f6e64]: Hire me Now
+  - generic [ref=f6e68]:
+    - heading "Experience" [level=2] [ref=f6e70]
+    - generic [ref=f6e74]:
+      - generic [ref=f6e77]:
+        - heading "MERN Stack Developer" [level=3] [ref=f6e78]
+        - paragraph [ref=f6e79]: Axis Cyber Technologies, Lahore
+        - paragraph [ref=f6e80]: Apr 2025 - Jun 2026
+        - paragraph [ref=f6e81]: Worked as a MERN Stack developer.
+      - generic [ref=f6e84]:
+        - heading "ReactJS/ NextJS Developer" [level=3] [ref=f6e85]
+        - paragraph [ref=f6e86]: Core Edge Solutions LTD, Lahore
+        - paragraph [ref=f6e87]: Feb 2025 - Apr 2025
+        - paragraph [ref=f6e88]: Worked as a ReactJS/ NextJS developer.
+      - generic [ref=f6e91]:
+        - heading "Frontend Developer" [level=3] [ref=f6e92]
+        - paragraph [ref=f6e93]: Idea Section, Lahore
+        - paragraph [ref=f6e94]: Feb 2024 - Feb 2025
+        - paragraph [ref=f6e95]: Worked as a frontend developer in a startup company.
+  - generic [ref=f6e96]:
+    - generic [ref=f6e97]:
+      - heading "My Skills" [level=2] [ref=f6e99]
+      - paragraph [ref=f6e102]: Technologies, frameworks, databases, and DevOps tools I leverage to build scalable, high-performance software.
+    - generic [ref=f6e103]:
+      - generic [ref=f6e104]:
+        - generic [ref=f6e105]:
+          - generic [ref=f6e106] [cursor=pointer]:
+            - img "React" [ref=f6e108]
+            - generic [ref=f6e109]:
+              - generic [ref=f6e110]: React
+              - generic [ref=f6e111]: Frontend
+          - generic [ref=f6e112] [cursor=pointer]:
+            - img "Docker" [ref=f6e114]
+            - generic [ref=f6e115]:
+              - generic [ref=f6e116]: Docker
+              - generic [ref=f6e117]: DevOps
+          - generic [ref=f6e118] [cursor=pointer]:
+            - img "Node.js" [ref=f6e120]
+            - generic [ref=f6e121]:
+              - generic [ref=f6e122]: Node.js
+              - generic [ref=f6e123]: Backend
+          - generic [ref=f6e124] [cursor=pointer]:
+            - img "Firebase" [ref=f6e126]
+            - generic [ref=f6e127]:
+              - generic [ref=f6e128]: Firebase
+              - generic [ref=f6e129]: Cloud
+          - generic [ref=f6e130] [cursor=pointer]:
+            - img "Next.js" [ref=f6e132]
+            - generic [ref=f6e133]:
+              - generic [ref=f6e134]: Next.js
+              - generic [ref=f6e135]: Fullstack
+          - generic [ref=f6e136] [cursor=pointer]:
+            - img "PostgreSQL" [ref=f6e138]
+            - generic [ref=f6e139]:
+              - generic [ref=f6e140]: PostgreSQL
+              - generic [ref=f6e141]: Database
+          - generic [ref=f6e142] [cursor=pointer]:
+            - img "JavaScript" [ref=f6e144]
+            - generic [ref=f6e145]:
+              - generic [ref=f6e146]: JavaScript
+              - generic [ref=f6e147]: Language
+          - generic [ref=f6e148] [cursor=pointer]:
+            - img "GitLab" [ref=f6e150]
+            - generic [ref=f6e151]:
+              - generic [ref=f6e152]: GitLab
+              - generic [ref=f6e153]: CI/CD
+          - generic [ref=f6e154] [cursor=pointer]:
+            - img "React Native" [ref=f6e156]
+            - generic [ref=f6e157]:
+              - generic [ref=f6e158]: React Native
+              - generic [ref=f6e159]: Mobile
+          - generic [ref=f6e160] [cursor=pointer]:
+            - img "MySQL" [ref=f6e162]
+            - generic [ref=f6e163]:
+              - generic [ref=f6e164]: MySQL
+              - generic [ref=f6e165]: Database
+          - generic [ref=f6e166] [cursor=pointer]:
+            - img "Expo" [ref=f6e168]
+            - generic [ref=f6e169]:
+              - generic [ref=f6e170]: Expo
+              - generic [ref=f6e171]: Mobile
+          - generic [ref=f6e172] [cursor=pointer]:
+            - img "Redux" [ref=f6e174]
+            - generic [ref=f6e175]:
+              - generic [ref=f6e176]: Redux
+              - generic [ref=f6e177]: State Mgmt
+        - generic [aria-hidden] [ref=f6e178]:
+          - generic [ref=f6e182] [cursor=pointer]:
+            - generic [ref=f6e183]: React
+            - generic [ref=f6e184]: Frontend
+          - generic [ref=f6e188] [cursor=pointer]:
+            - generic [ref=f6e189]: Docker
+            - generic [ref=f6e190]: DevOps
+          - generic [ref=f6e194] [cursor=pointer]:
+            - generic [ref=f6e195]: Node.js
+            - generic [ref=f6e196]: Backend
+          - generic [ref=f6e200] [cursor=pointer]:
+            - generic [ref=f6e201]: Firebase
+            - generic [ref=f6e202]: Cloud
+          - generic [ref=f6e206] [cursor=pointer]:
+            - generic [ref=f6e207]: Next.js
+            - generic [ref=f6e208]: Fullstack
+          - generic [ref=f6e212] [cursor=pointer]:
+            - generic [ref=f6e213]: PostgreSQL
+            - generic [ref=f6e214]: Database
+          - generic [ref=f6e218] [cursor=pointer]:
+            - generic [ref=f6e219]: JavaScript
+            - generic [ref=f6e220]: Language
+          - generic [ref=f6e224] [cursor=pointer]:
+            - generic [ref=f6e225]: GitLab
+            - generic [ref=f6e226]: CI/CD
+          - generic [ref=f6e230] [cursor=pointer]:
+            - generic [ref=f6e231]: React Native
+            - generic [ref=f6e232]: Mobile
+          - generic [ref=f6e236] [cursor=pointer]:
+            - generic [ref=f6e237]: MySQL
+            - generic [ref=f6e238]: Database
+          - generic [ref=f6e242] [cursor=pointer]:
+            - generic [ref=f6e243]: Expo
+            - generic [ref=f6e244]: Mobile
+          - generic [ref=f6e248] [cursor=pointer]:
+            - generic [ref=f6e249]: Redux
+            - generic [ref=f6e250]: State Mgmt
+      - generic [ref=f6e251]:
+        - generic [ref=f6e252]:
+          - generic [ref=f6e253] [cursor=pointer]:
+            - img "MongoDB" [ref=f6e255]
+            - generic [ref=f6e256]:
+              - generic [ref=f6e257]: MongoDB
+              - generic [ref=f6e258]: NoSQL DB
+          - generic [ref=f6e259] [cursor=pointer]:
+            - img "React" [ref=f6e261]
+            - generic [ref=f6e262]:
+              - generic [ref=f6e263]: React
+              - generic [ref=f6e264]: Frontend
+          - generic [ref=f6e265] [cursor=pointer]:
+            - img "Express.js" [ref=f6e267]
+            - generic [ref=f6e268]:
+              - generic [ref=f6e269]: Express.js
+              - generic [ref=f6e270]: Backend
+          - generic [ref=f6e271] [cursor=pointer]:
+            - img "Jira" [ref=f6e273]
+            - generic [ref=f6e274]:
+              - generic [ref=f6e275]: Jira
+              - generic [ref=f6e276]: Agile Mgmt
+          - generic [ref=f6e277] [cursor=pointer]:
+            - img "Bitbucket" [ref=f6e279]
+            - generic [ref=f6e280]:
+              - generic [ref=f6e281]: Bitbucket
+              - generic [ref=f6e282]: Git Hosting
+          - generic [ref=f6e283] [cursor=pointer]:
+            - img "Firebase" [ref=f6e285]
+            - generic [ref=f6e286]:
+              - generic [ref=f6e287]: Firebase
+              - generic [ref=f6e288]: BaaS
+          - generic [ref=f6e289] [cursor=pointer]:
+            - img "CSS3" [ref=f6e291]
+            - generic [ref=f6e292]:
+              - generic [ref=f6e293]: CSS3
+              - generic [ref=f6e294]: Styling
+          - generic [ref=f6e295] [cursor=pointer]:
+            - img "Docker" [ref=f6e297]
+            - generic [ref=f6e298]:
+              - generic [ref=f6e299]: Docker
+              - generic [ref=f6e300]: Container
+          - generic [ref=f6e301] [cursor=pointer]:
+            - img "HTML5" [ref=f6e303]
+            - generic [ref=f6e304]:
+              - generic [ref=f6e305]: HTML5
+              - generic [ref=f6e306]: Markup
+          - generic [ref=f6e307] [cursor=pointer]:
+            - img "Next.js" [ref=f6e309]
+            - generic [ref=f6e310]:
+              - generic [ref=f6e311]: Next.js
+              - generic [ref=f6e312]: Framework
+          - generic [ref=f6e313] [cursor=pointer]:
+            - img "GitHub" [ref=f6e315]
+            - generic [ref=f6e316]:
+              - generic [ref=f6e317]: GitHub
+              - generic [ref=f6e318]: Version Control
+          - generic [ref=f6e319] [cursor=pointer]:
+            - img "PostgreSQL" [ref=f6e321]
+            - generic [ref=f6e322]:
+              - generic [ref=f6e323]: PostgreSQL
+              - generic [ref=f6e324]: SQL DB
+        - generic [aria-hidden] [ref=f6e325]:
+          - generic [ref=f6e329] [cursor=pointer]:
+            - generic [ref=f6e330]: MongoDB
+            - generic [ref=f6e331]: NoSQL DB
+          - generic [ref=f6e335] [cursor=pointer]:
+            - generic [ref=f6e336]: React
+            - generic [ref=f6e337]: Frontend
+          - generic [ref=f6e341] [cursor=pointer]:
+            - generic [ref=f6e342]: Express.js
+            - generic [ref=f6e343]: Backend
+          - generic [ref=f6e347] [cursor=pointer]:
+            - generic [ref=f6e348]: Jira
+            - generic [ref=f6e349]: Agile Mgmt
+          - generic [ref=f6e353] [cursor=pointer]:
+            - generic [ref=f6e354]: Bitbucket
+            - generic [ref=f6e355]: Git Hosting
+          - generic [ref=f6e359] [cursor=pointer]:
+            - generic [ref=f6e360]: Firebase
+            - generic [ref=f6e361]: BaaS
+          - generic [ref=f6e365] [cursor=pointer]:
+            - generic [ref=f6e366]: CSS3
+            - generic [ref=f6e367]: Styling
+          - generic [ref=f6e371] [cursor=pointer]:
+            - generic [ref=f6e372]: Docker
+            - generic [ref=f6e373]: Container
+          - generic [ref=f6e377] [cursor=pointer]:
+            - generic [ref=f6e378]: HTML5
+            - generic [ref=f6e379]: Markup
+          - generic [ref=f6e383] [cursor=pointer]:
+            - generic [ref=f6e384]: Next.js
+            - generic [ref=f6e385]: Framework
+          - generic [ref=f6e389] [cursor=pointer]:
+            - generic [ref=f6e390]: GitHub
+            - generic [ref=f6e391]: Version Control
+          - generic [ref=f6e395] [cursor=pointer]:
+            - generic [ref=f6e396]: PostgreSQL
+            - generic [ref=f6e397]: SQL DB
+      - generic [ref=f6e398]:
+        - generic [ref=f6e399]:
+          - generic [ref=f6e400] [cursor=pointer]:
+            - img "Expo" [ref=f6e402]
+            - generic [ref=f6e403]:
+              - generic [ref=f6e404]: Expo
+              - generic [ref=f6e405]: Mobile App
+          - generic [ref=f6e406] [cursor=pointer]:
+            - img "JavaScript" [ref=f6e408]
+            - generic [ref=f6e409]:
+              - generic [ref=f6e410]: JavaScript
+              - generic [ref=f6e411]: Core JS
+          - generic [ref=f6e412] [cursor=pointer]:
+            - img "MySQL" [ref=f6e414]
+            - generic [ref=f6e415]:
+              - generic [ref=f6e416]: MySQL
+              - generic [ref=f6e417]: Relational DB
+          - generic [ref=f6e418] [cursor=pointer]:
+            - img "React Native" [ref=f6e420]
+            - generic [ref=f6e421]:
+              - generic [ref=f6e422]: React Native
+              - generic [ref=f6e423]: Cross-Platform
+          - generic [ref=f6e424] [cursor=pointer]:
+            - img "GitLab" [ref=f6e426]
+            - generic [ref=f6e427]:
+              - generic [ref=f6e428]: GitLab
+              - generic [ref=f6e429]: DevOps
+          - generic [ref=f6e430] [cursor=pointer]:
+            - img "Node.js" [ref=f6e432]
+            - generic [ref=f6e433]:
+              - generic [ref=f6e434]: Node.js
+              - generic [ref=f6e435]: Runtime
+          - generic [ref=f6e436] [cursor=pointer]:
+            - img "Redux" [ref=f6e438]
+            - generic [ref=f6e439]:
+              - generic [ref=f6e440]: Redux
+              - generic [ref=f6e441]: Store
+          - generic [ref=f6e442] [cursor=pointer]:
+            - img "Docker" [ref=f6e444]
+            - generic [ref=f6e445]:
+              - generic [ref=f6e446]: Docker
+              - generic [ref=f6e447]: Deployment
+          - generic [ref=f6e448] [cursor=pointer]:
+            - img "Bitbucket" [ref=f6e450]
+            - generic [ref=f6e451]:
+              - generic [ref=f6e452]: Bitbucket
+              - generic [ref=f6e453]: VCS
+          - generic [ref=f6e454] [cursor=pointer]:
+            - img "Firebase" [ref=f6e456]
+            - generic [ref=f6e457]:
+              - generic [ref=f6e458]: Firebase
+              - generic [ref=f6e459]: Auth & DB
+          - generic [ref=f6e460] [cursor=pointer]:
+            - img "Express.js" [ref=f6e462]
+            - generic [ref=f6e463]:
+              - generic [ref=f6e464]: Express.js
+              - generic [ref=f6e465]: REST API
+          - generic [ref=f6e466] [cursor=pointer]:
+            - img "Jira" [ref=f6e468]
+            - generic [ref=f6e469]:
+              - generic [ref=f6e470]: Jira
+              - generic [ref=f6e471]: Scrum
+        - generic [aria-hidden] [ref=f6e472]:
+          - generic [ref=f6e476] [cursor=pointer]:
+            - generic [ref=f6e477]: Expo
+            - generic [ref=f6e478]: Mobile App
+          - generic [ref=f6e482] [cursor=pointer]:
+            - generic [ref=f6e483]: JavaScript
+            - generic [ref=f6e484]: Core JS
+          - generic [ref=f6e488] [cursor=pointer]:
+            - generic [ref=f6e489]: MySQL
+            - generic [ref=f6e490]: Relational DB
+          - generic [ref=f6e494] [cursor=pointer]:
+            - generic [ref=f6e495]: React Native
+            - generic [ref=f6e496]: Cross-Platform
+          - generic [ref=f6e500] [cursor=pointer]:
+            - generic [ref=f6e501]: GitLab
+            - generic [ref=f6e502]: DevOps
+          - generic [ref=f6e506] [cursor=pointer]:
+            - generic [ref=f6e507]: Node.js
+            - generic [ref=f6e508]: Runtime
+          - generic [ref=f6e512] [cursor=pointer]:
+            - generic [ref=f6e513]: Redux
+            - generic [ref=f6e514]: Store
+          - generic [ref=f6e518] [cursor=pointer]:
+            - generic [ref=f6e519]: Docker
+            - generic [ref=f6e520]: Deployment
+          - generic [ref=f6e524] [cursor=pointer]:
+            - generic [ref=f6e525]: Bitbucket
+            - generic [ref=f6e526]: VCS
+          - generic [ref=f6e530] [cursor=pointer]:
+            - generic [ref=f6e531]: Firebase
+            - generic [ref=f6e532]: Auth & DB
+          - generic [ref=f6e536] [cursor=pointer]:
+            - generic [ref=f6e537]: Express.js
+            - generic [ref=f6e538]: REST API
+          - generic [ref=f6e542] [cursor=pointer]:
+            - generic [ref=f6e543]: Jira
+            - generic [ref=f6e544]: Scrum
+  - generic [ref=f6e546]:
+    - generic [ref=f6e547]:
+      - heading "My Services" [level=2] [ref=f6e549]
+      - paragraph [ref=f6e553]: I offer a wide range of services to help bring your digital ideas to life
+    - generic [ref=f6e554]:
+      - generic [ref=f6e556]:
+        - heading "Website Development" [level=3] [ref=f6e560]
+        - paragraph [ref=f6e561]: Creating responsive and visually appealing websites tailored to your needs.
+      - generic [ref=f6e563]:
+        - heading "Mobile App Development" [level=3] [ref=f6e567]
+        - paragraph [ref=f6e568]: Building high-quality cross-platform mobile applications using modern frameworks.
+      - generic [ref=f6e570]:
+        - heading "iOS App Development" [level=3] [ref=f6e574]
+        - paragraph [ref=f6e575]: Designing and developing smooth and efficient iOS applications.
+      - generic [ref=f6e577]:
+        - heading "Android App Development" [level=3] [ref=f6e581]
+        - paragraph [ref=f6e582]: Creating scalable and feature-rich Android applications.
+      - generic [ref=f6e584]:
+        - heading "Front-end Development" [level=3] [ref=f6e588]
+        - paragraph [ref=f6e589]: Building interactive and dynamic user interfaces with modern front-end frameworks.
+      - generic [ref=f6e591]:
+        - heading "Back-end Development" [level=3] [ref=f6e595]
+        - paragraph [ref=f6e596]: Developing secure and scalable backend solutions to power your applications.
+  - generic [ref=f6e598]:
+    - generic [ref=f6e599]:
+      - heading "My Projects" [level=2] [ref=f6e601]
+      - paragraph [ref=f6e605]: Here are some of my recent projects that showcase my skills and expertise
+    - generic [ref=f6e606]:
+      - generic [ref=f6e608]:
+        - generic [ref=f6e609]:
+          - img "TMZ Meredith | Web App" [ref=f6e610]
+          - generic [ref=f6e611]:
+            - generic [ref=f6e612] [cursor=pointer]
+            - link [ref=f6e617] [cursor=pointer]:
+              - /url: https://github.com/jahanzaib2610
+        - generic [ref=f6e621]:
+          - heading "TMZ Meredith | Web App" [level=3] [ref=f6e622]
+          - paragraph [ref=f6e623]: Worked as a Frontend Developer on the Meredith project, delivering a modern and scalable web application.
+          - generic [ref=f6e624]:
+            - generic [ref=f6e625]: React
+            - generic [ref=f6e626]: Material UI
+            - generic [ref=f6e627]: Context API
+            - generic [ref=f6e628]: JavaScript
+            - generic [ref=f6e629]: Typescript
+      - generic [ref=f6e631]:
+        - generic [ref=f6e632]:
+          - img "RNR Bookings | Mobile App" [ref=f6e633]
+          - generic [ref=f6e634]:
+            - generic [ref=f6e635] [cursor=pointer]
+            - link [ref=f6e640] [cursor=pointer]:
+              - /url: https://github.com/jahanzaib2610
+        - generic [ref=f6e644]:
+          - heading "RNR Bookings | Mobile App" [level=3] [ref=f6e645]
+          - paragraph [ref=f6e646]: Serving as a Frontend Developer on the RNR Mobile App, building a robust, scalable, and user-friendly mobile application using React Native and Expo.
+          - generic [ref=f6e647]:
+            - generic [ref=f6e648]: React Native
+            - generic [ref=f6e649]: Expo
+            - generic [ref=f6e650]: Context API
+            - generic [ref=f6e651]: React Native Paper
+            - generic [ref=f6e652]: Google Maps API
+      - generic [ref=f6e654]:
+        - generic [ref=f6e655]:
+          - img "Guide Plus | Mobile App" [ref=f6e656]
+          - generic [ref=f6e657]:
+            - generic [ref=f6e658] [cursor=pointer]
+            - link [ref=f6e663] [cursor=pointer]:
+              - /url: https://github.com/jahanzaib2610
+        - generic [ref=f6e667]:
+          - heading "Guide Plus | Mobile App" [level=3] [ref=f6e668]
+          - paragraph [ref=f6e669]: Developed a full stack mobile application designed to assist users with multiple features.
+          - generic [ref=f6e670]:
+            - generic [ref=f6e671]: React
+            - generic [ref=f6e672]: React Native
+            - generic [ref=f6e673]: Express
+            - generic [ref=f6e674]: Node.js
+            - generic [ref=f6e675]: MongoDB
+      - generic [ref=f6e677]:
+        - generic [ref=f6e678]:
+          - img "Mindset Medi | Mobile App" [ref=f6e679]
+          - generic [ref=f6e680]:
+            - generic [ref=f6e681] [cursor=pointer]
+            - link [ref=f6e686] [cursor=pointer]:
+              - /url: https://github.com/jahanzaib2610
+        - generic [ref=f6e690]:
+          - heading "Mindset Medi | Mobile App" [level=3] [ref=f6e691]
+          - paragraph [ref=f6e692]: Contributed as a front-end developer, designed and deployed mobile app for both iOS and Android.
+          - generic [ref=f6e693]:
+            - generic [ref=f6e694]: React
+            - generic [ref=f6e695]: React Native
+            - generic [ref=f6e696]: Stripe
+            - generic [ref=f6e697]: JavaScript
+      - generic [ref=f6e699]:
+        - generic [ref=f6e700]:
+          - img "Personal Portfolio" [ref=f6e701]
+          - generic [ref=f6e702]:
+            - generic [ref=f6e703] [cursor=pointer]
+            - link [ref=f6e708] [cursor=pointer]:
+              - /url: https://github.com/jahanzaib2610
+        - generic [ref=f6e712]:
+          - heading "Personal Portfolio" [level=3] [ref=f6e713]
+          - paragraph [ref=f6e714]: Designed and developed personal full-stack portfolio website and deployed it on Vercel.com.
+          - generic [ref=f6e715]:
+            - generic [ref=f6e716]: React
+            - generic [ref=f6e717]: React-Bootstrap
+            - generic [ref=f6e718]: Material-UI
+            - generic [ref=f6e719]: NodeJS
+            - generic [ref=f6e720]: ExpressJS
+            - generic [ref=f6e721]: MongoDB
+      - generic [ref=f6e723]:
+        - generic [ref=f6e724]:
+          - img "Judgement Labs" [ref=f6e725]
+          - generic [ref=f6e726]:
+            - generic [ref=f6e727] [cursor=pointer]
+            - link [ref=f6e732] [cursor=pointer]:
+              - /url: "#"
+        - generic [ref=f6e736]:
+          - heading "Judgement Labs" [level=3] [ref=f6e737]
+          - paragraph [ref=f6e738]: Worked as a Frontend Developer on the Judgement Labs, delivering a high-quality, responsive web application with secure payment integration.
+          - generic [ref=f6e739]:
+            - generic [ref=f6e740]: ReactJS
+            - generic [ref=f6e741]: NextJS
+            - generic [ref=f6e742]: Material UI
+            - generic [ref=f6e743]: Stripe
+            - generic [ref=f6e744]: Typescript
+      - generic [ref=f6e746]:
+        - generic [ref=f6e747]:
+          - img "Slim Club" [ref=f6e748]
+          - generic [ref=f6e749]:
+            - generic [ref=f6e750] [cursor=pointer]
+            - link [ref=f6e755] [cursor=pointer]:
+              - /url: "#"
+        - generic [ref=f6e759]:
+          - heading "Slim Club" [level=3] [ref=f6e760]
+          - paragraph [ref=f6e761]: Developed a fitness club management platform with user registration, payments, and booking features.
+          - generic [ref=f6e762]:
+            - generic [ref=f6e763]: React JS
+            - generic [ref=f6e764]: Redux Toolkit
+            - generic [ref=f6e765]: Material UI
+            - generic [ref=f6e766]: React Query
+  - generic [ref=f6e768]:
+    - generic [ref=f6e769]:
+      - heading "Get in Touch" [level=2] [ref=f6e771]
+      - paragraph [ref=f6e775]: Have a project in mind? Let's work together to create something amazing
+    - generic [ref=f6e776]:
+      - generic [ref=f6e778]:
+        - heading "Contact Information" [level=3] [ref=f6e779]
+        - generic [ref=f6e780]:
+          - generic [ref=f6e781]: jahanzaib2610@gmail.com
+          - generic [ref=f6e786]: +92 318 2425007
+          - generic [ref=f6e790]: Lahore, Pakistan
+        - generic [ref=f6e795]:
+          - heading "Follow Me" [level=4] [ref=f6e796]
+          - generic [ref=f6e797]:
+            - link [ref=f6e798] [cursor=pointer]:
+              - /url: https://github.com/jahanzaib2610
+            - link [ref=f6e802] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/jahanzaib2610/
+            - link [ref=f6e807] [cursor=pointer]:
+              - /url: /
+      - generic [ref=f6e812]:
+        - generic [ref=f6e813]:
+          - generic [ref=f6e814]: Name
+          - textbox "Name" [ref=f6e815]:
+            - /placeholder: Your Name
+        - generic [ref=f6e816]:
+          - generic [ref=f6e817]: Email
+          - textbox "Email" [ref=f6e818]:
+            - /placeholder: johndoe@example.com
+        - generic [ref=f6e819]:
+          - generic [ref=f6e820]: Subject
+          - textbox "Subject" [ref=f6e821]:
+            - /placeholder: Subject of Email
+        - generic [ref=f6e822]:
+          - generic [ref=f6e823]: Message
+          - textbox "Message" [ref=f6e824]:
+            - /placeholder: Your Message
+        - button "Send Message" [ref=f6e825] [cursor=pointer]

@@ -8,6 +8,8 @@ import placeHolderImg from "../assets/placeholder.jpg";
 import meredith from "../assets/meredith.png";
 import rnr from "../assets/rnr.jpg";
 import { motion } from "framer-motion";
+import { useTheme } from "../context/ThemeContext";
+import BorderGlow from "./ui/BorderGlow";
 
 const projects = [
   {
@@ -153,6 +155,7 @@ const projects = [
 
 const Projects = () => {
   const [selectedProject, setSelectedProject] = useState(null);
+  const { isDark } = useTheme();
 
   const openModal = (project) => {
     setSelectedProject(project);
@@ -208,7 +211,21 @@ const Projects = () => {
               transition={{ duration: 0.8, delay: 0.4 }}
               key={project.title}
             >
-              <div className="project-card">
+              <BorderGlow
+                className="project-card"
+                borderRadius={22}
+                glowRadius={40}
+                glowIntensity={1.25}
+                coneSpread={28}
+                backgroundColor={isDark ? "#161226" : "#ffffff"}
+                glowColor={isDark ? "275 85 75" : "270 70 65"}
+                colors={
+                  isDark
+                    ? ["#c084fc", "#f472b6", "#38bdf8"]
+                    : ["#a855f7", "#ec4899", "#3b82f6"]
+                }
+                isLight={!isDark}
+              >
                 <div className="project-image">
                   <img
                     style={{ objectFit: "contain" }}
@@ -244,7 +261,7 @@ const Projects = () => {
                     ))}
                   </div>
                 </div>
-              </div>
+              </BorderGlow>
             </motion.div>
           ))}
         </div>

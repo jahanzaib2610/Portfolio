@@ -6,53 +6,58 @@ import CodeIcon from "@mui/icons-material/Code";
 import ViewQuiltIcon from "@mui/icons-material/ViewQuilt";
 import StorageIcon from "@mui/icons-material/Storage";
 import { motion } from "framer-motion";
+import { useTheme } from "../context/ThemeContext";
+import BorderGlow from "./ui/BorderGlow";
 import "./Services.css";
 
 const services = [
   {
     title: "Website Development",
     description:
-      "Creating responsive and visually appealing websites tailored to your needs.",
-    icon: CodeIcon, // Replace with the appropriate icon if needed
+      "Creating responsive, high-performance, and visually engaging websites tailored to your needs.",
+    icon: CodeIcon,
     transition: { duration: 0.5, delay: 0.4 },
   },
   {
     title: "Mobile App Development",
     description:
-      "Building high-quality cross-platform mobile applications using modern frameworks.",
+      "Building robust, cross-platform mobile applications using modern frameworks and native tools.",
     icon: PhoneIphoneIcon,
     transition: { duration: 0.5, delay: 0.6 },
   },
   {
     title: "iOS App Development",
     description:
-      "Designing and developing smooth and efficient iOS applications.",
-    icon: AppleIcon, // Replace with the appropriate icon for iOS
+      "Designing and developing smooth, elegant, and efficient native-quality iOS applications.",
+    icon: AppleIcon,
     transition: { duration: 0.5, delay: 0.5 },
   },
   {
     title: "Android App Development",
-    description: "Creating scalable and feature-rich Android applications.",
-    icon: AndroidIcon, // Replace with the appropriate icon for Android if needed
+    description:
+      "Creating scalable, feature-rich, and user-friendly Android applications with seamless performance.",
+    icon: AndroidIcon,
     transition: { duration: 0.5, delay: 1 },
   },
   {
     title: "Front-end Development",
     description:
-      "Building interactive and dynamic user interfaces with modern front-end frameworks.",
+      "Building interactive, accessible, and dynamic user interfaces with modern front-end frameworks.",
     icon: ViewQuiltIcon,
     transition: { duration: 0.5, delay: 1.2 },
   },
   {
     title: "Back-end Development",
     description:
-      "Developing secure and scalable backend solutions to power your applications.",
+      "Developing secure, high-throughput, and scalable backend architectures to power your products.",
     icon: StorageIcon,
     transition: { duration: 0.5, delay: 1.4 },
   },
 ];
 
 const Services = () => {
+  const { isDark } = useTheme();
+
   return (
     <section
       id="services"
@@ -64,7 +69,7 @@ const Services = () => {
           <motion.div
             whileInView={{ opacity: 1, x: 0 }}
             initial={{ opacity: 0, x: -100 }}
-            viewport={{ amount: 0.2, once: true }} // Once visible, it will trigger animation only once
+            viewport={{ amount: 0.2, once: true }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <h2>My Services</h2>
@@ -72,7 +77,7 @@ const Services = () => {
           <motion.div
             whileInView={{ opacity: 1, x: 0 }}
             initial={{ opacity: 0, x: 50 }}
-            viewport={{ amount: 0.2, once: true }} // Once visible, it will trigger animation only once
+            viewport={{ amount: 0.2, once: true }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <div className="divider"></div>
@@ -80,7 +85,7 @@ const Services = () => {
           <motion.div
             whileInView={{ opacity: 1, y: 0 }}
             initial={{ opacity: 0, y: 30 }}
-            viewport={{ amount: 0.2, once: true }} // Once visible, it will trigger animation only once
+            viewport={{ amount: 0.2, once: true }}
             transition={{ duration: 0.5, delay: 0.4 }}
           >
             <p>
@@ -95,19 +100,33 @@ const Services = () => {
             const Icon = service.icon;
             return (
               <motion.div
-              whileInView={{ opacity: 1, y: 0 }}
-              initial={{ opacity: 0, y: -30 }}
-                viewport={{ amount: 0.3, once: true }} // Ensure it triggers again when leaving
+                whileInView={{ opacity: 1, y: 0 }}
+                initial={{ opacity: 0, y: -30 }}
+                viewport={{ amount: 0.3, once: true }}
                 transition={service.transition}
                 key={service.title}
               >
-                <div className="service-card">
+                <BorderGlow
+                  className="service-card"
+                  borderRadius={22}
+                  glowRadius={40}
+                  glowIntensity={1.25}
+                  coneSpread={28}
+                  backgroundColor={isDark ? "#161226" : "#ffffff"}
+                  glowColor={isDark ? "275 85 75" : "270 70 65"}
+                  colors={
+                    isDark
+                      ? ["#c084fc", "#f472b6", "#38bdf8"]
+                      : ["#a855f7", "#ec4899", "#3b82f6"]
+                  }
+                  isLight={!isDark}
+                >
                   <div className="service-icon">
                     <Icon />
                   </div>
                   <h3 className="service-title">{service.title}</h3>
                   <p className="service-description">{service.description}</p>
-                </div>
+                </BorderGlow>
               </motion.div>
             );
           })}

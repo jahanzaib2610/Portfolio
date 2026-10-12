@@ -4,7 +4,12 @@ import { ArrowRight } from "lucide-react";
 import "./Home.css";
 import Typed from "typed.js";
 import tune2 from "../assets/notify2.mp3";
+import DataRain from "./ui/data-rain";
+import { useTheme } from "../context/ThemeContext";
+
 const Home = () => {
+  const { isDark } = useTheme();
+
   useEffect(() => {
     const options = {
       strings: [
@@ -26,8 +31,27 @@ const Home = () => {
   }, []);
   const audio = new Audio(tune2);
   audio.loop = true;
+
+  const rainPalette = isDark
+    ? {
+        calm: "#22e6ff",
+        mid: "#8a5cff",
+        hot: "#ff3d9a",
+      }
+    : {
+        calm: "#0284c7",
+        mid: "#7c3aed",
+        hot: "#db2777",
+      };
+
   return (
     <section id="home" className="home" style={{ overflow: "hidden" }}>
+      <DataRain
+        key={isDark ? "dark" : "light"}
+        fullscreen={false}
+        count={500}
+        palette={rainPalette}
+      />
       <div className="background-circle circle-1"></div>
       <div className="background-circle circle-2"></div>
 

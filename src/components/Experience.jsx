@@ -1,13 +1,21 @@
 import React from "react";
 import "./Experience.css";
 import { motion } from "framer-motion";
+import { useTheme } from "../context/ThemeContext";
+import BorderGlow from "./ui/BorderGlow";
 
 const experiences = [
   {
-    jobTitle: "Junior MERN Stack Developer",
-    years: "Apr 2025 - Present",
+    jobTitle: "Senior Full Stack Engineer",
+    years: "Jun 2026 - Present",
+    company: "Preesoft, Lahore",
+    description: "Working as a Senior Full Stack Engineer building scalable full-stack applications.",
+  },
+  {
+    jobTitle: "MERN Stack Developer",
+    years: "Apr 2025 - Jun 2026",
     company: "Axis Cyber Technologies, Lahore",
-    description: "Working as a Junior MERN Stack developer.",
+    description: "Worked as a MERN Stack developer.",
   },
   {
     jobTitle: "ReactJS/ NextJS Developer",
@@ -21,18 +29,18 @@ const experiences = [
     company: "Idea Section, Lahore",
     description: "Worked as a frontend developer in a startup company.",
   },
-  
 ];
 
 const Experience = () => {
+  const { isDark } = useTheme();
+
   return (
-    <div className="experience section">
+    <section id="experience" className="experience section">
       <motion.div
         className="section-title"
-        style={{ display: "absolute" }}
         whileInView={{ opacity: 1, x: 0 }}
         initial={{ opacity: 0, x: 30 }}
-        viewport={{ amount: 0.2, once: true }} // Once visible, it will trigger animation only once
+        viewport={{ amount: 0.2, once: true }}
         transition={{ duration: 0.5 }}
       >
         <h2>Experience</h2>
@@ -40,12 +48,13 @@ const Experience = () => {
         <motion.div
           whileInView={{ opacity: 1, x: 0 }}
           initial={{ opacity: 0, x: -30 }}
-          viewport={{ amount: 0.2, once: true }} // Once visible, it will trigger animation only once
+          viewport={{ amount: 0.2, once: true }}
           transition={{ duration: 0.5 }}
         >
           <div className="divider"></div>
         </motion.div>
       </motion.div>
+
       <div className="experience-container">
         <div className="experience-stepper">
           {experiences.map((exp, index) => (
@@ -54,17 +63,31 @@ const Experience = () => {
               className={`step ${index % 2 === 0 ? "right" : "left"}`}
             >
               <div className="step-dot"></div>
-              <div className="step-content">
+              <BorderGlow
+                className="step-content"
+                borderRadius={18}
+                glowRadius={36}
+                glowIntensity={1.2}
+                coneSpread={28}
+                backgroundColor={isDark ? "#161224" : "#ffffff"}
+                glowColor={isDark ? "275 85 75" : "270 70 65"}
+                colors={
+                  isDark
+                    ? ["#c084fc", "#f472b6", "#38bdf8"]
+                    : ["#a855f7", "#ec4899", "#3b82f6"]
+                }
+                isLight={!isDark}
+              >
                 <h3>{exp.jobTitle}</h3>
                 <p className="experience-company">{exp.company}</p>
                 <p className="experience-years">{exp.years}</p>
-                <p>{exp.description}</p>
-              </div>
+                <p className="experience-desc">{exp.description}</p>
+              </BorderGlow>
             </div>
           ))}
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

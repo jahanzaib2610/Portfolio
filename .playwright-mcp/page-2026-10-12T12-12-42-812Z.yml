@@ -1,0 +1,724 @@
+- generic [ref=f3e3]:
+  - banner:
+    - navigation [ref=f3e4]:
+      - generic [ref=f3e5] [cursor=pointer]: Jahan Zaib Inc.
+      - navigation [ref=f3e7]:
+        - generic [ref=f3e8]:
+          - list [ref=f3e9]:
+            - listitem [ref=f3e10]:
+              - button "Home" [ref=f3e11] [cursor=pointer]
+            - listitem [ref=f3e13]:
+              - button "About" [ref=f3e14] [cursor=pointer]
+            - listitem [ref=f3e16]:
+              - button "Experience" [ref=f3e17] [cursor=pointer]
+            - listitem [ref=f3e19]:
+              - button "Skills" [ref=f3e20] [cursor=pointer]
+            - listitem [ref=f3e22]:
+              - button "Services" [ref=f3e23] [cursor=pointer]
+            - listitem [ref=f3e25]:
+              - button "Projects" [ref=f3e26] [cursor=pointer]
+            - listitem [ref=f3e28]:
+              - button "Contact" [ref=f3e29] [cursor=pointer]
+          - list [aria-hidden]:
+            - listitem:
+              - generic: Home
+            - listitem:
+              - generic: About
+            - listitem:
+              - generic: Experience
+            - listitem:
+              - generic: Skills
+            - listitem:
+              - generic: Services
+            - listitem:
+              - generic: Projects
+            - listitem:
+              - generic: Contact
+      - button "Toggle dark/light mode" [ref=f3e32] [cursor=pointer]
+  - generic [ref=f3e39]:
+    - heading "Hi, I'm Jahan Zaib" [level=2] [ref=f3e40]
+    - heading "and I'm a Fr" [level=3] [ref=f3e41]: and I'm a Fr|
+    - generic [ref=f3e42]: More About Me...
+  - generic [ref=f3e47]:
+    - generic [ref=f3e48]:
+      - heading "About Me" [level=2] [ref=f3e50]
+      - paragraph [ref=f3e54]: Passionate full-stack developer with a love for building dynamic, responsive, and user-centric web and mobile applications. With experience in React, React Native, MongoDB, Express.js, and Node.js, I specialize in creating seamless user experiences and efficient back-end solutions. I am skilled in developing robust cross-platform mobile apps for both Android and iOS, leveraging React Native to ensure high performance and native-like functionality. My expertise also includes designing intuitive user interfaces and delivering scalable solutions that meet modern development standards. Dedicated to turning innovative ideas into functional and visually appealing applications for web and mobile platforms.
+    - generic [ref=f3e55]:
+      - generic [ref=f3e56]: My Skills
+      - generic [ref=f3e60]: My Projects
+      - generic [ref=f3e64]: Hire me Now
+  - generic [ref=f3e68]:
+    - heading "Experience" [level=2] [ref=f3e70]
+    - generic [ref=f3e74]:
+      - generic [ref=f3e77]:
+        - heading "MERN Stack Developer" [level=3] [ref=f3e78]
+        - paragraph [ref=f3e79]: Axis Cyber Technologies, Lahore
+        - paragraph [ref=f3e80]: Apr 2025 - Jun 2026
+        - paragraph [ref=f3e81]: Worked as a MERN Stack developer.
+      - generic [ref=f3e84]:
+        - heading "ReactJS/ NextJS Developer" [level=3] [ref=f3e85]
+        - paragraph [ref=f3e86]: Core Edge Solutions LTD, Lahore
+        - paragraph [ref=f3e87]: Feb 2025 - Apr 2025
+        - paragraph [ref=f3e88]: Worked as a ReactJS/ NextJS developer.
+      - generic [ref=f3e91]:
+        - heading "Frontend Developer" [level=3] [ref=f3e92]
+        - paragraph [ref=f3e93]: Idea Section, Lahore
+        - paragraph [ref=f3e94]: Feb 2024 - Feb 2025
+        - paragraph [ref=f3e95]: Worked as a frontend developer in a startup company.
+  - generic [ref=f3e96]:
+    - generic [ref=f3e97]:
+      - heading "My Skills" [level=2] [ref=f3e99]
+      - paragraph [ref=f3e102]: Technologies, frameworks, databases, and DevOps tools I leverage to build scalable, high-performance software.
+    - generic [ref=f3e103]:
+      - generic [ref=f3e104]:
+        - generic [ref=f3e105]:
+          - generic [ref=f3e106] [cursor=pointer]:
+            - img "React" [ref=f3e108]
+            - generic [ref=f3e109]:
+              - generic [ref=f3e110]: React
+              - generic [ref=f3e111]: Frontend
+          - generic [ref=f3e112] [cursor=pointer]:
+            - img "React Native" [ref=f3e114]
+            - generic [ref=f3e115]:
+              - generic [ref=f3e116]: React Native
+              - generic [ref=f3e117]: Mobile
+          - generic [ref=f3e118] [cursor=pointer]:
+            - img "Next.js" [ref=f3e120]
+            - generic [ref=f3e121]:
+              - generic [ref=f3e122]: Next.js
+              - generic [ref=f3e123]: Fullstack
+          - generic [ref=f3e124] [cursor=pointer]:
+            - img "JavaScript" [ref=f3e126]
+            - generic [ref=f3e127]:
+              - generic [ref=f3e128]: JavaScript
+              - generic [ref=f3e129]: Language
+          - generic [ref=f3e130] [cursor=pointer]:
+            - img "Redux Toolkit" [ref=f3e132]
+            - generic [ref=f3e133]:
+              - generic [ref=f3e134]: Redux Toolkit
+              - generic [ref=f3e135]: State Mgmt
+          - generic [ref=f3e136] [cursor=pointer]:
+            - img "HTML5" [ref=f3e138]
+            - generic [ref=f3e139]:
+              - generic [ref=f3e140]: HTML5
+              - generic [ref=f3e141]: Markup
+          - generic [ref=f3e142] [cursor=pointer]:
+            - img "CSS3" [ref=f3e144]
+            - generic [ref=f3e145]:
+              - generic [ref=f3e146]: CSS3
+              - generic [ref=f3e147]: Styling
+          - generic [ref=f3e148] [cursor=pointer]:
+            - img "Expo" [ref=f3e150]
+            - generic [ref=f3e151]:
+              - generic [ref=f3e152]: Expo
+              - generic [ref=f3e153]: Mobile Dev
+        - generic [ref=f3e154]:
+          - generic [ref=f3e155] [cursor=pointer]:
+            - img "React" [ref=f3e157]
+            - generic [ref=f3e158]:
+              - generic [ref=f3e159]: React
+              - generic [ref=f3e160]: Frontend
+          - generic [ref=f3e161] [cursor=pointer]:
+            - img "React Native" [ref=f3e163]
+            - generic [ref=f3e164]:
+              - generic [ref=f3e165]: React Native
+              - generic [ref=f3e166]: Mobile
+          - generic [ref=f3e167] [cursor=pointer]:
+            - img "Next.js" [ref=f3e169]
+            - generic [ref=f3e170]:
+              - generic [ref=f3e171]: Next.js
+              - generic [ref=f3e172]: Fullstack
+          - generic [ref=f3e173] [cursor=pointer]:
+            - img "JavaScript" [ref=f3e175]
+            - generic [ref=f3e176]:
+              - generic [ref=f3e177]: JavaScript
+              - generic [ref=f3e178]: Language
+          - generic [ref=f3e179] [cursor=pointer]:
+            - img "Redux Toolkit" [ref=f3e181]
+            - generic [ref=f3e182]:
+              - generic [ref=f3e183]: Redux Toolkit
+              - generic [ref=f3e184]: State Mgmt
+          - generic [ref=f3e185] [cursor=pointer]:
+            - img "HTML5" [ref=f3e187]
+            - generic [ref=f3e188]:
+              - generic [ref=f3e189]: HTML5
+              - generic [ref=f3e190]: Markup
+          - generic [ref=f3e191] [cursor=pointer]:
+            - img "CSS3" [ref=f3e193]
+            - generic [ref=f3e194]:
+              - generic [ref=f3e195]: CSS3
+              - generic [ref=f3e196]: Styling
+          - generic [ref=f3e197] [cursor=pointer]:
+            - img "Expo" [ref=f3e199]
+            - generic [ref=f3e200]:
+              - generic [ref=f3e201]: Expo
+              - generic [ref=f3e202]: Mobile Dev
+        - generic [ref=f3e203]:
+          - generic [ref=f3e204] [cursor=pointer]:
+            - img "React" [ref=f3e206]
+            - generic [ref=f3e207]:
+              - generic [ref=f3e208]: React
+              - generic [ref=f3e209]: Frontend
+          - generic [ref=f3e210] [cursor=pointer]:
+            - img "React Native" [ref=f3e212]
+            - generic [ref=f3e213]:
+              - generic [ref=f3e214]: React Native
+              - generic [ref=f3e215]: Mobile
+          - generic [ref=f3e216] [cursor=pointer]:
+            - img "Next.js" [ref=f3e218]
+            - generic [ref=f3e219]:
+              - generic [ref=f3e220]: Next.js
+              - generic [ref=f3e221]: Fullstack
+          - generic [ref=f3e222] [cursor=pointer]:
+            - img "JavaScript" [ref=f3e224]
+            - generic [ref=f3e225]:
+              - generic [ref=f3e226]: JavaScript
+              - generic [ref=f3e227]: Language
+          - generic [ref=f3e228] [cursor=pointer]:
+            - img "Redux Toolkit" [ref=f3e230]
+            - generic [ref=f3e231]:
+              - generic [ref=f3e232]: Redux Toolkit
+              - generic [ref=f3e233]: State Mgmt
+          - generic [ref=f3e234] [cursor=pointer]:
+            - img "HTML5" [ref=f3e236]
+            - generic [ref=f3e237]:
+              - generic [ref=f3e238]: HTML5
+              - generic [ref=f3e239]: Markup
+          - generic [ref=f3e240] [cursor=pointer]:
+            - img "CSS3" [ref=f3e242]
+            - generic [ref=f3e243]:
+              - generic [ref=f3e244]: CSS3
+              - generic [ref=f3e245]: Styling
+          - generic [ref=f3e246] [cursor=pointer]:
+            - img "Expo" [ref=f3e248]
+            - generic [ref=f3e249]:
+              - generic [ref=f3e250]: Expo
+              - generic [ref=f3e251]: Mobile Dev
+        - generic [ref=f3e252]:
+          - generic [ref=f3e253] [cursor=pointer]:
+            - img "React" [ref=f3e255]
+            - generic [ref=f3e256]:
+              - generic [ref=f3e257]: React
+              - generic [ref=f3e258]: Frontend
+          - generic [ref=f3e259] [cursor=pointer]:
+            - img "React Native" [ref=f3e261]
+            - generic [ref=f3e262]:
+              - generic [ref=f3e263]: React Native
+              - generic [ref=f3e264]: Mobile
+          - generic [ref=f3e265] [cursor=pointer]:
+            - img "Next.js" [ref=f3e267]
+            - generic [ref=f3e268]:
+              - generic [ref=f3e269]: Next.js
+              - generic [ref=f3e270]: Fullstack
+          - generic [ref=f3e271] [cursor=pointer]:
+            - img "JavaScript" [ref=f3e273]
+            - generic [ref=f3e274]:
+              - generic [ref=f3e275]: JavaScript
+              - generic [ref=f3e276]: Language
+          - generic [ref=f3e277] [cursor=pointer]:
+            - img "Redux Toolkit" [ref=f3e279]
+            - generic [ref=f3e280]:
+              - generic [ref=f3e281]: Redux Toolkit
+              - generic [ref=f3e282]: State Mgmt
+          - generic [ref=f3e283] [cursor=pointer]:
+            - img "HTML5" [ref=f3e285]
+            - generic [ref=f3e286]:
+              - generic [ref=f3e287]: HTML5
+              - generic [ref=f3e288]: Markup
+          - generic [ref=f3e289] [cursor=pointer]:
+            - img "CSS3" [ref=f3e291]
+            - generic [ref=f3e292]:
+              - generic [ref=f3e293]: CSS3
+              - generic [ref=f3e294]: Styling
+          - generic [ref=f3e295] [cursor=pointer]:
+            - img "Expo" [ref=f3e297]
+            - generic [ref=f3e298]:
+              - generic [ref=f3e299]: Expo
+              - generic [ref=f3e300]: Mobile Dev
+      - generic [ref=f3e301]:
+        - generic [ref=f3e302]:
+          - generic [ref=f3e303] [cursor=pointer]:
+            - img "Node.js" [ref=f3e305]
+            - generic [ref=f3e306]:
+              - generic [ref=f3e307]: Node.js
+              - generic [ref=f3e308]: Runtime
+          - generic [ref=f3e309] [cursor=pointer]:
+            - img "Express.js" [ref=f3e311]
+            - generic [ref=f3e312]:
+              - generic [ref=f3e313]: Express.js
+              - generic [ref=f3e314]: Backend
+          - generic [ref=f3e315] [cursor=pointer]:
+            - img "MongoDB" [ref=f3e317]
+            - generic [ref=f3e318]:
+              - generic [ref=f3e319]: MongoDB
+              - generic [ref=f3e320]: NoSQL DB
+          - generic [ref=f3e321] [cursor=pointer]:
+            - img "PostgreSQL" [ref=f3e323]
+            - generic [ref=f3e324]:
+              - generic [ref=f3e325]: PostgreSQL
+              - generic [ref=f3e326]: SQL Database
+          - generic [ref=f3e327] [cursor=pointer]:
+            - img "MySQL" [ref=f3e329]
+            - generic [ref=f3e330]:
+              - generic [ref=f3e331]: MySQL
+              - generic [ref=f3e332]: Relational DB
+          - generic [ref=f3e333] [cursor=pointer]:
+            - img "Firebase" [ref=f3e335]
+            - generic [ref=f3e336]:
+              - generic [ref=f3e337]: Firebase
+              - generic [ref=f3e338]: BaaS & Cloud
+          - generic [ref=f3e339] [cursor=pointer]:
+            - img "Docker" [ref=f3e341]
+            - generic [ref=f3e342]:
+              - generic [ref=f3e343]: Docker
+              - generic [ref=f3e344]: Containerization
+        - generic [ref=f3e345]:
+          - generic [ref=f3e346] [cursor=pointer]:
+            - img "Node.js" [ref=f3e348]
+            - generic [ref=f3e349]:
+              - generic [ref=f3e350]: Node.js
+              - generic [ref=f3e351]: Runtime
+          - generic [ref=f3e352] [cursor=pointer]:
+            - img "Express.js" [ref=f3e354]
+            - generic [ref=f3e355]:
+              - generic [ref=f3e356]: Express.js
+              - generic [ref=f3e357]: Backend
+          - generic [ref=f3e358] [cursor=pointer]:
+            - img "MongoDB" [ref=f3e360]
+            - generic [ref=f3e361]:
+              - generic [ref=f3e362]: MongoDB
+              - generic [ref=f3e363]: NoSQL DB
+          - generic [ref=f3e364] [cursor=pointer]:
+            - img "PostgreSQL" [ref=f3e366]
+            - generic [ref=f3e367]:
+              - generic [ref=f3e368]: PostgreSQL
+              - generic [ref=f3e369]: SQL Database
+          - generic [ref=f3e370] [cursor=pointer]:
+            - img "MySQL" [ref=f3e372]
+            - generic [ref=f3e373]:
+              - generic [ref=f3e374]: MySQL
+              - generic [ref=f3e375]: Relational DB
+          - generic [ref=f3e376] [cursor=pointer]:
+            - img "Firebase" [ref=f3e378]
+            - generic [ref=f3e379]:
+              - generic [ref=f3e380]: Firebase
+              - generic [ref=f3e381]: BaaS & Cloud
+          - generic [ref=f3e382] [cursor=pointer]:
+            - img "Docker" [ref=f3e384]
+            - generic [ref=f3e385]:
+              - generic [ref=f3e386]: Docker
+              - generic [ref=f3e387]: Containerization
+        - generic [ref=f3e388]:
+          - generic [ref=f3e389] [cursor=pointer]:
+            - img "Node.js" [ref=f3e391]
+            - generic [ref=f3e392]:
+              - generic [ref=f3e393]: Node.js
+              - generic [ref=f3e394]: Runtime
+          - generic [ref=f3e395] [cursor=pointer]:
+            - img "Express.js" [ref=f3e397]
+            - generic [ref=f3e398]:
+              - generic [ref=f3e399]: Express.js
+              - generic [ref=f3e400]: Backend
+          - generic [ref=f3e401] [cursor=pointer]:
+            - img "MongoDB" [ref=f3e403]
+            - generic [ref=f3e404]:
+              - generic [ref=f3e405]: MongoDB
+              - generic [ref=f3e406]: NoSQL DB
+          - generic [ref=f3e407] [cursor=pointer]:
+            - img "PostgreSQL" [ref=f3e409]
+            - generic [ref=f3e410]:
+              - generic [ref=f3e411]: PostgreSQL
+              - generic [ref=f3e412]: SQL Database
+          - generic [ref=f3e413] [cursor=pointer]:
+            - img "MySQL" [ref=f3e415]
+            - generic [ref=f3e416]:
+              - generic [ref=f3e417]: MySQL
+              - generic [ref=f3e418]: Relational DB
+          - generic [ref=f3e419] [cursor=pointer]:
+            - img "Firebase" [ref=f3e421]
+            - generic [ref=f3e422]:
+              - generic [ref=f3e423]: Firebase
+              - generic [ref=f3e424]: BaaS & Cloud
+          - generic [ref=f3e425] [cursor=pointer]:
+            - img "Docker" [ref=f3e427]
+            - generic [ref=f3e428]:
+              - generic [ref=f3e429]: Docker
+              - generic [ref=f3e430]: Containerization
+        - generic [ref=f3e431]:
+          - generic [ref=f3e432] [cursor=pointer]:
+            - img "Node.js" [ref=f3e434]
+            - generic [ref=f3e435]:
+              - generic [ref=f3e436]: Node.js
+              - generic [ref=f3e437]: Runtime
+          - generic [ref=f3e438] [cursor=pointer]:
+            - img "Express.js" [ref=f3e440]
+            - generic [ref=f3e441]:
+              - generic [ref=f3e442]: Express.js
+              - generic [ref=f3e443]: Backend
+          - generic [ref=f3e444] [cursor=pointer]:
+            - img "MongoDB" [ref=f3e446]
+            - generic [ref=f3e447]:
+              - generic [ref=f3e448]: MongoDB
+              - generic [ref=f3e449]: NoSQL DB
+          - generic [ref=f3e450] [cursor=pointer]:
+            - img "PostgreSQL" [ref=f3e452]
+            - generic [ref=f3e453]:
+              - generic [ref=f3e454]: PostgreSQL
+              - generic [ref=f3e455]: SQL Database
+          - generic [ref=f3e456] [cursor=pointer]:
+            - img "MySQL" [ref=f3e458]
+            - generic [ref=f3e459]:
+              - generic [ref=f3e460]: MySQL
+              - generic [ref=f3e461]: Relational DB
+          - generic [ref=f3e462] [cursor=pointer]:
+            - img "Firebase" [ref=f3e464]
+            - generic [ref=f3e465]:
+              - generic [ref=f3e466]: Firebase
+              - generic [ref=f3e467]: BaaS & Cloud
+          - generic [ref=f3e468] [cursor=pointer]:
+            - img "Docker" [ref=f3e470]
+            - generic [ref=f3e471]:
+              - generic [ref=f3e472]: Docker
+              - generic [ref=f3e473]: Containerization
+      - generic [ref=f3e474]:
+        - generic [ref=f3e475]:
+          - generic [ref=f3e476] [cursor=pointer]:
+            - img "Docker" [ref=f3e478]
+            - generic [ref=f3e479]:
+              - generic [ref=f3e480]: Docker
+              - generic [ref=f3e481]: DevOps
+          - generic [ref=f3e482] [cursor=pointer]:
+            - img "GitHub" [ref=f3e484]
+            - generic [ref=f3e485]:
+              - generic [ref=f3e486]: GitHub
+              - generic [ref=f3e487]: Version Control
+          - generic [ref=f3e488] [cursor=pointer]:
+            - img "GitLab" [ref=f3e490]
+            - generic [ref=f3e491]:
+              - generic [ref=f3e492]: GitLab
+              - generic [ref=f3e493]: CI/CD & Git
+          - generic [ref=f3e494] [cursor=pointer]:
+            - img "Bitbucket" [ref=f3e496]
+            - generic [ref=f3e497]:
+              - generic [ref=f3e498]: Bitbucket
+              - generic [ref=f3e499]: Repository
+          - generic [ref=f3e500] [cursor=pointer]:
+            - img "Jira" [ref=f3e502]
+            - generic [ref=f3e503]:
+              - generic [ref=f3e504]: Jira
+              - generic [ref=f3e505]: Agile Mgmt
+          - generic [ref=f3e506] [cursor=pointer]:
+            - img "PostgreSQL" [ref=f3e508]
+            - generic [ref=f3e509]:
+              - generic [ref=f3e510]: PostgreSQL
+              - generic [ref=f3e511]: Database
+          - generic [ref=f3e512] [cursor=pointer]:
+            - img "Firebase" [ref=f3e514]
+            - generic [ref=f3e515]:
+              - generic [ref=f3e516]: Firebase
+              - generic [ref=f3e517]: Realtime DB
+          - generic [ref=f3e518] [cursor=pointer]:
+            - img "Expo" [ref=f3e520]
+            - generic [ref=f3e521]:
+              - generic [ref=f3e522]: Expo
+              - generic [ref=f3e523]: Ecosystem
+        - generic [ref=f3e524]:
+          - generic [ref=f3e525] [cursor=pointer]:
+            - img "Docker" [ref=f3e527]
+            - generic [ref=f3e528]:
+              - generic [ref=f3e529]: Docker
+              - generic [ref=f3e530]: DevOps
+          - generic [ref=f3e531] [cursor=pointer]:
+            - img "GitHub" [ref=f3e533]
+            - generic [ref=f3e534]:
+              - generic [ref=f3e535]: GitHub
+              - generic [ref=f3e536]: Version Control
+          - generic [ref=f3e537] [cursor=pointer]:
+            - img "GitLab" [ref=f3e539]
+            - generic [ref=f3e540]:
+              - generic [ref=f3e541]: GitLab
+              - generic [ref=f3e542]: CI/CD & Git
+          - generic [ref=f3e543] [cursor=pointer]:
+            - img "Bitbucket" [ref=f3e545]
+            - generic [ref=f3e546]:
+              - generic [ref=f3e547]: Bitbucket
+              - generic [ref=f3e548]: Repository
+          - generic [ref=f3e549] [cursor=pointer]:
+            - img "Jira" [ref=f3e551]
+            - generic [ref=f3e552]:
+              - generic [ref=f3e553]: Jira
+              - generic [ref=f3e554]: Agile Mgmt
+          - generic [ref=f3e555] [cursor=pointer]:
+            - img "PostgreSQL" [ref=f3e557]
+            - generic [ref=f3e558]:
+              - generic [ref=f3e559]: PostgreSQL
+              - generic [ref=f3e560]: Database
+          - generic [ref=f3e561] [cursor=pointer]:
+            - img "Firebase" [ref=f3e563]
+            - generic [ref=f3e564]:
+              - generic [ref=f3e565]: Firebase
+              - generic [ref=f3e566]: Realtime DB
+          - generic [ref=f3e567] [cursor=pointer]:
+            - img "Expo" [ref=f3e569]
+            - generic [ref=f3e570]:
+              - generic [ref=f3e571]: Expo
+              - generic [ref=f3e572]: Ecosystem
+        - generic [ref=f3e573]:
+          - generic [ref=f3e574] [cursor=pointer]:
+            - img "Docker" [ref=f3e576]
+            - generic [ref=f3e577]:
+              - generic [ref=f3e578]: Docker
+              - generic [ref=f3e579]: DevOps
+          - generic [ref=f3e580] [cursor=pointer]:
+            - img "GitHub" [ref=f3e582]
+            - generic [ref=f3e583]:
+              - generic [ref=f3e584]: GitHub
+              - generic [ref=f3e585]: Version Control
+          - generic [ref=f3e586] [cursor=pointer]:
+            - img "GitLab" [ref=f3e588]
+            - generic [ref=f3e589]:
+              - generic [ref=f3e590]: GitLab
+              - generic [ref=f3e591]: CI/CD & Git
+          - generic [ref=f3e592] [cursor=pointer]:
+            - img "Bitbucket" [ref=f3e594]
+            - generic [ref=f3e595]:
+              - generic [ref=f3e596]: Bitbucket
+              - generic [ref=f3e597]: Repository
+          - generic [ref=f3e598] [cursor=pointer]:
+            - img "Jira" [ref=f3e600]
+            - generic [ref=f3e601]:
+              - generic [ref=f3e602]: Jira
+              - generic [ref=f3e603]: Agile Mgmt
+          - generic [ref=f3e604] [cursor=pointer]:
+            - img "PostgreSQL" [ref=f3e606]
+            - generic [ref=f3e607]:
+              - generic [ref=f3e608]: PostgreSQL
+              - generic [ref=f3e609]: Database
+          - generic [ref=f3e610] [cursor=pointer]:
+            - img "Firebase" [ref=f3e612]
+            - generic [ref=f3e613]:
+              - generic [ref=f3e614]: Firebase
+              - generic [ref=f3e615]: Realtime DB
+          - generic [ref=f3e616] [cursor=pointer]:
+            - img "Expo" [ref=f3e618]
+            - generic [ref=f3e619]:
+              - generic [ref=f3e620]: Expo
+              - generic [ref=f3e621]: Ecosystem
+        - generic [ref=f3e622]:
+          - generic [ref=f3e623] [cursor=pointer]:
+            - img "Docker" [ref=f3e625]
+            - generic [ref=f3e626]:
+              - generic [ref=f3e627]: Docker
+              - generic [ref=f3e628]: DevOps
+          - generic [ref=f3e629] [cursor=pointer]:
+            - img "GitHub" [ref=f3e631]
+            - generic [ref=f3e632]:
+              - generic [ref=f3e633]: GitHub
+              - generic [ref=f3e634]: Version Control
+          - generic [ref=f3e635] [cursor=pointer]:
+            - img "GitLab" [ref=f3e637]
+            - generic [ref=f3e638]:
+              - generic [ref=f3e639]: GitLab
+              - generic [ref=f3e640]: CI/CD & Git
+          - generic [ref=f3e641] [cursor=pointer]:
+            - img "Bitbucket" [ref=f3e643]
+            - generic [ref=f3e644]:
+              - generic [ref=f3e645]: Bitbucket
+              - generic [ref=f3e646]: Repository
+          - generic [ref=f3e647] [cursor=pointer]:
+            - img "Jira" [ref=f3e649]
+            - generic [ref=f3e650]:
+              - generic [ref=f3e651]: Jira
+              - generic [ref=f3e652]: Agile Mgmt
+          - generic [ref=f3e653] [cursor=pointer]:
+            - img "PostgreSQL" [ref=f3e655]
+            - generic [ref=f3e656]:
+              - generic [ref=f3e657]: PostgreSQL
+              - generic [ref=f3e658]: Database
+          - generic [ref=f3e659] [cursor=pointer]:
+            - img "Firebase" [ref=f3e661]
+            - generic [ref=f3e662]:
+              - generic [ref=f3e663]: Firebase
+              - generic [ref=f3e664]: Realtime DB
+          - generic [ref=f3e665] [cursor=pointer]:
+            - img "Expo" [ref=f3e667]
+            - generic [ref=f3e668]:
+              - generic [ref=f3e669]: Expo
+              - generic [ref=f3e670]: Ecosystem
+  - generic [ref=f3e672]:
+    - generic [ref=f3e673]:
+      - heading "My Services" [level=2] [ref=f3e675]
+      - paragraph [ref=f3e679]: I offer a wide range of services to help bring your digital ideas to life
+    - generic [ref=f3e680]:
+      - generic [ref=f3e682]:
+        - heading "Website Development" [level=3] [ref=f3e686]
+        - paragraph [ref=f3e687]: Creating responsive and visually appealing websites tailored to your needs.
+      - generic [ref=f3e689]:
+        - heading "Mobile App Development" [level=3] [ref=f3e693]
+        - paragraph [ref=f3e694]: Building high-quality cross-platform mobile applications using modern frameworks.
+      - generic [ref=f3e696]:
+        - heading "iOS App Development" [level=3] [ref=f3e700]
+        - paragraph [ref=f3e701]: Designing and developing smooth and efficient iOS applications.
+      - generic [ref=f3e703]:
+        - heading "Android App Development" [level=3] [ref=f3e707]
+        - paragraph [ref=f3e708]: Creating scalable and feature-rich Android applications.
+      - generic [ref=f3e710]:
+        - heading "Front-end Development" [level=3] [ref=f3e714]
+        - paragraph [ref=f3e715]: Building interactive and dynamic user interfaces with modern front-end frameworks.
+      - generic [ref=f3e717]:
+        - heading "Back-end Development" [level=3] [ref=f3e721]
+        - paragraph [ref=f3e722]: Developing secure and scalable backend solutions to power your applications.
+  - generic [ref=f3e724]:
+    - generic [ref=f3e725]:
+      - heading "My Projects" [level=2] [ref=f3e727]
+      - paragraph [ref=f3e731]: Here are some of my recent projects that showcase my skills and expertise
+    - generic [ref=f3e732]:
+      - generic [ref=f3e734]:
+        - generic [ref=f3e735]:
+          - img "TMZ Meredith | Web App" [ref=f3e736]
+          - generic [ref=f3e737]:
+            - generic [ref=f3e738] [cursor=pointer]
+            - link [ref=f3e743] [cursor=pointer]:
+              - /url: https://github.com/jahanzaib2610
+        - generic [ref=f3e747]:
+          - heading "TMZ Meredith | Web App" [level=3] [ref=f3e748]
+          - paragraph [ref=f3e749]: Worked as a Frontend Developer on the Meredith project, delivering a modern and scalable web application.
+          - generic [ref=f3e750]:
+            - generic [ref=f3e751]: React
+            - generic [ref=f3e752]: Material UI
+            - generic [ref=f3e753]: Context API
+            - generic [ref=f3e754]: JavaScript
+            - generic [ref=f3e755]: Typescript
+      - generic [ref=f3e757]:
+        - generic [ref=f3e758]:
+          - img "RNR Bookings | Mobile App" [ref=f3e759]
+          - generic [ref=f3e760]:
+            - generic [ref=f3e761] [cursor=pointer]
+            - link [ref=f3e766] [cursor=pointer]:
+              - /url: https://github.com/jahanzaib2610
+        - generic [ref=f3e770]:
+          - heading "RNR Bookings | Mobile App" [level=3] [ref=f3e771]
+          - paragraph [ref=f3e772]: Serving as a Frontend Developer on the RNR Mobile App, building a robust, scalable, and user-friendly mobile application using React Native and Expo.
+          - generic [ref=f3e773]:
+            - generic [ref=f3e774]: React Native
+            - generic [ref=f3e775]: Expo
+            - generic [ref=f3e776]: Context API
+            - generic [ref=f3e777]: React Native Paper
+            - generic [ref=f3e778]: Google Maps API
+      - generic [ref=f3e780]:
+        - generic [ref=f3e781]:
+          - img "Guide Plus | Mobile App" [ref=f3e782]
+          - generic [ref=f3e783]:
+            - generic [ref=f3e784] [cursor=pointer]
+            - link [ref=f3e789] [cursor=pointer]:
+              - /url: https://github.com/jahanzaib2610
+        - generic [ref=f3e793]:
+          - heading "Guide Plus | Mobile App" [level=3] [ref=f3e794]
+          - paragraph [ref=f3e795]: Developed a full stack mobile application designed to assist users with multiple features.
+          - generic [ref=f3e796]:
+            - generic [ref=f3e797]: React
+            - generic [ref=f3e798]: React Native
+            - generic [ref=f3e799]: Express
+            - generic [ref=f3e800]: Node.js
+            - generic [ref=f3e801]: MongoDB
+      - generic [ref=f3e803]:
+        - generic [ref=f3e804]:
+          - img "Mindset Medi | Mobile App" [ref=f3e805]
+          - generic [ref=f3e806]:
+            - generic [ref=f3e807] [cursor=pointer]
+            - link [ref=f3e812] [cursor=pointer]:
+              - /url: https://github.com/jahanzaib2610
+        - generic [ref=f3e816]:
+          - heading "Mindset Medi | Mobile App" [level=3] [ref=f3e817]
+          - paragraph [ref=f3e818]: Contributed as a front-end developer, designed and deployed mobile app for both iOS and Android.
+          - generic [ref=f3e819]:
+            - generic [ref=f3e820]: React
+            - generic [ref=f3e821]: React Native
+            - generic [ref=f3e822]: Stripe
+            - generic [ref=f3e823]: JavaScript
+      - generic [ref=f3e825]:
+        - generic [ref=f3e826]:
+          - img "Personal Portfolio" [ref=f3e827]
+          - generic [ref=f3e828]:
+            - generic [ref=f3e829] [cursor=pointer]
+            - link [ref=f3e834] [cursor=pointer]:
+              - /url: https://github.com/jahanzaib2610
+        - generic [ref=f3e838]:
+          - heading "Personal Portfolio" [level=3] [ref=f3e839]
+          - paragraph [ref=f3e840]: Designed and developed personal full-stack portfolio website and deployed it on Vercel.com.
+          - generic [ref=f3e841]:
+            - generic [ref=f3e842]: React
+            - generic [ref=f3e843]: React-Bootstrap
+            - generic [ref=f3e844]: Material-UI
+            - generic [ref=f3e845]: NodeJS
+            - generic [ref=f3e846]: ExpressJS
+            - generic [ref=f3e847]: MongoDB
+      - generic [ref=f3e849]:
+        - generic [ref=f3e850]:
+          - img "Judgement Labs" [ref=f3e851]
+          - generic [ref=f3e852]:
+            - generic [ref=f3e853] [cursor=pointer]
+            - link [ref=f3e858] [cursor=pointer]:
+              - /url: "#"
+        - generic [ref=f3e862]:
+          - heading "Judgement Labs" [level=3] [ref=f3e863]
+          - paragraph [ref=f3e864]: Worked as a Frontend Developer on the Judgement Labs, delivering a high-quality, responsive web application with secure payment integration.
+          - generic [ref=f3e865]:
+            - generic [ref=f3e866]: ReactJS
+            - generic [ref=f3e867]: NextJS
+            - generic [ref=f3e868]: Material UI
+            - generic [ref=f3e869]: Stripe
+            - generic [ref=f3e870]: Typescript
+      - generic [ref=f3e872]:
+        - generic [ref=f3e873]:
+          - img "Slim Club" [ref=f3e874]
+          - generic [ref=f3e875]:
+            - generic [ref=f3e876] [cursor=pointer]
+            - link [ref=f3e881] [cursor=pointer]:
+              - /url: "#"
+        - generic [ref=f3e885]:
+          - heading "Slim Club" [level=3] [ref=f3e886]
+          - paragraph [ref=f3e887]: Developed a fitness club management platform with user registration, payments, and booking features.
+          - generic [ref=f3e888]:
+            - generic [ref=f3e889]: React JS
+            - generic [ref=f3e890]: Redux Toolkit
+            - generic [ref=f3e891]: Material UI
+            - generic [ref=f3e892]: React Query
+  - generic [ref=f3e894]:
+    - generic [ref=f3e895]:
+      - heading "Get in Touch" [level=2] [ref=f3e897]
+      - paragraph [ref=f3e901]: Have a project in mind? Let's work together to create something amazing
+    - generic [ref=f3e902]:
+      - generic [ref=f3e904]:
+        - heading "Contact Information" [level=3] [ref=f3e905]
+        - generic [ref=f3e906]:
+          - generic [ref=f3e907]: jahanzaib2610@gmail.com
+          - generic [ref=f3e912]: +92 318 2425007
+          - generic [ref=f3e916]: Lahore, Pakistan
+        - generic [ref=f3e921]:
+          - heading "Follow Me" [level=4] [ref=f3e922]
+          - generic [ref=f3e923]:
+            - link [ref=f3e924] [cursor=pointer]:
+              - /url: https://github.com/jahanzaib2610
+            - link [ref=f3e928] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/jahanzaib2610/
+            - link [ref=f3e933] [cursor=pointer]:
+              - /url: /
+      - generic [ref=f3e938]:
+        - generic [ref=f3e939]:
+          - generic [ref=f3e940]: Name
+          - textbox "Name" [ref=f3e941]:
+            - /placeholder: Your Name
+        - generic [ref=f3e942]:
+          - generic [ref=f3e943]: Email
+          - textbox "Email" [ref=f3e944]:
+            - /placeholder: johndoe@example.com
+        - generic [ref=f3e945]:
+          - generic [ref=f3e946]: Subject
+          - textbox "Subject" [ref=f3e947]:
+            - /placeholder: Subject of Email
+        - generic [ref=f3e948]:
+          - generic [ref=f3e949]: Message
+          - textbox "Message" [ref=f3e950]:
+            - /placeholder: Your Message
+        - button "Send Message" [ref=f3e951] [cursor=pointer]

@@ -1,4 +1,158 @@
-/* Reset CSS */
+@import "tailwindcss";
+@import "tw-animate-css";
+
+/* ========================
+   CSS Custom Properties
+   ======================== */
+:root {
+  /* DataRain Particle / Background Variables (Light Mode) */
+  --dr-bg-0: transparent;
+  --dr-bg-1: transparent;
+  --dr-bg-2: transparent;
+  --dr-calm: #0284c7;
+  --dr-mid: #7c3aed;
+  --dr-hot: #db2777;
+  --dr-core: #4338ca;
+  --dr-vignette: 0;
+  --dr-grain: 0.02;
+  --dr-bloom-blur: 6px;
+  --dr-bloom-opacity: 0.35;
+
+  /* Backgrounds */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f9fafb;
+  --bg-gradient: linear-gradient(135deg, #f3e8ff, #e0f2fe);
+  --bg-navbar: rgba(255, 255, 255, 0.15);
+
+  /* Floating Pill Navbar Glass */
+  --nav-pill-bg: rgba(255, 255, 255, 0.72);
+  --nav-pill-border: rgba(255, 255, 255, 0.7);
+  --nav-pill-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.1), 0 4px 12px -2px rgba(0, 0, 0, 0.05), inset 0 1px 1px rgba(255, 255, 255, 0.9);
+
+  /* Text */
+  --text-primary: #333333;
+  --text-secondary: #666666;
+  --text-muted: #555555;
+
+  /* Cards & Surfaces */
+  --card-bg: #ffffff;
+  --card-bg-alt: #f2f2f2;
+  --card-content-bg: #f2f2f2;
+
+  /* Borders & Inputs */
+  --border-color: #dddddd;
+  --input-bg: #ffffff;
+  --input-text: #333333;
+
+  /* Services */
+  --service-icon-bg: #f3e8ff;
+
+  /* Mobile Menu */
+  --mobile-menu-bg: #ffffff;
+
+  /* Modal */
+  --modal-bg: #ffffff;
+  --modal-tag-bg: #f3f4f6;
+  --modal-tag-color: #333333;
+
+  /* Accents */
+  --accent-purple: #6b46c1;
+  --accent-purple-dark: #553c9a;
+  --accent-blue: #3b82f6;
+  --accent-gradient: linear-gradient(to right, #6b46c1, #3b82f6);
+
+  /* Experience timeline */
+  --step-content-bg: #ffffff;
+  --experience-years-color: #666666;
+
+  /* Section title */
+  --section-h2-color: #333333;
+  --section-p-color: #666666;
+
+  /* Progress bar track */
+  --progress-track: #e5e7eb;
+
+  /* Project tag chips */
+  --tag-bg: #f3e8ff;
+  --tag-color: #6b46c1;
+
+  /* Project overlay icon circles */
+  --project-link-bg: #ffffff;
+  --project-link-color: #333333;
+  --project-link-hover-bg: #f3f4f6;
+}
+
+/* ========================
+   Dark Mode Overrides
+   ======================== */
+html.dark {
+  --bg-primary: #0f172a;
+  --bg-secondary: #1e293b;
+  --bg-gradient: linear-gradient(135deg, #1e1035, #0c1f3f);
+  --bg-navbar: rgba(15, 23, 42, 0.85);
+
+  /* Floating Pill Navbar Glass (Dark Mode) */
+  --nav-pill-bg: rgba(18, 14, 30, 0.78);
+  --nav-pill-border: rgba(255, 255, 255, 0.12);
+  --nav-pill-shadow: 0 20px 45px -12px rgba(0, 0, 0, 0.7), 0 6px 16px -4px rgba(0, 0, 0, 0.45), inset 0 1px 1px rgba(255, 255, 255, 0.16);
+
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted: #cbd5e1;
+
+  --card-bg: #1e293b;
+  --card-bg-alt: #334155;
+  --card-content-bg: #1e293b;
+
+  --border-color: #475569;
+  --input-bg: #1e293b;
+  --input-text: #f1f5f9;
+
+  --service-icon-bg: #2d1b69;
+
+  --mobile-menu-bg: #1e293b;
+
+  --modal-bg: #1e293b;
+  --modal-tag-bg: #334155;
+  --modal-tag-color: #f1f5f9;
+
+  --step-content-bg: #1e293b;
+  --experience-years-color: #94a3b8;
+
+  --section-h2-color: #f1f5f9;
+  --section-p-color: #94a3b8;
+
+  --progress-track: #334155;
+
+  /* Project tag chips */
+  --tag-bg: #2d1b69;
+  --tag-color: #c4b5fd;
+
+  /* Project overlay icon circles */
+  --project-link-bg: #334155;
+  --project-link-color: #f1f5f9;
+  --project-link-hover-bg: #475569;
+
+  /* DataRain Particle Variables (Dark Mode) */
+  --dr-bg-0: #020308;
+  --dr-bg-1: #05070d;
+  --dr-bg-2: #0a1020;
+  --dr-calm: #22e6ff;
+  --dr-mid: #8a5cff;
+  --dr-hot: #ff3d9a;
+  --dr-core: #eafcff;
+  --dr-vignette: 0.55;
+  --dr-grain: 0.04;
+  --dr-bloom-blur: 10px;
+  --dr-bloom-opacity: 0.7;
+
+  /* Accents */
+  --accent-gradient: linear-gradient(to right, #c084fc, #60a5fa);
+}
+
+/* ========================
+   Reset CSS
+   ======================== */
 * {
   margin: 0;
   padding: 0;
@@ -8,10 +162,14 @@
 body {
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   line-height: 1.6;
-  color: #333;
+  color: var(--text-primary);
+  background-color: var(--bg-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Common styles */
+/* ========================
+   Common Styles
+   ======================== */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -29,23 +187,25 @@ body {
 
 .section-title h2 {
   font-size: 2.5rem;
-  color: #333;
+  color: var(--section-h2-color);
   margin-bottom: 20px;
   animation: slideBottom 1s ease forwards;
+  transition: color 0.3s ease;
 }
 
 .section-title .divider {
   width: 80px;
   height: 4px;
-  background: #6b46c1;
+  background: var(--accent-purple);
   margin: 0 auto 30px;
 }
 
 .section-title p {
   font-size: 1.2rem;
-  color: #666;
+  color: var(--section-p-color);
   max-width: 800px;
   margin: 0 auto;
+  transition: color 0.3s ease;
 }
 
 .btn {
@@ -61,15 +221,17 @@ body {
 }
 
 .btn-primary {
-  background: #6b46c1;
+  background: var(--accent-purple);
   color: white;
 }
 
 .btn-primary:hover {
-  background: #553c9a;
+  background: var(--accent-purple-dark);
 }
 
-/* Grid system */
+/* ========================
+   Grid System
+   ======================== */
 .grid {
   display: grid;
   gap: 30px;
@@ -101,13 +263,15 @@ body {
   }
 }
 
-/* Card styles */
+/* ========================
+   Card Styles
+   ======================== */
 .card {
-  background: white;
+  background: var(--card-bg);
   border-radius: 8px;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   padding: 24px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 .card:hover {
@@ -115,7 +279,9 @@ body {
   box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
 }
 
-/* Form styles */
+/* ========================
+   Form Styles
+   ======================== */
 .form-group {
   margin-bottom: 5px;
 }
@@ -124,27 +290,37 @@ body {
   display: block;
   margin-bottom: 2px;
   font-weight: 500;
-  color: #333;
+  color: var(--text-primary);
+  transition: color 0.3s ease;
 }
 
 .form-group input,
 .form-group textarea {
   width: 100%;
   padding: 8px 10px;
-  border: 1px solid #ddd;
+  border: 1px solid var(--border-color);
   border-radius: 8px;
   font-size: 1rem;
-  transition: border-color 0.3s ease;
+  background-color: var(--input-bg);
+  color: var(--input-text);
+  transition: border-color 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--text-secondary);
 }
 
 .form-group input:focus,
 .form-group textarea:focus {
   outline: none;
-  border-color: #6b46c1;
+  border-color: var(--accent-purple);
   box-shadow: 0 0 0 3px rgba(107, 70, 193, 0.2);
 }
 
-/* Animations */
+/* ========================
+   Animations
+   ======================== */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -160,7 +336,9 @@ body {
   animation: fadeIn 0.8s ease forwards;
 }
 
-/* Responsive design */
+/* ========================
+   Responsive
+   ======================== */
 @media (max-width: 768px) {
   .section {
     padding: 60px 0;
@@ -171,15 +349,154 @@ body {
   }
 }
 
-@keyframes slideBottom{
-  0%{
-      transform: translateY(-100px);
-      opacity: 0;
+@keyframes slideBottom {
+  0% {
+    transform: translateY(-100px);
+    opacity: 0;
   }
-  100%{
-      transform: translateY(0px);
-      opacity: 1;
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
   }
 }
 
+/* ========================
+   DataRain Component Styles
+   ======================== */
+@keyframes dr-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.dr-root {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+  z-index: 0;
+  background: transparent;
+  animation: dr-fade-in 1.2s ease-out forwards;
+}
+
+.dr-root--contained {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.dr-bloom {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  filter: blur(var(--dr-bloom-blur, 6px));
+  opacity: var(--dr-bloom-opacity, 0.35);
+  mix-blend-mode: multiply;
+}
+
+html.dark .dr-bloom {
+  mix-blend-mode: screen;
+  opacity: var(--dr-bloom-opacity, 0.7);
+}
+
+.dr-main {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+}
+
+.dr-vignette {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: var(--dr-vignette, 0);
+  background: radial-gradient(
+    ellipse at 50% 50%,
+    transparent 50%,
+    rgba(0, 0, 0, 0.5) 100%
+  );
+  transition: opacity 0.3s ease;
+}
+
+.dr-grain {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  opacity: var(--dr-grain, 0.02);
+  background-image: radial-gradient(rgba(100, 100, 100, 0.25) 1px, transparent 1px);
+  background-size: 4px 4px;
+}
+
+html.dark .dr-grain {
+  background-image: radial-gradient(rgba(255, 255, 255, 0.4) 1px, transparent 1px);
+}
+
+/* ========================
+   Marquee Animations
+   ======================== */
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(calc(-100% - var(--gap, 2rem)));
+  }
+}
+
+@keyframes marquee-reverse {
+  0% {
+    transform: translateX(calc(-100% - var(--gap, 2rem)));
+  }
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+.animate-marquee {
+  animation: marquee var(--duration, 40s) linear infinite;
+  will-change: transform;
+}
+
+.animate-marquee-reverse {
+  animation: marquee-reverse var(--duration, 40s) linear infinite;
+  will-change: transform;
+}
+
+.marquee-container {
+  mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 12%,
+    rgba(0, 0, 0, 1) 88%,
+    rgba(0, 0, 0, 0) 100%
+  );
+  -webkit-mask-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 1) 12%,
+    rgba(0, 0, 0, 1) 88%,
+    rgba(0, 0, 0, 0) 100%
+  );
+}
+
+.marquee-track:hover .animate-marquee,
+.marquee-track:hover .animate-marquee-reverse,
+.group:hover .animate-marquee,
+.group:hover .animate-marquee-reverse {
+  animation-play-state: paused;
+}
 

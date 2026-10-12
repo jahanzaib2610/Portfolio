@@ -4,7 +4,8 @@
   align-items: center;
   position: relative;
   overflow: hidden;
-  background: linear-gradient(135deg, #f3e8ff, #e0f2fe);
+  background: var(--bg-gradient);
+  transition: background 0.3s ease;
 }
 
 .home-content {
@@ -21,19 +22,24 @@
 
 .home-title {
   font-size: 3.5rem;
-  color: #333;
+  color: var(--text-primary);
   animation: slideBottom 1s ease forwards;
+  transition: color 0.3s ease;
 }
+
 .home-content h3 {
   animation: slideBottom 1s ease forwards;
-  margin-left: 15%;  
+  margin-left: 15%;
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
 }
+
 .home-button {
   animation: slideTop 1s ease forwards;
 }
 
 .home-title span {
-  background: linear-gradient(to right, #6b46c1, #3b82f6);
+  background: var(--accent-gradient);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -42,7 +48,7 @@
 .home-subtitle {
   font-size: 1.5rem;
   font-weight: bold;
-  background: linear-gradient(to right, #6b46c1, #3b82f6);
+  background: var(--accent-gradient);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -55,8 +61,8 @@
   width: 180px;
   align-items: center;
   gap: 8px;
-
 }
+
 .home-cta:hover {
   -webkit-box-shadow: 0px 0px 45px 0px rgba(107, 70, 193, 0.75);
   -moz-box-shadow: 0px 0px 45px 0px rgba(107, 70, 193, 0.75);
@@ -101,6 +107,7 @@
     font-size: 1.1rem;
   }
 }
+
 @media (max-width: 378px) {
   .home-title {
     font-size: 1.8rem;
@@ -109,9 +116,9 @@
   .home-subtitle {
     font-size: 1.1rem;
   }
+
   .home-content h3 {
-    
-    margin-left: 2%;  
+    margin-left: 2%;
   }
 }
 

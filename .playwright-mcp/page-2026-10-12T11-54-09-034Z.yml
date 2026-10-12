@@ -1,0 +1,379 @@
+- generic [ref=e3]:
+  - banner:
+    - navigation [ref=e4]:
+      - generic [ref=e5] [cursor=pointer]: Jahan Zaib Inc.
+      - navigation [ref=e7]:
+        - generic [ref=e8]:
+          - list [ref=e9]:
+            - listitem [ref=e10]:
+              - button "Home" [ref=e11] [cursor=pointer]
+            - listitem [ref=e13]:
+              - button "About" [ref=e14] [cursor=pointer]
+            - listitem [ref=e16]:
+              - button "Experience" [ref=e17] [cursor=pointer]
+            - listitem [ref=e19]:
+              - button "Skills" [ref=e20] [cursor=pointer]
+            - listitem [ref=e22]:
+              - button "Services" [ref=e23] [cursor=pointer]
+            - listitem [ref=e25]:
+              - button "Projects" [ref=e26] [cursor=pointer]
+            - listitem [ref=e28]:
+              - button "Contact" [ref=e29] [cursor=pointer]
+          - list [aria-hidden]:
+            - listitem:
+              - generic: Home
+            - listitem:
+              - generic: About
+            - listitem:
+              - generic: Experience
+            - listitem:
+              - generic: Skills
+            - listitem:
+              - generic: Services
+            - listitem:
+              - generic: Projects
+            - listitem:
+              - generic: Contact
+      - button "Toggle dark/light mode" [ref=e32] [cursor=pointer]
+  - generic [ref=e39]:
+    - heading "Hi, I'm Jahan Zaib" [level=2] [ref=e40]
+    - heading "and I'm a Full-Stack Develope" [level=3] [ref=e505]: and I'm a Full-Stack Develope|
+    - generic [ref=e42]: More About Me...
+  - generic [ref=e47]:
+    - generic [ref=e48]:
+      - heading "About Me" [level=2] [ref=e50]
+      - paragraph [ref=e54]: Passionate full-stack developer with a love for building dynamic, responsive, and user-centric web and mobile applications. With experience in React, React Native, MongoDB, Express.js, and Node.js, I specialize in creating seamless user experiences and efficient back-end solutions. I am skilled in developing robust cross-platform mobile apps for both Android and iOS, leveraging React Native to ensure high performance and native-like functionality. My expertise also includes designing intuitive user interfaces and delivering scalable solutions that meet modern development standards. Dedicated to turning innovative ideas into functional and visually appealing applications for web and mobile platforms.
+    - generic [ref=e55]:
+      - generic [ref=e56]: My Skills
+      - generic [ref=e60]: My Projects
+      - generic [ref=e64]: Hire me Now
+  - generic [ref=e68]:
+    - heading "Experience" [level=2] [ref=e70]
+    - generic [ref=e74]:
+      - generic [ref=e77]:
+        - heading "MERN Stack Developer" [level=3] [ref=e78]
+        - paragraph [ref=e79]: Axis Cyber Technologies, Lahore
+        - paragraph [ref=e80]: Apr 2025 - Present
+        - paragraph [ref=e81]: Worked as a MERN Stack developer.
+      - generic [ref=e84]:
+        - heading "ReactJS/ NextJS Developer" [level=3] [ref=e85]
+        - paragraph [ref=e86]: Core Edge Solutions LTD, Lahore
+        - paragraph [ref=e87]: Feb 2025 - Apr 2025
+        - paragraph [ref=e88]: Worked as a ReactJS/ NextJS developer.
+      - generic [ref=e91]:
+        - heading "Frontend Developer" [level=3] [ref=e92]
+        - paragraph [ref=e93]: Idea Section, Lahore
+        - paragraph [ref=e94]: Feb 2024 - Feb 2025
+        - paragraph [ref=e95]: Worked as a frontend developer in a startup company.
+  - generic [ref=e96]:
+    - heading "My Skills" [level=2] [ref=e99]
+    - generic [ref=e102]:
+      - generic [ref=e104]:
+        - generic [ref=e105]:
+          - img "React" [ref=e107]
+          - heading "React" [level=5] [ref=e108]
+        - generic [ref=e109]:
+          - paragraph [ref=e110]: React
+          - paragraph [ref=e111]:
+            - text: To build dynamic and interactive web user interfaces.
+            - paragraph [ref=e112]: "Skill Level(%) : Advanced"
+            - text: "0"
+            - progressbar [ref=e113]
+            - text: "100"
+      - generic [ref=e115]:
+        - generic [ref=e116]:
+          - img "React Native" [ref=e118]
+          - heading "React Native" [level=5] [ref=e119]
+        - generic [ref=e120]:
+          - paragraph [ref=e121]: React Native
+          - paragraph [ref=e122]:
+            - text: To develop cross-platform mobile applications.
+            - paragraph [ref=e123]: "Skill Level(%) : Advanced"
+            - text: "0"
+            - progressbar [ref=e124]
+            - text: "100"
+      - generic [ref=e126]:
+        - generic [ref=e127]:
+          - img "Node.js" [ref=e129]
+          - heading "Node.js" [level=5] [ref=e130]
+        - generic [ref=e131]:
+          - paragraph [ref=e132]: Node.js
+          - paragraph [ref=e133]:
+            - text: To build scalable backend APIs and server-side applications.
+            - paragraph [ref=e134]: "Skill Level(%) : Intermediate"
+            - text: "0"
+            - progressbar [ref=e135]
+            - text: "100"
+      - generic [ref=e137]:
+        - generic [ref=e138]:
+          - img "MongoDB" [ref=e140]
+          - heading "MongoDB" [level=5] [ref=e141]
+        - generic [ref=e142]:
+          - paragraph [ref=e143]: MongoDB
+          - paragraph [ref=e144]:
+            - text: To store and manage data in a NoSQL database for flexible schema needs.
+            - paragraph [ref=e145]: "Skill Level(%) : Intermediate"
+            - text: "0"
+            - progressbar [ref=e146]
+            - text: "100"
+      - generic [ref=e148]:
+        - generic [ref=e149]:
+          - img "MongoDB" [ref=e151]
+          - heading "ExpressJS" [level=5] [ref=e152]
+        - generic [ref=e153]:
+          - paragraph [ref=e154]: ExpressJS
+          - paragraph [ref=e155]:
+            - text: For building fast, scalable web applications and APIs in Node.js.
+            - paragraph [ref=e156]: "Skill Level(%) : Intermediate"
+            - text: "0"
+            - progressbar [ref=e157]
+            - text: "100"
+      - generic [ref=e159]:
+        - generic [ref=e160]:
+          - img "MongoDB" [ref=e162]
+          - heading "NextJS" [level=5] [ref=e163]
+        - generic [ref=e164]:
+          - paragraph [ref=e165]: NextJS
+          - paragraph [ref=e166]:
+            - text: To build React applications with server-side rendering and static site generation.
+            - paragraph [ref=e167]: "Skill Level(%) : Beginner"
+            - text: "0"
+            - progressbar [ref=e168]
+            - text: "100"
+      - generic [ref=e170]:
+        - generic [ref=e171]:
+          - img "MongoDB" [ref=e173]
+          - heading "Redux/Redux Toolkit" [level=5] [ref=e174]
+        - generic [ref=e175]:
+          - paragraph [ref=e176]: Redux/Redux Toolkit
+          - paragraph [ref=e177]:
+            - text: For simplifying state management in React applications with Redux.
+            - paragraph [ref=e178]: "Skill Level(%) : Intermediate"
+            - text: "0"
+            - progressbar [ref=e179]
+            - text: "100"
+      - generic [ref=e181]:
+        - generic [ref=e182]:
+          - img "JavaScript" [ref=e184]
+          - heading "JavaScript" [level=5] [ref=e185]
+        - generic [ref=e186]:
+          - paragraph [ref=e187]: JavaScript
+          - paragraph [ref=e188]:
+            - text: To handle client-side functionality and interactive web features.
+            - paragraph [ref=e189]: "Skill Level(%) : Advanced"
+            - text: "0"
+            - progressbar [ref=e190]
+            - text: "100"
+      - generic [ref=e192]:
+        - generic [ref=e193]:
+          - img "HTML5" [ref=e195]
+          - heading "HTML5" [level=5] [ref=e196]
+        - generic [ref=e197]:
+          - paragraph [ref=e198]: HTML5
+          - paragraph [ref=e199]:
+            - text: To structure the content of web pages.
+            - paragraph [ref=e200]: "Skill Level(%) : Advanced"
+            - text: "0"
+            - progressbar [ref=e201]
+            - text: "100"
+      - generic [ref=e203]:
+        - generic [ref=e204]:
+          - img "CSS3" [ref=e206]
+          - heading "CSS3" [level=5] [ref=e207]
+        - generic [ref=e208]:
+          - paragraph [ref=e209]: CSS3
+          - paragraph [ref=e210]:
+            - text: To style and layout web pages for an appealing design.
+            - paragraph [ref=e211]: "Skill Level(%) : Advanced"
+            - text: "0"
+            - progressbar [ref=e212]
+            - text: "100"
+      - generic [ref=e214]:
+        - generic [ref=e215]:
+          - img "Git" [ref=e217]
+          - heading "GitHub" [level=5] [ref=e218]
+        - generic [ref=e219]:
+          - paragraph [ref=e220]: GitHub
+          - paragraph [ref=e221]:
+            - text: To manage version control and collaborate on code efficiently.
+            - paragraph [ref=e222]: "Skill Level(%) : Intermediate"
+            - text: "0"
+            - progressbar [ref=e223]
+            - text: "100"
+  - generic [ref=e225]:
+    - generic [ref=e226]:
+      - heading "My Services" [level=2] [ref=e228]
+      - paragraph [ref=e232]: I offer a wide range of services to help bring your digital ideas to life
+    - generic [ref=e233]:
+      - generic [ref=e235]:
+        - heading "Website Development" [level=3] [ref=e239]
+        - paragraph [ref=e240]: Creating responsive and visually appealing websites tailored to your needs.
+      - generic [ref=e242]:
+        - heading "Mobile App Development" [level=3] [ref=e246]
+        - paragraph [ref=e247]: Building high-quality cross-platform mobile applications using modern frameworks.
+      - generic [ref=e249]:
+        - heading "iOS App Development" [level=3] [ref=e253]
+        - paragraph [ref=e254]: Designing and developing smooth and efficient iOS applications.
+      - generic [ref=e256]:
+        - heading "Android App Development" [level=3] [ref=e260]
+        - paragraph [ref=e261]: Creating scalable and feature-rich Android applications.
+      - generic [ref=e263]:
+        - heading "Front-end Development" [level=3] [ref=e267]
+        - paragraph [ref=e268]: Building interactive and dynamic user interfaces with modern front-end frameworks.
+      - generic [ref=e270]:
+        - heading "Back-end Development" [level=3] [ref=e274]
+        - paragraph [ref=e275]: Developing secure and scalable backend solutions to power your applications.
+  - generic [ref=e277]:
+    - generic [ref=e278]:
+      - heading "My Projects" [level=2] [ref=e280]
+      - paragraph [ref=e284]: Here are some of my recent projects that showcase my skills and expertise
+    - generic [ref=e285]:
+      - generic [ref=e287]:
+        - generic [ref=e288]:
+          - img "TMZ Meredith | Web App" [ref=e289]
+          - generic [ref=e290]:
+            - generic [ref=e291] [cursor=pointer]
+            - link [ref=e296] [cursor=pointer]:
+              - /url: https://github.com/jahanzaib2610
+        - generic [ref=e300]:
+          - heading "TMZ Meredith | Web App" [level=3] [ref=e301]
+          - paragraph [ref=e302]: Worked as a Frontend Developer on the Meredith project, delivering a modern and scalable web application.
+          - generic [ref=e303]:
+            - generic [ref=e304]: React
+            - generic [ref=e305]: Material UI
+            - generic [ref=e306]: Context API
+            - generic [ref=e307]: JavaScript
+            - generic [ref=e308]: Typescript
+      - generic [ref=e310]:
+        - generic [ref=e311]:
+          - img "RNR Bookings | Mobile App" [ref=e312]
+          - generic [ref=e313]:
+            - generic [ref=e314] [cursor=pointer]
+            - link [ref=e319] [cursor=pointer]:
+              - /url: https://github.com/jahanzaib2610
+        - generic [ref=e323]:
+          - heading "RNR Bookings | Mobile App" [level=3] [ref=e324]
+          - paragraph [ref=e325]: Serving as a Frontend Developer on the RNR Mobile App, building a robust, scalable, and user-friendly mobile application using React Native and Expo.
+          - generic [ref=e326]:
+            - generic [ref=e327]: React Native
+            - generic [ref=e328]: Expo
+            - generic [ref=e329]: Context API
+            - generic [ref=e330]: React Native Paper
+            - generic [ref=e331]: Google Maps API
+      - generic [ref=e333]:
+        - generic [ref=e334]:
+          - img "Guide Plus | Mobile App" [ref=e335]
+          - generic [ref=e336]:
+            - generic [ref=e337] [cursor=pointer]
+            - link [ref=e342] [cursor=pointer]:
+              - /url: https://github.com/jahanzaib2610
+        - generic [ref=e346]:
+          - heading "Guide Plus | Mobile App" [level=3] [ref=e347]
+          - paragraph [ref=e348]: Developed a full stack mobile application designed to assist users with multiple features.
+          - generic [ref=e349]:
+            - generic [ref=e350]: React
+            - generic [ref=e351]: React Native
+            - generic [ref=e352]: Express
+            - generic [ref=e353]: Node.js
+            - generic [ref=e354]: MongoDB
+      - generic [ref=e356]:
+        - generic [ref=e357]:
+          - img "Mindset Medi | Mobile App" [ref=e358]
+          - generic [ref=e359]:
+            - generic [ref=e360] [cursor=pointer]
+            - link [ref=e365] [cursor=pointer]:
+              - /url: https://github.com/jahanzaib2610
+        - generic [ref=e369]:
+          - heading "Mindset Medi | Mobile App" [level=3] [ref=e370]
+          - paragraph [ref=e371]: Contributed as a front-end developer, designed and deployed mobile app for both iOS and Android.
+          - generic [ref=e372]:
+            - generic [ref=e373]: React
+            - generic [ref=e374]: React Native
+            - generic [ref=e375]: Stripe
+            - generic [ref=e376]: JavaScript
+      - generic [ref=e378]:
+        - generic [ref=e379]:
+          - img "Personal Portfolio" [ref=e380]
+          - generic [ref=e381]:
+            - generic [ref=e382] [cursor=pointer]
+            - link [ref=e387] [cursor=pointer]:
+              - /url: https://github.com/jahanzaib2610
+        - generic [ref=e391]:
+          - heading "Personal Portfolio" [level=3] [ref=e392]
+          - paragraph [ref=e393]: Designed and developed personal full-stack portfolio website and deployed it on Vercel.com.
+          - generic [ref=e394]:
+            - generic [ref=e395]: React
+            - generic [ref=e396]: React-Bootstrap
+            - generic [ref=e397]: Material-UI
+            - generic [ref=e398]: NodeJS
+            - generic [ref=e399]: ExpressJS
+            - generic [ref=e400]: MongoDB
+      - generic [ref=e402]:
+        - generic [ref=e403]:
+          - img "Judgement Labs" [ref=e404]
+          - generic [ref=e405]:
+            - generic [ref=e406] [cursor=pointer]
+            - link [ref=e411] [cursor=pointer]:
+              - /url: "#"
+        - generic [ref=e415]:
+          - heading "Judgement Labs" [level=3] [ref=e416]
+          - paragraph [ref=e417]: Worked as a Frontend Developer on the Judgement Labs, delivering a high-quality, responsive web application with secure payment integration.
+          - generic [ref=e418]:
+            - generic [ref=e419]: ReactJS
+            - generic [ref=e420]: NextJS
+            - generic [ref=e421]: Material UI
+            - generic [ref=e422]: Stripe
+            - generic [ref=e423]: Typescript
+      - generic [ref=e425]:
+        - generic [ref=e426]:
+          - img "Slim Club" [ref=e427]
+          - generic [ref=e428]:
+            - generic [ref=e429] [cursor=pointer]
+            - link [ref=e434] [cursor=pointer]:
+              - /url: "#"
+        - generic [ref=e438]:
+          - heading "Slim Club" [level=3] [ref=e439]
+          - paragraph [ref=e440]: Developed a fitness club management platform with user registration, payments, and booking features.
+          - generic [ref=e441]:
+            - generic [ref=e442]: React JS
+            - generic [ref=e443]: Redux Toolkit
+            - generic [ref=e444]: Material UI
+            - generic [ref=e445]: React Query
+  - generic [ref=e447]:
+    - generic [ref=e448]:
+      - heading "Get in Touch" [level=2] [ref=e450]
+      - paragraph [ref=e454]: Have a project in mind? Let's work together to create something amazing
+    - generic [ref=e455]:
+      - generic [ref=e457]:
+        - heading "Contact Information" [level=3] [ref=e458]
+        - generic [ref=e459]:
+          - generic [ref=e460]: jahanzaib2610@gmail.com
+          - generic [ref=e465]: +92 318 2425007
+          - generic [ref=e469]: Lahore, Pakistan
+        - generic [ref=e474]:
+          - heading "Follow Me" [level=4] [ref=e475]
+          - generic [ref=e476]:
+            - link [ref=e477] [cursor=pointer]:
+              - /url: https://github.com/jahanzaib2610
+            - link [ref=e481] [cursor=pointer]:
+              - /url: https://www.linkedin.com/in/jahanzaib2610/
+            - link [ref=e486] [cursor=pointer]:
+              - /url: /
+      - generic [ref=e491]:
+        - generic [ref=e492]:
+          - generic [ref=e493]: Name
+          - textbox "Name" [ref=e494]:
+            - /placeholder: Your Name
+        - generic [ref=e495]:
+          - generic [ref=e496]: Email
+          - textbox "Email" [ref=e497]:
+            - /placeholder: johndoe@example.com
+        - generic [ref=e498]:
+          - generic [ref=e499]: Subject
+          - textbox "Subject" [ref=e500]:
+            - /placeholder: Subject of Email
+        - generic [ref=e501]:
+          - generic [ref=e502]: Message
+          - textbox "Message" [ref=e503]:
+            - /placeholder: Your Message
+        - button "Send Message" [ref=e504] [cursor=pointer]

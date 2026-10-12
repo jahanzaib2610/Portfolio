@@ -2,6 +2,8 @@
   position: relative;
   padding: 80px 0;
   overflow: hidden;
+  background: var(--bg-secondary);
+  transition: background 0.3s ease;
 }
 
 .experience-container {
@@ -17,6 +19,12 @@
   width: 2px;
   height: 100%;
   background-color: #6b46c1;
+  opacity: 0.6;
+}
+
+html.dark .experience-container::before {
+  background-color: #8a5cff;
+  box-shadow: 0 0 12px rgba(138, 92, 255, 0.4);
 }
 
 .experience-stepper {
@@ -43,6 +51,11 @@
   top: 50%;
   height: calc(100% + 40px);
   z-index: 0;
+  opacity: 0.6;
+}
+
+html.dark .step:not(:last-child)::after {
+  background-color: #8a5cff;
 }
 
 .step.right:not(:last-child)::after {
@@ -62,7 +75,16 @@
 .step.left {
   left: 0;
   justify-content: flex-end;
+}
+
+.step.left .border-glow-inner {
+  align-items: flex-end;
   text-align: right;
+}
+
+.step.right .border-glow-inner {
+  align-items: flex-start;
+  text-align: left;
 }
 
 .step-dot {
@@ -73,8 +95,15 @@
   height: 20px;
   border-radius: 50%;
   background-color: #6b46c1;
-  border: 3px solid #fff;
-  z-index: 1;
+  border: 3px solid var(--bg-secondary);
+  z-index: 2;
+  transition: all 0.3s ease;
+}
+
+html.dark .step-dot {
+  background-color: #a855f7;
+  border-color: #0f172a;
+  box-shadow: 0 0 14px rgba(168, 85, 247, 0.7);
 }
 
 .step.left .step-dot {
@@ -85,27 +114,67 @@
   left: -11px;
 }
 
+/* Card Content wrapped with BorderGlow */
 .step-content {
-  background: white;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 24px;
+  width: 100%;
+  padding: 24px 28px;
   position: relative;
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+}
+
+.step-content:hover {
+  transform: translateY(-4px);
 }
 
 .step-content h3 {
-  font-size: 1.5rem;
-  color: #333;
-  margin-bottom: 10px;
+  font-size: 1.45rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 8px;
+  letter-spacing: -0.01em;
+  transition: color 0.3s ease;
 }
 
 .experience-company {
-  font-weight: bold;
+  font-size: 1.02rem;
+  font-weight: 600;
   color: #6b46c1;
+  margin-bottom: 4px;
+  transition: color 0.3s ease;
+}
+
+html.dark .experience-company {
+  color: #c084fc;
 }
 
 .experience-years {
+  font-size: 0.88rem;
   font-style: italic;
-  color: #666;
-  margin-bottom: 10px;
-} 
+  font-weight: 500;
+  color: var(--experience-years-color);
+  margin-bottom: 12px;
+  transition: color 0.3s ease;
+}
+
+.experience-desc {
+  font-size: 0.95rem;
+  line-height: 1.55;
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+}
+
+@media (max-width: 768px) {
+  .step {
+    width: 100%;
+    padding: 10px 20px;
+  }
+
+  .step.left {
+    text-align: left;
+  }
+
+  .step.left .border-glow-inner {
+    align-items: flex-start;
+    text-align: left;
+  }
+}
