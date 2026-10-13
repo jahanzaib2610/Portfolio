@@ -9,25 +9,21 @@ const experiences = [
     jobTitle: "Senior Full Stack Engineer",
     years: "Jun 2026 - Present",
     company: "Preesoft, Lahore",
-    description: "Working as a Senior Full Stack Engineer building scalable full-stack applications.",
   },
   {
     jobTitle: "MERN Stack Developer",
     years: "Apr 2025 - Jun 2026",
     company: "Axis Cyber Technologies, Lahore",
-    description: "Worked as a MERN Stack developer.",
   },
   {
     jobTitle: "ReactJS/ NextJS Developer",
     years: "Feb 2025 - Apr 2025",
     company: "Core Edge Solutions LTD, Lahore",
-    description: "Worked as a ReactJS/ NextJS developer.",
   },
   {
     jobTitle: "Frontend Developer",
     years: "Feb 2024 - Feb 2025",
     company: "Idea Section, Lahore",
-    description: "Worked as a frontend developer in a startup company.",
   },
 ];
 
@@ -58,9 +54,17 @@ const Experience = () => {
       <div className="experience-container">
         <div className="experience-stepper">
           {experiences.map((exp, index) => (
-            <div
+            <motion.div
               key={index}
               className={`step ${index % 2 === 0 ? "right" : "left"}`}
+              initial={{ opacity: 0, y: 35 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true, amount: 0.2 }}
+              transition={{
+                duration: 0.6,
+                delay: index * 0.1,
+                ease: "easeOut",
+              }}
             >
               <div className="step-dot"></div>
               <BorderGlow
@@ -81,9 +85,8 @@ const Experience = () => {
                 <h3>{exp.jobTitle}</h3>
                 <p className="experience-company">{exp.company}</p>
                 <p className="experience-years">{exp.years}</p>
-                <p className="experience-desc">{exp.description}</p>
               </BorderGlow>
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

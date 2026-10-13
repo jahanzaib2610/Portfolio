@@ -114,9 +114,9 @@ html.dark .step-dot {
   left: -11px;
 }
 
-/* Card Content wrapped with BorderGlow */
 .step-content {
-  width: 100%;
+  width: fit-content;
+  max-width: 100%;
   padding: 24px 28px;
   position: relative;
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
@@ -152,7 +152,7 @@ html.dark .experience-company {
   font-style: italic;
   font-weight: 500;
   color: var(--experience-years-color);
-  margin-bottom: 12px;
+  margin-bottom: 0;
   transition: color 0.3s ease;
 }
 
@@ -164,17 +164,79 @@ html.dark .experience-company {
 }
 
 @media (max-width: 768px) {
+  .experience {
+    padding: 50px 0;
+  }
+
+  .experience-container {
+    padding: 0 10px;
+  }
+
+  /* Anchor vertical timeline to left */
+  .experience-container::before {
+    left: 20px;
+    transform: none;
+  }
+
+  .experience-stepper {
+    padding-left: 0;
+  }
+
   .step {
-    width: 100%;
-    padding: 10px 20px;
+    width: 100% !important;
+    left: 0 !important;
+    padding: 0 0 0 44px !important;
+    margin-bottom: 24px;
+    justify-content: flex-start !important;
   }
 
+  .step.right,
   .step.left {
-    text-align: left;
+    left: 0 !important;
+    justify-content: flex-start !important;
   }
 
-  .step.left .border-glow-inner {
-    align-items: flex-start;
-    text-align: left;
+  /* Hide segment connector lines on mobile since container::before runs full height */
+  .step:not(:last-child)::after {
+    display: none !important;
+  }
+
+  /* Center all dots on the left vertical line */
+  .step-dot,
+  .step.left .step-dot,
+  .step.right .step-dot {
+    left: 11px !important;
+    right: auto !important;
+    width: 18px;
+    height: 18px;
+  }
+
+  /* Left-align card contents for all steps */
+  .step .border-glow-inner,
+  .step.left .border-glow-inner,
+  .step.right .border-glow-inner {
+    align-items: flex-start !important;
+    text-align: left !important;
+  }
+
+  .step-content {
+    padding: 16px 18px;
+    border-radius: 16px !important;
+    --border-radius: 16px !important;
+  }
+
+  .step-content h3 {
+    font-size: 1.12rem;
+    margin-bottom: 6px;
+  }
+
+  .experience-company {
+    font-size: 0.90rem;
+    margin-bottom: 4px;
+  }
+
+  .experience-years {
+    font-size: 0.80rem;
+    margin-bottom: 0;
   }
 }

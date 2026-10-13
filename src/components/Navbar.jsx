@@ -5,7 +5,6 @@ import { motion, AnimatePresence } from "framer-motion";
 import { useTheme } from "../context/ThemeContext";
 import GooeyNav from "./GooeyNav";
 import "./Navbar.css";
-import tune from "../assets/notify.mp3";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -23,16 +22,9 @@ const Navbar = () => {
     { label: "Contact", target: "contact" },
   ];
 
-  const audio = useRef(new Audio(tune)).current;
-
   const handleSelect = (index, item) => {
     setActiveIndex(index);
     isClickScrolling.current = true;
-    try {
-      audio.loop = false;
-      audio.currentTime = 0;
-      audio.play().catch(() => {});
-    } catch (e) {}
 
     scroller.scrollTo(item.target, {
       smooth: true,

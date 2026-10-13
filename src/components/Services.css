@@ -113,12 +113,52 @@ html.dark .service-icon svg {
 
 @media (max-width: 768px) {
   .services-grid {
-    gap: 16px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 0 10px;
   }
-  .service-card {
+
+  .services-grid > div {
+    display: flex;
     width: 100%;
-    max-width: 340px;
-    height: auto;
-    min-height: 230px;
+    height: 100%;
+  }
+
+  .service-card {
+    width: 100% !important;
+    max-width: none !important;
+    height: 100% !important;
+    min-height: 180px;
+    padding: 14px 8px 12px;
+    border-radius: 16px !important;
+    --border-radius: 16px !important;
+  }
+
+  .service-icon {
+    width: 40px;
+    height: 40px;
+    margin: 0 auto 8px;
+  }
+
+  .service-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .service-title {
+    font-size: 0.84rem;
+    margin-bottom: 6px;
+    line-height: 1.25;
+  }
+
+  .service-description {
+    font-size: 0.68rem;
+    line-height: 1.35;
+    min-height: auto;
+    display: -webkit-box;
+    -webkit-line-clamp: 4;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 }
