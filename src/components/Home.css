@@ -1,5 +1,8 @@
 .home {
-  min-height: 95vh;
+  min-height: 100vh;
+  min-height: 100dvh;
+  height: 100vh;
+  height: 100dvh;
   display: flex;
   align-items: center;
   position: relative;

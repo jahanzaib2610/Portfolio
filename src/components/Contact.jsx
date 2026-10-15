@@ -6,6 +6,7 @@ import "./Contact.css";
 import { ThreeDot } from "react-loading-indicators";
 import { motion } from "framer-motion";
 import tune from "../assets/notify.mp3";
+import emailjs from "@emailjs/browser";
 
 const Contact = () => {
   const [alertVisile, setAlertVisible] = useState(false);
@@ -69,33 +70,33 @@ const Contact = () => {
       return;
     }
 
-    // Handle form submission
-    console.log(formData);
+    // Handle form submission via EmailJS directly from frontend
     setIsDisabled(true);
     try {
-      // Make the fetch request
-      const response = await fetch(
-        "https://portfolio-backend-pi-eosin.vercel.app/send-email",
-        {
-          method: "POST",
-          headers: {
-            "Content-Type": "application/json",
-          },
-          body: JSON.stringify(formData),
-        }
-      );
+      const templateParams = {
+        senderName: formData.senderName,
+        senderEmail: formData.senderEmail,
+        subject: formData.subject,
+        message: formData.message,
+        // Recipient address where you receive the email:
+        to_email: "jahanzaib2610@gmail.com",
+        to_name: "Jahan Zaib",
+        recipient: "jahanzaib2610@gmail.com",
+        recipient_email: "jahanzaib2610@gmail.com",
+        // Common EmailJS aliases to support any template configuration:
+        from_name: formData.senderName,
+        from_email: formData.senderEmail,
+        user_name: formData.senderName,
+        user_email: formData.senderEmail,
+        reply_to: formData.senderEmail,
+      };
 
-      // Handle non-2xx responses (like 400, 300, etc.)
-      if (!response.ok) {
-        const result = await response.json();
-        setAlertSeverity("error");
-        setAlertMessage(
-          `Failed to send Message! ${result.error || "Unknown error"}`
-        );
-        setAlertVisible(true);
-        setIsDisabled(false);
-        return;
-      }
+      await emailjs.send(
+        "service_lhee715",
+        "template_9h2krlp",
+        templateParams,
+        "NVJuh4hO19nRROPXo"
+      );
 
       // Handle success
       setFormData({
@@ -111,10 +112,10 @@ const Contact = () => {
       setAlertVisible(true);
       setIsDisabled(false);
     } catch (error) {
-      // Handle network errors or other issues
+      console.error("EmailJS send error:", error);
       setAlertSeverity("error");
       setAlertMessage(
-        `Failed to send Message! Network Error: ${error.message}`
+        `Failed to send Message! ${error?.text || error?.message || "Unknown error"}`
       );
       setAlertVisible(true);
       setIsDisabled(false);

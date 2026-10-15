@@ -5,6 +5,7 @@ import "./Home.css";
 import Typed from "typed.js";
 import tune2 from "../assets/notify2.mp3";
 import DataRain from "./ui/data-rain";
+import LaserFlow from "./ui/LaserFlow";
 import { useTheme } from "../context/ThemeContext";
 
 const Home = () => {
@@ -24,11 +25,11 @@ const Home = () => {
     };
     const typed = new Typed(".home-subtitle", options);
 
-    // Cleanup function to destroy the instance on unmount
     return () => {
       typed.destroy();
     };
   }, []);
+
   const audio = new Audio(tune2);
   audio.loop = true;
 
@@ -52,6 +53,37 @@ const Home = () => {
         count={500}
         palette={rainPalette}
       />
+
+      {/* LaserFlow — persistently mounted; when theme changes, dye pours down from the top like a waterfall */}
+      <LaserFlow
+        surfaceLevel={1}
+        beamPosition={0.69}
+        color={isDark ? "#3847ff" : "#7c3aed"}
+        intensity={isDark ? 1.8 : 1.4}
+        beamWidth={1.7}
+        flare={2}
+        spread={isDark ? 2 : 1.6}
+        spill={isDark ? 1.2 : 0.9}
+        fog={0}
+        dust={isDark ? 1.3 : 0.8}
+        streaks={1.5}
+        dots={1}
+        pulse={1.5}
+        speed={2}
+        seed={isDark ? 20 : 42}
+        intro={true}
+        theme={isDark ? "dark" : "light"}
+        mouseInteraction={true}
+        style={{
+          position: "absolute",
+          inset: 0,
+          width: "100%",
+          height: "100%",
+          zIndex: 0,
+          pointerEvents: "none",
+        }}
+      />
+
       <div className="background-circle circle-1"></div>
       <div className="background-circle circle-2"></div>
 
@@ -70,7 +102,6 @@ const Home = () => {
           and I'm a <span className="home-subtitle"></span>
         </h3>
         <br />
-        {/* <br /> */}
 
         <div
           className="home-button"
